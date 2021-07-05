@@ -36,7 +36,7 @@ public class SponPixelManager : MonoBehaviour
                 count = 1;
                 break;
 
-            case int n when (6 <= n && n <= 45): //45%
+            case int n when (6 <= n && n <= 45): //40%
                 Debug.Log("Rendompixel: 2");
                 count = 2;
                 break;

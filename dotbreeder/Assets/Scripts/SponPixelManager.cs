@@ -87,7 +87,7 @@ public class SponPixelManager : MonoBehaviour
 
     private GameObject FindCollisionObject(Collider2D player) //other에는 무조건 플레이어가 들어가야함.
     {
-        Debug.Log("childCounting Test REsult:" + transform.childCount);
+        Debug.Log("1: childCounting Test REsult:" + transform.childCount);
 
         for(int i=0;i<transform.childCount;i++)
         {
@@ -95,17 +95,19 @@ public class SponPixelManager : MonoBehaviour
             BoxCollider2D collider2D = ObjectPos.GetComponent<BoxCollider2D>();
             collider2D.isTrigger = true; //모든 object의 콜라이더istrigger을 켜서 현재 player이 있는 위치를 좌표로 알 수 있다.
 
-            if (player.tag == "player")
+            if (player.tag == "Player")
             {
                 //디버깅 위해 색변환
                 SpriteRenderer sprite = ObjectPos.GetComponent<SpriteRenderer>();
-                sprite.color = new Color(1, 1, 1, 1);
+                Debug.Log("crashedObj Name:"+ObjectPos.name);
 
-                SetCollisionInitial(ObjectPos.transform);
+                SetCollisionInitial(ObjectPos.transform);//IsTrigger 비활성화 시키기.
+
                 return ObjectPos; //플레이어가 있는 곳이라면 해당 위치 겜오브젝 리턴
             }
         }
         Debug.Log("Fail to Find");
+     
         return gameObject;
     }
 
@@ -113,6 +115,8 @@ public class SponPixelManager : MonoBehaviour
     private GameObject FindCollisionObject(GameObject ObjectPos)
     {
         Transform Objectpos = ObjectPos.transform;
+        Debug.Log("2: childCounting Test REsult:" + Objectpos.childCount); //꽃위치 아래의 자식 갯수 로그
+
         for (int i = 0; i < Objectpos.childCount; i++)
         {
             GameObject Sponedpos = Objectpos.GetChild(i).gameObject; //자식객체(ObjectPos들 가져오기)
@@ -167,7 +171,9 @@ public class SponPixelManager : MonoBehaviour
                 Debug.Log("Playerposition:" + Player.position);
                 //현재 액션상태인지 확인 후 랜덤 픽셀 젠 메세지 보내기
                 //flowerzenpos의 collision 체크 키기->어떤 꽃이랑 충돌했는지 알 수 있음.
-                SetPixelPosition(FindCollisionObject(other));//other=player collider
+                GameObject crashedobj = FindCollisionObject(other);//other=player collider, 충돌한 꽃의 위치 obj 얻음
+                GameObject PossibletoSpon = FindCollisionObject(crashedobj); //충돌한 꽃의 위치 obj주위에 스폰 가능한 장소 정보 obj 얻음
+
 
                 //SponPixel(); 스폰픽셀 메서드 실핼
             }

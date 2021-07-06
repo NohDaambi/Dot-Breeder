@@ -85,7 +85,7 @@ public class SponPixelManager : MonoBehaviour
 
     }
 
-    private GameObject FindCollisionObject(Collider2D player) //other에는 무조건 플레이어가 들어가야함.
+    private void FindCollisionObject(Collider2D player) //other에는 무조건 플레이어가 들어가야함.
     {
         Debug.Log("1: childCounting Test REsult:" + transform.childCount);
 
@@ -103,38 +103,39 @@ public class SponPixelManager : MonoBehaviour
 
                 SetCollisionInitial(ObjectPos.transform);//IsTrigger 비활성화 시키기.
 
-                return ObjectPos; //플레이어가 있는 곳이라면 해당 위치 겜오브젝 리턴
+
+                Transform Objectpos = ObjectPos.transform; //ObjectPos=FlowerPos(in Hierachy)
+                                                           //어차피 FlowerPos > SPonPos > ZenPos(1,2,3....)
+                                                           //SPonedPos는 ZenPos들의 상위 오브젝트이고, 여기서 충돌처리 계산 할거임!
+                GameObject Sponedpos = Objectpos.GetChild(0).gameObject; //자식객체(Sponpos 가져오기)-한개밖에 없음
+
+                GetComponent<SponPosManager>().ActiveTrigger(); //내부 자식 ZenPos의 isTrigger 활성화
+
+                //부모오브젝트에 리지드바디가 있기 때문에 부모스크립트인 OntriggerEnter2D함수가 활성화 됨.
+
+
+
+                //return ObjectPos; //플레이어가 있는 곳이라면 해당 위치 겜오브젝 리턴
             }
         }
         Debug.Log("Fail to Find");
      
-        return gameObject;
+       // return gameObject;
     }
 
     //함수 오버로딩: 아래는 플레이어가 아닌 픽셀조각이 이미 생성되어 있는 위치를 판별하기 위해 사용됨.
     private GameObject FindCollisionObject(GameObject ObjectPos)
     {
-        Transform Objectpos = ObjectPos.transform;
-        Debug.Log("2: childCounting Test REsult:" + Objectpos.childCount); //꽃위치 아래의 자식 갯수 로그
+        Transform Objectpos = ObjectPos.transform; //ObjectPos=FlowerPos(in Hierachy)
+        //어차피 FlowerPos > SPonPos > ZenPos(1,2,3....)
+        //SPonedPos는 ZenPos들의 상위 오브젝트이고, 여기서 충돌처리 계산 할거임!
+        GameObject Sponedpos = Objectpos.GetChild(0).gameObject; //자식객체(Sponpos 가져오기)-한개밖에 없음
 
-        for (int i = 0; i < Objectpos.childCount; i++)
-        {
-            GameObject Sponedpos = Objectpos.GetChild(i).gameObject; //자식객체(ObjectPos들 가져오기)
-            BoxCollider2D collider2D = Objectpos.GetComponent<BoxCollider2D>();
-            collider2D.isTrigger = true; //모든 object의 콜라이더istrigger을 킨다.
+        GetComponent<SponPosManager>().ActiveTrigger(); //내부 자식 ZenPos의 isTrigger 활성화
 
-            if (ObjectPos.tag != "Respawn" && ObjectPos.tag != "Respawn")
-            {
-                //디버깅 위해 색변환
-                SpriteRenderer sprite = ObjectPos.GetComponent<SpriteRenderer>();
-                sprite.color = new Color(1, 1, 1, 1);
+        //부모오브젝트에 리지드바디가 있기 때문에 부모스크립트인 OntriggerEnter2D함수가 활성화 됨.
 
-                SetCollisionInitial(Sponedpos.transform);
-                return ObjectPos; //픽셀이 없는 곳이라면 해당 위치 겜오브젝 리턴
-            }
-        }
 
-        Debug.Log("Fail to Find");
         return gameObject;
     }
 
@@ -171,8 +172,8 @@ public class SponPixelManager : MonoBehaviour
                 Debug.Log("Playerposition:" + Player.position);
                 //현재 액션상태인지 확인 후 랜덤 픽셀 젠 메세지 보내기
                 //flowerzenpos의 collision 체크 키기->어떤 꽃이랑 충돌했는지 알 수 있음.
-                GameObject crashedobj = FindCollisionObject(other);//other=player collider, 충돌한 꽃의 위치 obj 얻음
-                GameObject PossibletoSpon = FindCollisionObject(crashedobj); //충돌한 꽃의 위치 obj주위에 스폰 가능한 장소 정보 obj 얻음
+                FindCollisionObject(other);//other=player collider, 충돌한 꽃의 위치 obj 얻음
+                //GameObject PossibletoSpon = FindCollisionObject(crashedobj); //충돌한 꽃의 위치 obj주위에 스폰 가능한 장소 정보 obj 얻음
 
 
                 //SponPixel(); 스폰픽셀 메서드 실핼

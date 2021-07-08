@@ -15,9 +15,6 @@ public class PlayerMove : MonoBehaviour
     Vector3 dirVec3;
     GameObject scanObject;
 
-    public bool isWallTouch = false;
-    public bool isfirst = true;
-
     void Awake()
     {
         Rigid = GetComponent<Rigidbody2D>();
@@ -26,52 +23,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (scanObject != null)//±âµÕ¿¡ ºÎµúÇûÀ» ¶§´Â ¸ØÃß°í ÀÌµ¿ÇÒ¼öÀÖ°Ô²û
-        {
-            Debug.Log("±âµÕ Ãæµ¹");
-            isWallTouch = true;
-        }
-        if (scanObject == null)//±âµÕ¿¡ ºÎµúÈ÷Áö ¾Ê¾ÒÀ» ¶§ °è¼ÓÀÌµ¿ÇÏ°Ô²û
-        {
-            isWallTouch = false;
-        }
-
-        if (isWallTouch == true || isfirst == true)
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = 1;
-                v = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = -1;
-                v = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = 0;
-                v = 1;
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = 0;
-                v = -1;
-            }
-        }
-        if (isWallTouch == true)
-        {
-            Rigid.velocity = Vector2.zero;
-            Debug.Log("¸ØÃã");
-        }
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
 
         //Check Button Down & Up
         bool hDown = Input.GetButtonDown("Horizontal");
@@ -129,13 +82,12 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         //Move
-        Vector2 moveVec = new Vector2(h, v);
+        Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
         Rigid.velocity = moveVec * Speed;
 
 
         //Ray
         Debug.DrawRay(Rigid.position, dirVec3 * 0.7f, new Color(0, 1, 0));
-        //±âµÕÀ» °¨ÁöÇÏ°í scanObject¿¡ ³Ö´Â´Ù.
         RaycastHit2D rayHit = Physics2D.Raycast(Rigid.position, dirVec3, 0.7f, LayerMask.GetMask("Object"));
         if (rayHit.collider != null)
         {

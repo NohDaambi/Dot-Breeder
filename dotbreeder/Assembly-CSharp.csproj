@@ -63,14 +63,15 @@
     <Compile Include="Assets\Tilemap\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
+    <Compile Include="Assets\Script\Deserttile_PlayerMove.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Isometric Rule Tile\IsometricRuleTile.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Hexagonal Rule Tile\HexagonalRuleTile.cs" />
+    <Compile Include="Assets\Script\DesertScript.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
+    <Compile Include="Assets\Script\CameraManager.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
-    <Compile Include="Assets\Script\Deserttile_PlayerMove.cs" />
-    <Compile Include="Assets\Script\DesertScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />

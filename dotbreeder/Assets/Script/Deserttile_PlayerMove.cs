@@ -5,16 +5,18 @@ using UnityEngine;
 public class Deserttile_PlayerMove : MonoBehaviour
 {
     public float Speed = 5.0f;
-    public float unMoveTime = 1.2f;//캐릭터가 움직이기 시작하는 시간
-                                   //길 타일이 사라지는 시간(unVisibleTime)과 똑같이 해야함 아니면 0.2f만큼 더 주어야 함.
+    public float unMoveTime = 1.0f;
+
     Rigidbody2D Rigid;
     Animator animator;
+    SpriteRenderer spriterenderer;
 
     float h = 0;
     float v = 0;
     bool isHorizonMove;
-    bool isfirstMove = true;
-    bool isplayermove = false;
+
+    public bool isplayermove = false;//플레이어 움직이는거랑 빠지고 난 후 애니메이션 초기화
+
     Vector3 dirVec3;
     GameObject scanObject;
 
@@ -22,6 +24,7 @@ public class Deserttile_PlayerMove : MonoBehaviour
     {
         Rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriterenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -37,7 +40,6 @@ public class Deserttile_PlayerMove : MonoBehaviour
             bool hUp = Input.GetButtonUp("Horizontal");
             bool vUp = Input.GetButtonUp("Vertical");
             //Check Horizontal Move
-            //키 중복 안되게
             if (hDown)
             {
                 isHorizonMove = true;
@@ -69,10 +71,9 @@ public class Deserttile_PlayerMove : MonoBehaviour
                 dirVec3 = Vector3.left;
             }
         }
-        //처음 플레이어 위치에 서면 길 보여주는 버그 방지
-        if (h == 1 || v == 1)
+        else
         {
-            isfirstMove = false;
+            animator.Play("Player_Up_Idle", -1, 0f);
         }
         
     }
@@ -81,9 +82,10 @@ public class Deserttile_PlayerMove : MonoBehaviour
     {
         if (unMoveTime > 0)
         {
+            isplayermove = false;
             unMoveTime -= Time.deltaTime;
-            h = 0;
-            v = 0;
+            animator.Play("Player_Up_Idle", -1, 0f);
+            Rigid.constraints = RigidbodyConstraints2D.FreezeAll;
         }
         else
         {
@@ -104,7 +106,10 @@ public class Deserttile_PlayerMove : MonoBehaviour
             }
             else
                 animator.SetBool("isChange", false);
+
             isplayermove = true;
+            Rigid.constraints = RigidbodyConstraints2D.None;
+            Rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
         
@@ -122,29 +127,77 @@ public class Deserttile_PlayerMove : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "ClearFront")
-        {
-            Debug.Log("클리어");
-            
-        }
-    }
-
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Road")
         {
-            Debug.Log("길을 벗어나 모래 유사로 빠져 처음으로 돌아가짐");
-            transform.position = new Vector2(0.5f, -8);
-            isplayermove = false;
-            //unMoveTime = 1.2f;//처음값과 같이 초기화
+            unMoveTime = 3.0f;
+            Debug.Log("Fail");
+            StartCoroutine("SandFall");
+        }
+    }
 
-            //플레이어가 길을 벗어나면 길을 1초간 보여주게끔
-            if (transform.position.x == 0.5f && transform.position.y == -8 && isfirstMove == false)// 값은 후에 변경할 수도 있음
+    IEnumerator SandFall()
+    {
+        float rotationAngley = 0;
+        float rotationAnglez = 0;
+        int maxrotationAngez = 30;
+        //2second
+        while (rotationAngley < 1200)
+        {
+            transform.rotation = Quaternion.Euler(0, rotationAngley, rotationAnglez);
+            if (rotationAnglez <= maxrotationAngez && rotationAnglez >= -maxrotationAngez)
             {
-                DesertScript.unVisibleTime = 1.0f;
+                rotationAnglez += 0.1f;
+                
             }
+            else if (rotationAnglez > maxrotationAngez || rotationAnglez < -maxrotationAngez)
+            {
+                rotationAnglez = -rotationAnglez;
+            }
+            //Wait Update Frame
+            yield return new WaitForSeconds(0.01f);
+            //yield return null;
+            rotationAngley += 10;
+        }
+        //End
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        transform.position = new Vector2(0.5f, -8.0f);
+        DesertScript.unVisibleTime = 1.0f;
+        StartCoroutine("BlinkingPlayer");
+        yield return null;
+    }
+
+    IEnumerator BlinkingPlayer()
+    {
+        int countTime = 0;
+
+        while (countTime < 5)
+        {//Alpha Effect
+            if (countTime % 2 == 0)
+            {
+                spriterenderer.color = new Color32(255, 255, 255, 90);
+            }
+            else
+                spriterenderer.color = new Color32(255, 255, 255, 180);
+            //Wait Update Frame
+            yield return new WaitForSeconds(0.2f);
+
+            countTime++;
+        }
+        //Alpha Effect End
+        spriterenderer.color = new Color32(255, 255, 255, 255);
+        transform.position = new Vector2(0.5f, -8.0f);
+        yield return null;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "ClearFront")
+        {
+            Debug.Log("Clear");
+            //클리어 한 후 결과 스크립트는 이곳에
         }
     }
 }

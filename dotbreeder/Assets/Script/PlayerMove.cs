@@ -104,8 +104,6 @@ public class PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "ClearFront")
         {
             Debug.Log("Å¬¸®¾î");
-            h = 0;
-            v = 0;
         }
     }
 }

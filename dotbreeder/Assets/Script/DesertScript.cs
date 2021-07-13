@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DesertScript : MonoBehaviour
 {
-    public static float unVisibleTime = 1.0f;
+    public static float unVisibleTime = 3.0f;
     public GameObject road;
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,9 @@ public class DesertScript : MonoBehaviour
        
         if (unVisibleTime > 0)
         {
-            unVisibleTime -= Time.deltaTime;
             road.GetComponent<Renderer>().enabled = true;
+            unVisibleTime -= Time.deltaTime;
+            //Debug.Log(unVisibleTime);
         }
         else
         {

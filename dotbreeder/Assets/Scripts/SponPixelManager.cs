@@ -9,20 +9,15 @@ using UnityEngine.Tilemaps;
 // 3. 젠은 플레이어 위치값을 받아와서 갯수만큼 주변에 뿌려
 public class SponPixelManager : MonoBehaviour
 {
+    public GameObject redpixelPrefab;
+    public GameObject greenpixelPrefab;
+    public GameObject bluepixelPrefab;
+    public Transform Sponpose;
     // Start is called before the first frame update
     void Start()
     {
     }
 
-    //어떤 장소에서 충돌하는냐에 따라서 생성되는 색깔이 다르다. 맵1: 나무:blue 풀:green 꽃:red로 했다.
-    //자기자신의 정보를 받아서, 성질값에 따라 달라진다.
-    private void PixelSpon()
-    {
-        //랜덤 한 확률로 픽셀을 스폰한다. 몇개 스폰할지 결정한다.
-        //충돌자원에 따라 스폰하는 색깔을 결정한다.자기 자신 정보에서 가져온다.
-        //스폰할 위치를 결정한다.(해당 장소-square-에 이미 다른 조각이 있으면 다른 장소를 탐색한다.
-        //해당 색깔의 픽셀을 x개 스폰한다.
-    }
 
     private int RendomPixel() //확률에 따른 픽셀조각 개수를 리턴한다.
     {
@@ -60,101 +55,119 @@ public class SponPixelManager : MonoBehaviour
         return count;
     }
 
-    private string SetPixelColor(GameObject me) //스폰할 픽셀 컬러를 결정한다. 인수로는 자기자신을 넣는다.
+    private GameObject SetPixelColor(GameObject me) //스폰할 픽셀 컬러를 결정한다. 인수로는 자기자신을 넣는다.
     {
         switch(me.tag)
         {
             case "Redsponer":
-                Debug.Log("You try to get Redsponers pixel");
-                return "R";
+                Debug.Log("You tried to get Redsponers pixel");
+                return redpixelPrefab;
 
             case "Greensponer":
-                Debug.Log("You try to get Greensponers pixel");
-                return "G";
+                Debug.Log("You tried to get Greensponers pixel");
+                return greenpixelPrefab;
 
             case "Bluesponer":
-                Debug.Log("You try to get Bluesponers pixel");
-                return "B";
+                Debug.Log("You tried to get Bluesponers pixel");
+                return bluepixelPrefab;
 
             default:
                 Debug.Log("There's no matching tag");
-                break;
+                return gameObject;
         }
 
-        return "Null";
+
 
     }
 
+    //어떤 오브젝트와 충돌했는지 타일맵 안에서 찾는 다.
     private void FindCollisionObject(Collider2D player) //other에는 무조건 플레이어가 들어가야함.
     {
-        Debug.Log("1: childCounting Test REsult:" + transform.childCount);
 
-        for(int i=0;i<transform.childCount;i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             GameObject ObjectPos = transform.GetChild(i).gameObject; //자식객체(ObjectPos들 가져오기)
             BoxCollider2D collider2D = ObjectPos.GetComponent<BoxCollider2D>();
             collider2D.isTrigger = true; //모든 object의 콜라이더istrigger을 켜서 현재 player이 있는 위치를 좌표로 알 수 있다.
 
-            if (player.tag == "Player")
+            if (collider2D.IsTouching(player))
             {
-                //디버깅 위해 색변환
-                SpriteRenderer sprite = ObjectPos.GetComponent<SpriteRenderer>();
-                Debug.Log("crashedObj Name:"+ObjectPos.name);
+                //player과 충돌중?인 오브젝트이면 아래 코드 실핼
+                Debug.Log("crashedObj Name:" + ObjectPos.name);
 
-                SetCollisionInitial(ObjectPos.transform);//IsTrigger 비활성화 시키기.
-
-
-                Transform Objectpos = ObjectPos.transform; //ObjectPos=FlowerPos(in Hierachy)
-                                                           //어차피 FlowerPos > SPonPos > ZenPos(1,2,3....)
-                                                           //SPonedPos는 ZenPos들의 상위 오브젝트이고, 여기서 충돌처리 계산 할거임!
-                GameObject Sponedpos = Objectpos.GetChild(0).gameObject; //자식객체(Sponpos 가져오기)-한개밖에 없음
-
-                GetComponent<SponPosManager>().ActiveTrigger(); //내부 자식 ZenPos의 isTrigger 활성화
-
-                //부모오브젝트에 리지드바디가 있기 때문에 부모스크립트인 OntriggerEnter2D함수가 활성화 됨.
-
-
-
-                //return ObjectPos; //플레이어가 있는 곳이라면 해당 위치 겜오브젝 리턴
+                //어차피 FlowerPos > SPonPos > ZenPos(1,2,3....)
+                //SPonedPos는 ZenPos들의 상위 오브젝트이고, 여기서 충돌처리 계산 할거임!
+                Sponpose = ObjectPos.transform; //자식객체(Sponpos 가져오기)-한개밖에 없음
             }
         }
-        Debug.Log("Fail to Find");
-     
-       // return gameObject;
+        SetCollisionInitial();
     }
 
-    //함수 오버로딩: 아래는 플레이어가 아닌 픽셀조각이 이미 생성되어 있는 위치를 판별하기 위해 사용됨.
-    private GameObject FindCollisionObject(GameObject ObjectPos)
+    //배열을 탐색해서 없는 스폰할 수 있는 공간을 내보낸다.
+    private Transform SearchSponSpace(Transform Sponpos)
     {
-        Transform Objectpos = ObjectPos.transform; //ObjectPos=FlowerPos(in Hierachy)
-        //어차피 FlowerPos > SPonPos > ZenPos(1,2,3....)
-        //SPonedPos는 ZenPos들의 상위 오브젝트이고, 여기서 충돌처리 계산 할거임!
-        GameObject Sponedpos = Objectpos.GetChild(0).gameObject; //자식객체(Sponpos 가져오기)-한개밖에 없음
+        for (int i = 0; i < 4; i++)
+        {
+            if (Sponpos.GetComponent<SponPosManager>().sponposes[i] == false)
+            {
+                Debug.Log("SearchSPonSpace: 성공");
+ 
+                return Sponpose.GetComponent<SponPosManager>().zenposes[i].transform;
+            }    
+        }
+        Debug.Log("SearchSPonSpace: 실패");
+        return transform;
+    }
 
-        GetComponent<SponPosManager>().ActiveTrigger(); //내부 자식 ZenPos의 isTrigger 활성화
+    //어떤 장소에서 충돌하는냐에 따라서 생성되는 색깔이 다르다. 맵1: 나무:blue 풀:green 꽃:red로 했다.
+    //자기자신의 정보를 받아서, 성질값에 따라 달라진다.
+    private void PixelSpon()
+    {
+        int debugcount = 0 ;
+        //랜덤 한 확률로 픽셀을 스폰한다. 몇개 스폰할지 결정한다.
+        //충돌자원에 따라 스폰하는 색깔을 결정한다.자기 자신 정보에서 가져온다.
+        //스폰할 위치를 결정한다.(해당 장소-square-에 이미 다른 조각이 있으면 다른 장소를 탐색한다.
+        //해당 색깔의 픽셀을 x개 스폰한다.
+        for (int i = 0; i < RendomPixel(); i++)
+        {
+           Transform CanSPon = SearchSponSpace(Sponpose);
+            int index = CanSPon.GetSiblingIndex();
+           GameObject pixel = Instantiate(SetPixelColor(gameObject), CanSPon.position, CanSPon.rotation);
+           Sponpose.GetComponent<SponPosManager>().sponposes[index] = true;
+           debugcount++;
+        }
 
-        //부모오브젝트에 리지드바디가 있기 때문에 부모스크립트인 OntriggerEnter2D함수가 활성화 됨.
-
-
-        return gameObject;
+        Debug.Log("픽셀조각생성 완료" + SetPixelColor(gameObject).name + debugcount);
     }
 
 
     //FinCollisionObject()함수를 사용한 뒤 반드시 아래함수를 통해 초기화 시켜줘여 함.
-    private void SetCollisionInitial(Transform transforms)
+    private void SetCollisionInitial()
     {
-        for (int i = 0; i < transforms.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            GameObject ObjectPos = transforms.GetChild(i).gameObject; //자식객체(ObjectPos들 가져오기)
+            GameObject ObjectPos = transform.GetChild(i).gameObject; //자식객체(ObjectPos들 가져오기)
             BoxCollider2D collider2D = ObjectPos.GetComponent<BoxCollider2D>();
             collider2D.isTrigger = false; //모든 object의 콜라이더istrigger을 끈다.
         }
     }
 
-    private void SetPixelPosition(GameObject Sponpos) //스폰할 픽셀 위치를 결정한다. 
+    //다시 함수 설계중..
+
+    public void CalculateSponPos(string position)
     {
-        FindCollisionObject(Sponpos); //픽셀조각이 이미 생성되어 있는 위치를 판별하기 위해 사용됨.
+        switch(position)
+        {
+            case "x":
+                break;
+            case "y":
+                break;
+            case "z":
+                break;
+        }
     }
+
+  
 
 
     //player tag를 가진 obj와 충돌 시 메세지 발송
@@ -169,20 +182,18 @@ public class SponPixelManager : MonoBehaviour
             //상대방으로부터  PlayerController,Transform 컴포넌트를 가져오는데 성공했다면
             if (playerController != null && Player !=null) //나중에는 if(playerController != null && playerController.playerstate== action)로 수정예정
             {
-                Debug.Log("Playerposition:" + Player.position);
+                Debug.Log("채집");
                 //현재 액션상태인지 확인 후 랜덤 픽셀 젠 메세지 보내기
                 //flowerzenpos의 collision 체크 키기->어떤 꽃이랑 충돌했는지 알 수 있음.
                 FindCollisionObject(other);//other=player collider, 충돌한 꽃의 위치 obj 얻음
-                //GameObject PossibletoSpon = FindCollisionObject(crashedobj); //충돌한 꽃의 위치 obj주위에 스폰 가능한 장소 정보 obj 얻음
 
+                PixelSpon();
 
-                //SponPixel(); 스폰픽셀 메서드 실핼
             }
 
-           // Debug.Log("player,flower collsion");
         }
         else
-            Debug.Log("not collision");
+            Debug.Log("충돌체이름: "+other.tag);
     }
 
     // Update is called once per frame

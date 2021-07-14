@@ -1,0 +1,5 @@
+
+dotbreeder/Library/ArtifactDB
+dotbreeder/Library/SourceAssetDB
+*.log
+dotbreeder/Temp/UnityLockfile

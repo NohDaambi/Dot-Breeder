@@ -15,7 +15,7 @@ public class Deserttile_PlayerMove : MonoBehaviour
     float v = 0;
     bool isHorizonMove;
 
-    public bool isplayermove = false;//ÇÃ·¹ÀÌ¾î ¿òÁ÷ÀÌ´Â°Å¶û ºüÁö°í ³­ ÈÄ ¾Ö´Ï¸ÞÀÌ¼Ç ÃÊ±âÈ­
+    public bool isplayermove = false;
 
     Vector3 dirVec3;
     GameObject scanObject;
@@ -197,7 +197,7 @@ public class Deserttile_PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "ClearFront")
         {
             Debug.Log("Clear");
-            //Å¬¸®¾î ÇÑ ÈÄ °á°ú ½ºÅ©¸³Æ®´Â ÀÌ°÷¿¡
+            //Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½
         }
     }
 }

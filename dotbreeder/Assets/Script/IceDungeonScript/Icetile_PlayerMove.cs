@@ -26,11 +26,11 @@ public class Icetile_PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (scanObject != null)//±âµÕ¿¡ ºÎµúÇûÀ» ¶§´Â ¸ØÃß°í ÀÌµ¿ÇÒ¼öÀÖ°Ô²û
+        if (scanObject != null)//ï¿½ï¿½Õ¿ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½Ìµï¿½ï¿½Ò¼ï¿½ï¿½Ö°Ô²ï¿½
         {
             isWallTouch = true;
         }
-        if (scanObject == null)//±âµÕ¿¡ ºÎµúÈ÷Áö ¾Ê¾ÒÀ» ¶§ °è¼ÓÀÌµ¿ÇÏ°Ô²û
+        if (scanObject == null)//ï¿½ï¿½Õ¿ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ï°Ô²ï¿½
         {
             isWallTouch = false;
         }
@@ -77,7 +77,7 @@ public class Icetile_PlayerMove : MonoBehaviour
         bool hUp = Input.GetButtonUp("Horizontal");
         bool vUp = Input.GetButtonUp("Vertical");
         //Check Horizontal Move
-        //Å° Áßº¹ ¾ÈµÇ°Ô
+        //Å° ï¿½ßºï¿½ ï¿½ÈµÇ°ï¿½
         if (hDown)
         {
             isHorizonMove = true;
@@ -133,7 +133,6 @@ public class Icetile_PlayerMove : MonoBehaviour
 
         //Ray
         Debug.DrawRay(Rigid.position, dirVec3 * 0.7f, new Color(0, 1, 0));
-        //±âµÕÀ» °¨ÁöÇÏ°í scanObject¿¡ ³Ö´Â´Ù.
         RaycastHit2D rayHit = Physics2D.Raycast(Rigid.position, dirVec3, 0.7f, LayerMask.GetMask("Object"));
         if (rayHit.collider != null)
         {
@@ -149,7 +148,7 @@ public class Icetile_PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Å¬¸®¾î");
+            Debug.Log("Å¬ï¿½ï¿½ï¿½ï¿½");
             h = 0;
             v = 0;
         }

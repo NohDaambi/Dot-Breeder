@@ -23,11 +23,22 @@ public class GameManager : MonoBehaviour
             {
                 m_ReadyForInput = false;
                 m_Player.Move(input);
+                IsLevelComplete();
+                
             }
         }
         else
         {
             m_ReadyForInput = true;
         }
+    }
+
+    bool IsLevelComplete() {
+        Box[] boxes = FindObjectsOfType<Box>();
+        foreach (var box in boxes) {
+            if (!box.m_OnCross) return false;
+        }
+        Debug.Log("clear");
+        return true;
     }
 }

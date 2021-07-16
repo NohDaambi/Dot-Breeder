@@ -32,7 +32,6 @@ public class PlayerMove : MonoBehaviour
         bool hUp = Input.GetButtonUp("Horizontal");
         bool vUp = Input.GetButtonUp("Vertical");
         //Check Horizontal Move
-        //Å° Áßº¹ ¾ÈµÇ°Ô
         if (hDown)
         {
             isHorizonMove = true;
@@ -103,7 +102,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Å¬¸®¾î");
+            Debug.Log("Å¬ï¿½ï¿½ï¿½ï¿½");
         }
     }
 }

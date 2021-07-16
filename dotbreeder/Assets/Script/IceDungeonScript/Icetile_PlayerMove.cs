@@ -26,11 +26,11 @@ public class Icetile_PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (scanObject != null)//��տ� �ε����� ���� ���߰� �̵��Ҽ��ְԲ�
+        if (scanObject != null)
         {
             isWallTouch = true;
         }
-        if (scanObject == null)//��տ� �ε����� �ʾ��� �� ����̵��ϰԲ�
+        if (scanObject == null)
         {
             isWallTouch = false;
         }
@@ -77,7 +77,6 @@ public class Icetile_PlayerMove : MonoBehaviour
         bool hUp = Input.GetButtonUp("Horizontal");
         bool vUp = Input.GetButtonUp("Vertical");
         //Check Horizontal Move
-        //Ű �ߺ� �ȵǰ�
         if (hDown)
         {
             isHorizonMove = true;
@@ -103,7 +102,10 @@ public class Icetile_PlayerMove : MonoBehaviour
             anim.SetInteger("vAxisRaw", (int)v);
         }
         else
+        {
             anim.SetBool("isChange", false);
+        }
+            
 
         //Raycast Direction
         if (vDown && v == 1)

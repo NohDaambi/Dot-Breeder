@@ -34,7 +34,7 @@ public class Levels : MonoBehaviour {
         }
         else
         {
-            Debug.Log("Levels imported");
+            //Debug.Log("Levels imported");
         }
         string completeText = textAsset.text;
         string[] lines = completeText.Split(new string[] { "\n" }, System.StringSplitOptions.None);
@@ -44,7 +44,7 @@ public class Levels : MonoBehaviour {
             string line = lines[i];
             if (line.StartsWith(";"))
             {
-                Debug.Log("New level added");
+                //Debug.Log("New level added");
                 m_Levels.Add(new Level());
                 continue;
             }

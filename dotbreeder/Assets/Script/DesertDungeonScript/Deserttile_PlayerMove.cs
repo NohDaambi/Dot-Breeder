@@ -151,10 +151,6 @@ public class Deserttile_PlayerMove : MonoBehaviour
                 rotationAnglez += 0.1f;
                 
             }
-            else if (rotationAnglez > maxrotationAngez || rotationAnglez < -maxrotationAngez)
-            {
-                rotationAnglez = -rotationAnglez;
-            }
             //Wait Update Frame
             yield return new WaitForSeconds(0.01f);
             //yield return null;

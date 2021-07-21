@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
             if (!box.m_OnCross) return false;
         }
         Debug.Log("clear");
+        //if Clear, you go to other scenes
         return true;
     }
 }

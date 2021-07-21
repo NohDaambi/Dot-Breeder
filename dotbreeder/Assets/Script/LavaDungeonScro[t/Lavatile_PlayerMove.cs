@@ -83,26 +83,6 @@ public class Lavatile_PlayerMove : MonoBehaviour
         //Move
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
         Rigid.velocity = moveVec * Speed;
-
-
-        //Ray
-        Debug.DrawRay(Rigid.position, dirVec3 * 0.7f, new Color(0, 1, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(Rigid.position, dirVec3, 0.7f, LayerMask.GetMask("Object"));
-        if (rayHit.collider != null)
-        {
-            scanObject = rayHit.collider.gameObject;
-        }
-        else
-        {
-            scanObject = null;
-        }
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "ClearFront")
-        {
-            Debug.Log("Ŭ����");
-        }
-    }
+    
 }

@@ -150,7 +150,7 @@ public class Icetile_PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Ŭ����");
+            Debug.Log("Clear");
             h = 0;
             v = 0;
         }

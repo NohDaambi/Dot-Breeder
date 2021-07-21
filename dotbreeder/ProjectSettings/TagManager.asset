@@ -9,6 +9,7 @@ TagManager:
   - Box
   - Wall
   - Cross
+  - Plate
   layers:
   - Default
   - TransparentFX

@@ -102,7 +102,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Ŭ����");
+            Debug.Log("Clear");
         }
     }
 }

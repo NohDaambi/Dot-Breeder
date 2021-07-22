@@ -52,15 +52,20 @@ public class SpawnZone : MonoBehaviour
     {
         for(int i = 0; i< transform.childCount;i++)
         {
-            if (sponposes[i] != false) return; //Avtice상태가 아니면 return
-            //Active상태인 구역에는 채집 자원을 젠 해주어야 함. 위치 값을 받기 위해 transform 가져옴
-            Transform activezone = transform.GetChild(i).transform;
-            //해당 위치에 채집자원 젠해주기(채집자원은 SpawnZone의 특성에 따라 랜덤일 수도 아닐 수도 있음)
-            GameObject resources = Instantiate(RandomResources(), activezone.position, activezone.rotation);
-            resources.transform.SetParent(Ingredient.transform, false);
-            //스폰이 되었기 때문에 스폰된 상태로 변경해준다.
-            activezone.GetComponent<RespawnCounter>().spawned_trigger = true ;
-            sponposes[i] = true; //채집자원이 생성되었기 때문에 true로 바꾸어 준다.
+            if (sponposes[i] == false && SpawnState[i] == RESPAWN_STATE.ACTIVE)   //Avtice상태(false)가 아니면 다음 검색으로 넘어간다.
+            {
+                //if(sponposes[i] ==true )아래 실행
+                //Active상태인 구역에는 채집 자원을 젠 해주어야 함. 위치 값을 받기 위해 transform 가져옴
+                Debug.Log("처리중인 sponposes 넘버:" + i);
+                Transform activezone = transform.GetChild(i).transform;
+               
+                //해당 위치에 채집자원 젠해주기(채집자원은 SpawnZone의 특성에 따라 랜덤일 수도 아닐 수도 있음)
+                GameObject resources = Instantiate(RandomResources(), activezone.position, activezone.rotation);
+                resources.transform.SetParent(Ingredient.transform, false);
+                //스폰이 되었기 때문에 스폰된 상태로 변경해준다.
+                activezone.GetComponent<RespawnCounter>().spawned_trigger = true;
+                sponposes[i] = true; //채집자원이 생성되었기 때문에 true로 바꾸어 준다.
+            }
         }
 
     }
@@ -85,11 +90,18 @@ public class SpawnZone : MonoBehaviour
     //Tree는 랜덤이 아닌 고정이다.
     private GameObject StaticResources()
     {
-        return Null;
+        return tree;
     }
     // Update is called once per frame
     void Update()
     {
+        //RespawnCounter 가져오기
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            MySponZone[i] = transform.GetChild(i).gameObject;
+            SpawnState[i] = MySponZone[i].GetComponent<RespawnCounter>().CurrentState;
+        }
+
         SponResources();
     }
 }

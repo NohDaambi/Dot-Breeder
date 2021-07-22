@@ -22,6 +22,7 @@ public class RespawnCounter : MonoBehaviour
     void Start()
     {
         StartCoroutine(State_Actice());
+        spawned_trigger = true;
     }
 
     public IEnumerator State_Actice()
@@ -29,7 +30,8 @@ public class RespawnCounter : MonoBehaviour
         CurrentState = RESPAWN_STATE.ACTIVE;
         GameObject Spawnzone = transform.parent.gameObject; //부모객체 가져오기
         //전체 배열을 관리하는 부모객체의 배열 bool값을 false(스폰 가능한 상태)로 바꾼다.
-        Spawnzone.GetComponent<SpawnZone>().sponposes[Spawnzone.transform.GetSiblingIndex()] = false;
+        Spawnzone.GetComponent<SpawnZone>().sponposes[transform.GetSiblingIndex()] = false;
+        Debug.Log("Getsiblingindex" + Spawnzone.transform.GetSiblingIndex());
         //Active로 바뀌는 순간, SpawnZone에게 채집자원을 젠하라고 요청을 보낸다.
 
         while (CurrentState == RESPAWN_STATE.ACTIVE)

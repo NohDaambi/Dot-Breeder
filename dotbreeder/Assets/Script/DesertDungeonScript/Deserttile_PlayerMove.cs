@@ -153,7 +153,6 @@ public class Deserttile_PlayerMove : MonoBehaviour
             }
             //Wait Update Frame
             yield return new WaitForSeconds(0.01f);
-            //yield return null;
             rotationAngley += 10;
         }
         //End
@@ -193,7 +192,6 @@ public class Deserttile_PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "ClearFront")
         {
             Debug.Log("Clear");
-            //Ŭ���� �� �� ��� ��ũ��Ʈ�� �̰���
         }
     }
 }

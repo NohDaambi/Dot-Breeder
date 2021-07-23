@@ -25,7 +25,6 @@ public class DesertScript : MonoBehaviour
         {
             road.GetComponent<Renderer>().enabled = true;
             unVisibleTime -= Time.deltaTime;
-            //Debug.Log(unVisibleTime);
         }
         else
         {

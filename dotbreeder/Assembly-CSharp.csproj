@@ -46,8 +46,7 @@
      <Compile Include="Assets\Tilemap\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
      <Compile Include="Assets\Script\ForestDungeonScript\Player.cs" />
      <Compile Include="Assets\Script\DesertDungeonScript\Deserttile_PlayerMove.cs" />
-     <Compile Include="Assets\Script\ForestDungeonScript\GameManager.cs" />
-     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropCollision.cs" />
+     <Compile Include="Assets\Script\ForestDungeonScript\ForestDungeonManager.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Isometric Rule Tile\IsometricRuleTile.cs" />
      <Compile Include="Assets\Script\ForestDungeonScript\Box.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Hexagonal Rule Tile\HexagonalRuleTile.cs" />
@@ -60,6 +59,11 @@
      <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
      <Compile Include="Assets\Script\ForestDungeonScript\Levels.cs" />
      <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropManager.cs" />
+     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropBrown.cs" />
+     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropBlue.cs" />
+     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropGreen.cs" />
+     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropOrange.cs" />
+     <Compile Include="Assets\Script\LavaDungeonScro[t\WaterDropWhite.cs" />
      <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
      <None Include="Assets\Resources\Levels.txt" />
      <None Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />

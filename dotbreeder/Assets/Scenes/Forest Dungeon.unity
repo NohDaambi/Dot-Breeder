@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788f643370224424787b69175823a028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CurrentLevel: 0
+  m_CurrentLevel: 1
   m_LevelElement:
   - m_Character: '#'
     m_Prefab: {fileID: 5892416235765580857, guid: 25ef51ac360924c4faa9401d4c4ccd77, type: 3}

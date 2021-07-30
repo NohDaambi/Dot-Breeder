@@ -101,6 +101,7 @@ m_PackageAssets:
         - 6.0.3
         - 6.0.4
         - 7.0.0-pre.2
+        - 7.0.0-pre.3
         compatible:
         - 5.0.5
         - 5.0.6
@@ -293,6 +294,7 @@ m_PackageAssets:
         - 5.0.4
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.1.0
@@ -3408,6 +3410,7 @@ m_PackageAssets:
         - 5.0.0
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.0.3

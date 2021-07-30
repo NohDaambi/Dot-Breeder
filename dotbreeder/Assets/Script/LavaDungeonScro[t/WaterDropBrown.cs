@@ -9,7 +9,7 @@ public class WaterDropBrown : MonoBehaviour
     public bool isPlayerContactable;
     public bool isWaterDropExit;
     public static float waterDropBrown_unVisibleTime;
-
+    public static bool isConectWaterDropBrown;
     private float brownDelayTime;
 
     private void Awake() {
@@ -20,6 +20,7 @@ public class WaterDropBrown : MonoBehaviour
         brownDelayTime = 0.7f;
         isPlayerContactable = false;
         isWaterDropExit = true;
+        isConectWaterDropBrown = false;
     }
     public bool TruePlayerContactable()
     {
@@ -42,13 +43,17 @@ public class WaterDropBrown : MonoBehaviour
         }
     }
     
-    private void Update() {
+    private void FixedUpdate() {
         //bool값 하나 더 줘서 벗어나면 참 안 벗어나면 펄스로 해서 펄스일때 계속 해줄 예정
         //예: isPlayerContactable && isWaterDropExit 하면 저 위에꺼 넣으멸 될듯
-        //Debug.Log("부딪히는중");
         if (isWaterDropExit == false && isPlayerContactable == true)
         {
             waterDropBrown_unVisibleTime = brownDelayTime;
+            isConectWaterDropBrown = true;
+        }
+        else
+        {
+            isConectWaterDropBrown = false;
         }
     }
 

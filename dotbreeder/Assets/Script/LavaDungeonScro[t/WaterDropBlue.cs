@@ -9,7 +9,7 @@ public class WaterDropBlue : MonoBehaviour
     public bool isPlayerContactable;
     public bool isWaterDropExit;
     public static float waterDropBlue_unVisibleTime;
-
+    public static bool isConectWaterDropBlue;
     private float blueDelayTime;
 
     private void Awake() {
@@ -20,6 +20,7 @@ public class WaterDropBlue : MonoBehaviour
         blueDelayTime = 2.0f;
         isPlayerContactable = false;
         isWaterDropExit = true;
+        isConectWaterDropBlue = false;
     }
     public bool TruePlayerContactable()
     {
@@ -45,10 +46,14 @@ public class WaterDropBlue : MonoBehaviour
     private void Update() {
         //bool값 하나 더 줘서 벗어나면 참 안 벗어나면 펄스로 해서 펄스일때 계속 해줄 예정
         //예: isPlayerContactable && isWaterDropExit 하면 저 위에꺼 넣으멸 될듯
-        //Debug.Log("부딪히는중");
         if (isWaterDropExit == false && isPlayerContactable == true)
-        {
+        {   //플레이어 접시와 물방울이 닿았을때의 event는 이곳에 작성
             waterDropBlue_unVisibleTime = blueDelayTime;
+            isConectWaterDropBlue = true;
+        }
+        else
+        {
+            isConectWaterDropBlue = false;
         }
     }
 

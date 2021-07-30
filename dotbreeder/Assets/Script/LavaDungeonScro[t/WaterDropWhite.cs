@@ -9,7 +9,7 @@ public class WaterDropWhite : MonoBehaviour
     public bool isPlayerContactable;
     public bool isWaterDropExit;
     public static float waterDropWhite_unVisibleTime;
-
+    public static bool isConectWaterDropWhite;
     private float whiteDelayTime;
 
     private void Awake() {
@@ -20,6 +20,7 @@ public class WaterDropWhite : MonoBehaviour
         whiteDelayTime = 1.2f;
         isPlayerContactable = false;
         isWaterDropExit = true;
+        isConectWaterDropWhite = false;
     }
     public bool TruePlayerContactable()
     {
@@ -49,6 +50,11 @@ public class WaterDropWhite : MonoBehaviour
         if (isWaterDropExit == false && isPlayerContactable == true)
         {
             waterDropWhite_unVisibleTime = whiteDelayTime;
+            isConectWaterDropWhite = true;
+        }
+        else
+        {
+            isConectWaterDropWhite = false;
         }
     }
 

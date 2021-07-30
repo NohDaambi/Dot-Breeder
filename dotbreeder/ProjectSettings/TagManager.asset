@@ -10,6 +10,11 @@ TagManager:
   - Wall
   - Cross
   - Plate
+  - SqureBlue
+  - SqureBrown
+  - SqureGreen
+  - SqureOrange
+  - ActivePortal
   layers:
   - Default
   - TransparentFX

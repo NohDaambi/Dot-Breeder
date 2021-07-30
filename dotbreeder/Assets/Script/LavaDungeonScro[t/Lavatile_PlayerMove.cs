@@ -84,5 +84,11 @@ public class Lavatile_PlayerMove : MonoBehaviour
         Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
         Rigid.velocity = moveVec * Speed;
     }
-    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("ActivePortal"))
+        {
+            Debug.Log("Clear");
+        }
+    }
 }

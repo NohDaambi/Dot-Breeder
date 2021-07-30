@@ -9,7 +9,7 @@ public class WaterDropOrange : MonoBehaviour
     public bool isPlayerContactable;
     public bool isWaterDropExit;
     public static float waterDropOrange_unVisibleTime;
-
+    public static bool isConectWaterDropOrange;
     private float orangeDelayTime;
 
     private void Awake() {
@@ -20,6 +20,7 @@ public class WaterDropOrange : MonoBehaviour
         orangeDelayTime = 1.0f;
         isPlayerContactable = false;
         isWaterDropExit = true;
+        isConectWaterDropOrange = false;
     }
     public bool TruePlayerContactable()
     {
@@ -49,6 +50,11 @@ public class WaterDropOrange : MonoBehaviour
         if (isWaterDropExit == false && isPlayerContactable == true)
         {
             waterDropOrange_unVisibleTime = orangeDelayTime;
+            isConectWaterDropOrange = true;
+        }
+        else
+        {
+            isConectWaterDropOrange = false;
         }
     }
 

@@ -3,7 +3,30 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Flower
+  - Rock
+  - FoRight
+  - FoLeft
+  - RightToMain
+  - GoOcene
+  - Right
+  - GoForest
+  - Left
+  - OcLeft
+  - OcRight
+  - GoDesert
+  - DeLeft
+  - DeRight
+  - GoVolcano
+  - VoLeft
+  - VoRight
+  - BackOcene
+  - BackDesert
+  - Npc
+  - R
+  - G
+  - B
   layers:
   - Default
   - TransparentFX
@@ -11,7 +34,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Object
   - 
   - 
   - 

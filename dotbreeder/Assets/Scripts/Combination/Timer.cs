@@ -52,7 +52,7 @@ public class Timer : MonoBehaviour
             CombineEnded();
 
             timerText.text = textTIme;
-            timerSlider.value = combineTIme * combine.produceNum - timeFlow + transTime; // 1 2 3 4 5 6 7 8 9 
+            timerSlider.value = combineTIme * combine.produceNum - timeFlow + transTime * combine.produceNum; // 1 2 3 4 5 6 7 8 9 
 
             if(timeFlow > 0)
                 isPlus = true;

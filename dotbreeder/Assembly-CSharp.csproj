@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\MinIGameScripts\MiniGame.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Isometric Rule Tile\IsometricRuleTile.cs" />
     <Compile Include="Assets\Scripts\StartScene\Diary.cs" />
+    <Compile Include="Assets\Scripts\Combination\UnlockSystem.cs" />
     <Compile Include="Assets\Scripts\Combination\Combination.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Hexagonal Rule Tile\HexagonalRuleTile.cs" />
     <Compile Include="Assets\Scripts\MinIGameScripts\CountDown.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\ScoreScripts\Gscore.cs" />
     <Compile Include="Assets\Scripts\Manager\TabManager.cs" />
-    <Compile Include="Assets\Scripts\Combination\UnlockSystem.cs" />
     <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
     <None Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <Reference Include="UnityEngine">

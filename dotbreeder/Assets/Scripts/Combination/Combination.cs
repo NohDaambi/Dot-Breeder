@@ -52,80 +52,132 @@ public class Combination : MonoBehaviour
     public int maxG = 1;
     public int maxB = 1;
 
+    //조합기 아이템 목록 버튼
+    public Button[] UnlockButton = new Button[6];
+    public Text[] UnlockBtnText = new Text[6];        
+
+    //잠금 버튼
+    public Button[] LockButton = new Button[6];
+    public Text[] LockBtnText = new Text[6];
 
     //조합중인가?, 조합이 끝나거나 취소할 때 false, 조합버튼 누를때 true
     public bool isCombining;
 
+    //조합기 페이지
+    public Text pageText;
+    public int pageNum = 1;
+    public int pageMax;
+
     public int DotItem;
 
     private static bool combineExist;
-
-    public void Awake()
-    {
-
-        // 씬 이동 간 중복 방지        
-        if (!combineExist)
-        {
-            combineExist = true;
-            DontDestroyOnLoad(gameObject);
-
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
+        
     void Update()
     {
         if(Input.GetButtonDown("Cancel"))
         {
             CombineChild.SetActive(false);
-            Combining.SetActive(false);
+            //Combining.SetActive(false);
             Manager.isAction = false;
         }
+
+        if(isCombining)
+        {
+            //ineractable로 해금 시스템도 만들기
+            //이거는 조합중일때 다른 버튼 클릭 제한
+            for (int i = 0; i < UnlockButton.Length; i++)
+            {
+                UnlockButton[i].interactable = false;                
+            }
+        }
+        else if(!isCombining)
+        {
+            for (int i = 0; i < UnlockButton.Length; i++)
+            {
+                UnlockButton[i].interactable = true;
+            }
+        }
+                
+        pageText.text = pageNum.ToString()+ " / " + pageMax.ToString();
+
+        //1페이지
+        if(pageNum == 1)
+        {
+            UnlockBtnText[0].text = "1레벨 통나무집";
+            UnlockBtnText[1].text = "1레벨 요람침대";
+            UnlockBtnText[2].text = "1레벨 벽난로";
+            UnlockBtnText[3].text = "2레벨 테이블 톱";
+            UnlockBtnText[4].text = "2레벨 아이템";
+            UnlockBtnText[5].text = "2레벨 아이템";            
+        }
+        //2페이지
+        if(pageNum == 2)
+        {
+            UnlockBtnText[0].text = "3레벨 사탕";
+            UnlockBtnText[1].text = "3레벨 아이템";
+            UnlockBtnText[2].text = "3레벨 아이템";
+            UnlockBtnText[3].text = "4레벨 아이템";
+            UnlockBtnText[4].text = "4레벨 아이템";
+            UnlockBtnText[5].text = "4레벨 아이템";            
+        }
+        //3페이지~~
+        if (pageNum == 3)
+        {
+            UnlockBtnText[0].text = "1레벨 건축물";
+            UnlockBtnText[1].text = "2레벨 건축물";
+            UnlockBtnText[2].text = "3레벨 건축물";
+            UnlockBtnText[3].text = "4레벨 건축물";
+            UnlockBtnText[4].text = " ";
+            UnlockBtnText[5].text = " ";            
+        }
+
+
+    }
+    //버튼 클릭 시
+    public void BtnClick()
+    {
+        CombineAnim.SetTrigger("isButton");
+        if (!isCombining)
+            CombineChild.SetActive(true);
+        else if (isCombining)
+        {            
+            Combining.SetActive(true);            
+        }
+        ChildAnim.SetTrigger("isShow");
     }
 
     public void Button1()
     {
-        CombineAnim.SetTrigger("isButton");
-        if(!isCombining)
-            CombineChild.SetActive(true);
-        else if(isCombining)
-            Combining.SetActive(true);
-        ChildAnim.SetTrigger("isShow");
-        TreeHouse();
+        BtnClick();
+        //숫자하나 할당해서 1페이지일경우 뭐 건축물, 2페이지 아이템 3페이지 아이템2 등등 넘기기?
+        if (pageNum == 1)
+            TreeHouse();
+        else if (pageNum == 2)
+            Candy();
     }
     public void Button2()
     {
-        CombineAnim.SetTrigger("isButton");
-        if (!isCombining)
-            CombineChild.SetActive(true);
-        else if (isCombining)
-            Combining.SetActive(true);
-        ChildAnim.SetTrigger("isShow");
-        Bed();
+        BtnClick();
+        if (pageNum == 1)
+            Bed();
+        //else if (pageNum == 2)
     }
     public void Button3()
     {
-        CombineAnim.SetTrigger("isButton");
-        if (!isCombining)
-            CombineChild.SetActive(true);
-        else if (isCombining)
-            Combining.SetActive(true);
-        ChildAnim.SetTrigger("isShow");
-        Stove();
+        BtnClick();
+        if (pageNum == 1)
+            Stove();
+        //else if (pageNum == 2)
     }
     public void Button4()
     {
-        CombineAnim.SetTrigger("isButton");
-        if (!isCombining)
-            CombineChild.SetActive(true);
-        else if (isCombining)
-            Combining.SetActive(true);
-        ChildAnim.SetTrigger("isShow");
-        Table();
+        BtnClick();
+        if (pageNum == 1)
+            Table();
+        //else if (pageNum == 2) 
     }
+
+    //제작 버튼
     public void ProduceButton()
     {
         if (Manager.Rcount >= RequiredR && Manager.Gcount >= RequiredG && Manager.Bcount >= RequiredB)
@@ -147,12 +199,10 @@ public class Combination : MonoBehaviour
         else if(Manager.Rcount <= RequiredR || Manager.Gcount <= RequiredG || Manager.Bcount <= RequiredB)
         {
             ChildAnim.SetTrigger("isNotFull");
-            Debug.Log("재료가 부족합니다!");
         }
 
-        //제작하는 함수(시간,증가)
-
     }
+    //시간 줄이기
     public void TimeReduce()
     {
         //1버튼 1초 감소
@@ -162,6 +212,7 @@ public class Combination : MonoBehaviour
             timer.transTime++;
         }
     }
+    //조합 취소
     public void CombineCancel()
     {
         Combining.SetActive(false);
@@ -186,6 +237,7 @@ public class Combination : MonoBehaviour
         
 
     }
+    //아이템 넘기기
     public void GiveItem()
     {
         Combining.SetActive(false);
@@ -197,6 +249,7 @@ public class Combination : MonoBehaviour
         //도트한테 해당 아이템 할당하기, 이름불러와서 그 값 할당
         DotItem += produceNum;
     }
+    //최대로 조합하기
     public void Max()
     {
         if (Manager.Rcount >= RequiredR && Manager.Gcount >= RequiredG && Manager.Bcount >= RequiredB)
@@ -205,14 +258,25 @@ public class Combination : MonoBehaviour
             maxG = Manager.Gcount / RequiredG;
             maxB = Manager.Bcount / RequiredB;
 
-            if (maxR == maxG && maxR == maxB && maxG == maxB)
+            if (maxR <= maxG && maxR <= maxB)
             {
                 produceNum = maxR;
                 ProduceNum.text = produceNum.ToString();
             }
-     
+            if (maxG <= maxR && maxG <= maxB)
+            {
+                produceNum = maxG;
+                ProduceNum.text = produceNum.ToString();
+            }
+            if (maxB <= maxG && maxB <= maxR)
+            {
+                produceNum = maxB;
+                ProduceNum.text = produceNum.ToString();
+            }
+
         }
     }
+    //최대에서 반 조합하기
     public void Half()
     {
         if (Manager.Rcount >= RequiredR && Manager.Gcount >= RequiredG && Manager.Bcount >= RequiredB)
@@ -221,13 +285,35 @@ public class Combination : MonoBehaviour
             maxG = Manager.Gcount / RequiredG;
             maxB = Manager.Bcount / RequiredB;
 
-            if (maxR == maxG && maxR == maxB && maxG == maxB)
+            if (maxR <= maxG && maxR <= maxB)
             {
                 produceNum = maxR / 2;
                 ProduceNum.text = produceNum.ToString();
             }
+            if (maxG <= maxR && maxG <= maxB)
+            {
+                produceNum = maxG / 2;
+                ProduceNum.text = produceNum.ToString();
+            }
+            if (maxB <= maxG && maxB <= maxR)
+            {
+                produceNum = maxB / 2;
+                ProduceNum.text = produceNum.ToString();
+            }
 
         }
+    }
+    //페이지 왼쪽 버튼
+    public void LeftBtn()
+    {
+        if(pageNum > 1)
+            pageNum--;
+    }
+    //페이지 오른쪽 버튼
+    public void RightBtn()
+    {
+        if(pageNum < pageMax)
+            pageNum++;
     }
 
 
@@ -240,7 +326,7 @@ public class Combination : MonoBehaviour
         GetHouseTime = 20;
         timer.combineTIme = GetHouseTime;
 
-        //조합기 텍스트
+        //조합기 텍스트        
         Title.text = "통나무집";
         time.text = "제작 시간 : " + GetHouseTime.ToString();
         //image.sprite = 스프라이트 가져와서 각 할당
@@ -273,7 +359,7 @@ public class Combination : MonoBehaviour
         RequiredB = 1;
         GetBedTime = 40;
         timer.combineTIme = GetBedTime;
-
+                
         Title.text = "라탄 요람침대";
         time.text = "제작 시간 : " + GetBedTime.ToString();
         //image.sprite = 스프라이트 가져와서 각 할당
@@ -306,7 +392,7 @@ public class Combination : MonoBehaviour
         RequiredB = 2;
         GetStoveTime = 50;
         timer.combineTIme = GetStoveTime;
-
+                
         Title.text = "벽난로";
         time.text = "제작 시간 : " + GetStoveTime.ToString();
         //image.sprite = 스프라이트 가져와서 각 할당
@@ -339,7 +425,7 @@ public class Combination : MonoBehaviour
         RequiredB = 3;
         GetTableTime = 70;
         timer.combineTIme = GetTableTime;
-
+                
         Title.text = "테이블 톱";
         time.text = "제작 시간 : " + GetTableTime.ToString();
         //image.sprite = 스프라이트 가져와서 각 할당
@@ -353,6 +439,40 @@ public class Combination : MonoBehaviour
         timeIng.text = "제작 시간 : " + GetTableTime.ToString();
         //imageIng.sprtie = ~~
       
+        if (Manager.Rcount >= RequiredR && Manager.Gcount >= RequiredG && Manager.Bcount >= RequiredB)
+        {
+            produceNum = 1;
+        }
+        else
+        {
+            produceNum = 0;
+        }
+
+        ProduceNum.text = produceNum.ToString();
+    }
+    public void Candy()
+    {
+        RequiredR = 1;
+        RequiredG = 1;
+        RequiredB = 1;
+        GetHouseTime = 10;
+        timer.combineTIme = GetHouseTime;
+
+        //조합기 텍스트        
+        Title.text = "사탕";
+        time.text = "제작 시간 : " + GetHouseTime.ToString();
+        //image.sprite = 스프라이트 가져와서 각 할당
+        Content.text = "달달한 사탕! 이빨 썩어,,";
+        R.text = Manager.Rcount + " / " + RequiredR;
+        G.text = Manager.Gcount + " / " + RequiredG;
+        B.text = Manager.Bcount + " / " + RequiredB;
+
+        //조합중 텍스트
+        TitleIng.text = "사탕";
+        timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
+        //imageIng.sprtie = ~~
+
+
         if (Manager.Rcount >= RequiredR && Manager.Gcount >= RequiredG && Manager.Bcount >= RequiredB)
         {
             produceNum = 1;

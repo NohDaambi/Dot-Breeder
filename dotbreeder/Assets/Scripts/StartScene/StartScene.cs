@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartScene : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class StartScene : MonoBehaviour
 
     public GameObject ExitBox;
     public GameObject DiaryBox;
+    public GameObject StartBox;
+
+    public Button ContinueBtn;
+
+    public 
 
     void Update()
     {
@@ -17,16 +23,37 @@ public class StartScene : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
                 ExitBox.SetActive(false);
         }
+        if (StartBox.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                StartBox.SetActive(false);
+        }
     }
 
 
     public void GameStart()
     {
+        //새로하기 이어하기 팝업창 액티브
+        StartBox.SetActive(true);
+
         //저장한 기록이 있다면 저장기록 불러오기
         if (PlayerPrefs.HasKey("PlayerX"))
-            Manager.GameLoad();
-        else //아니면 걍 숲-1
-            SceneManager.LoadScene(1);
+            ContinueBtn.interactable = true;
+        else
+            ContinueBtn.interactable = false;
+
+
+    }
+
+    public void NewGame()
+    {
+        //숲-1 
+        SceneManager.LoadScene(1);
+    }
+    public void ContinueGame()
+    {        
+        //저장값
+        Manager.GameLoad();    
     }
 
     public void GameExit()

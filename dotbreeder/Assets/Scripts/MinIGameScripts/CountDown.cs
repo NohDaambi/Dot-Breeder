@@ -11,6 +11,7 @@ public class CountDown : MonoBehaviour
     public Text countDownText;
     public MiniGame miniGame;
     public GameObject GameOver;
+    public GameObject MiniGame;
     public GameManager manger;
 
 
@@ -34,32 +35,42 @@ public class CountDown : MonoBehaviour
 
         countDownText.text = Mathf.Round(setTime).ToString();
 
-        
     }
 
     public void Restart()
     {
-        //시간 흐름
-        Time.timeScale = 1;
-
-        SceneManager.LoadScene("MiniGame");        
+        InitGame();
     }
 
     public void Exit()
     {
-        //manger.isAction = false;
-        GameOver.SetActive(false);
+        MiniGame.SetActive(false);
+        InitGame();
+        manger.isAction = false;
 
-        if (!PlayerPrefs.HasKey("SceneNum"))
-            return;
-
-        int ScNum = PlayerPrefs.GetInt("SceneNum");
-        
-        //씬 번호 저장되어있는 곳으로 이동시키기
-        SceneManager.LoadScene(ScNum);
-
+        //점수 할당
     }
 
+    public void InitGame()
+    {
+        setTime = 10;
+        //시간 흐름
+        Time.timeScale = 1;
+
+        miniGame.isAlive = true;
+        GameOver.SetActive(false);
+
+        miniGame.InputInit();
+        miniGame.AnswerInit();
+        miniGame.ResultInit();
+        miniGame.InputTextInit();
+        miniGame.InputIndex = 0;
+        miniGame.AnswerIndex = 0;
+        miniGame.InputNum = 0;
+        miniGame.Score = 0;
+
+        miniGame.InitKey();
+    }
 
 
 }

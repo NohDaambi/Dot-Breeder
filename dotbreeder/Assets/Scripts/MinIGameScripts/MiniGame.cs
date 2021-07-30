@@ -46,15 +46,14 @@ public class MiniGame : MonoBehaviour
     public AudioClip clip1;
     public AudioClip clip2;
 
-    public GameManager manager;
+    public GameManager manager;    
 
     public bool isAlive = true;
     public int Score = 0;
     int random = 0;
-    int InputIndex = 0;
-    int AnswerIndex = 0;
-
-    int InputNum = 0;
+    public int InputIndex = 0;
+    public int AnswerIndex = 0;
+    public int InputNum = 0;
 
     void Awake()
     {
@@ -76,28 +75,28 @@ public class MiniGame : MonoBehaviour
         {
             
             //방향키 입력값
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 InputKeyArr[InputIndex] = "Up";
                 InputIndex++;
                 InputKey();
                 SoundManager.instance.SFXPlay("Button", clip);
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                 InputKeyArr[InputIndex] = "Down";
                 InputIndex++;
                 InputKey();
                 SoundManager.instance.SFXPlay("Button", clip);
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.A))
             {
                 InputKeyArr[InputIndex] = "Left";
                 InputIndex++;
                 InputKey();
                 SoundManager.instance.SFXPlay("Button", clip);
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.D))
             {
                 InputKeyArr[InputIndex] = "Right";
                 InputIndex++;
@@ -110,7 +109,6 @@ public class MiniGame : MonoBehaviour
             {
                 InputIndex = 0;
                 InitKey(); //초기화 
-
             }
 
             ScoreText.text = Score.ToString();

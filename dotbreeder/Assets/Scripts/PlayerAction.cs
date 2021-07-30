@@ -32,20 +32,6 @@ public class PlayerAction : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        // 씬 이동 간 중복 방지        
-        if (!PlayerExist)
-            { 
-            PlayerExist = true;
-            DontDestroyOnLoad(gameObject);            
-    
-            }
-        else
-            {
-            Destroy(gameObject);           
-
-            }
-
-
         Rigid = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
     }
@@ -101,47 +87,44 @@ public class PlayerAction : MonoBehaviour
         else if (hDown && h == 1) // right
             DirVec = Vector3.right;
 
-        //Scan Object && Interaction
+        //Scan Object && Interaction 채집
         if (Input.GetMouseButtonDown(0) && scanObject != null)
         {
             //상호작용 키 딜레이
             if (!isDelay)
             {
-                isDelay = true;
-                //코루틴 
-                StartCoroutine(CountAttackDelay());
-
                 Manager.Forage();
-                Manager.Action(scanObject);
 
-                //Npc일 경우에는 애니메이션 사운드 제한
-                if (scanObject.tag != "Npc")
+                //채집 시에만 사운드, 무한클릭방지
+                if (scanObject.tag == "R" || scanObject.tag == "G" || scanObject.tag == "B")
                 {
+                    isDelay = true;
+                    //코루틴 
+                    StartCoroutine(CountAttackDelay());
+
                     Anim.SetTrigger("Attack");
                     //상호작용 사운드 재생            
                     SoundManager.instance.SFXPlay("Attack", clip);
-                }
-                               
-
-    
+                }          
             }
             else
             {
-                Debug.Log("공격 딜레이");
+                Debug.Log("클릭 딜레이");
             }
-
         }
-
+        //Scan Object && Interaction 그 외 상호작용
+        if (Input.GetKeyDown(KeyCode.E) && scanObject != null)
+        {
+                Manager.Interaction();
+                Manager.Action(scanObject); 
+        }
         //코루틴
         IEnumerator CountAttackDelay()
         {
             //0.3초 딜레이
             yield return new WaitForSecondsRealtime(0.3f);
             isDelay = false;
-        }
-        
-
-
+        }      
     }
     void FixedUpdate()
     {

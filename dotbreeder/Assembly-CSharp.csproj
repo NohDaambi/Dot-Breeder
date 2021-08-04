@@ -60,7 +60,7 @@
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\WaterDropGreen.cs" />
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\Lavatile_PlayerMove.cs" />
      <Compile Include="Assets\Scripts\DesertDungeonScript\CameraManager.cs" />
-     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\DefaltPlayerMove\PlayerMove.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
      <Compile Include="Assets\Scripts\ForestDungeonScript\Levels.cs" />

@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class BoundedNPC : MonoBehaviour
 {
-    public enum NpcState
-    {
-        Idle = 0,   //대기 상태
-        Walk        //이동 상태 Walk = 1;
-    }
-    public NpcState m_NpcState;
     private Vector3 directionVector;
     private Transform myTransform;
     public float speed;
@@ -30,7 +24,6 @@ public class BoundedNPC : MonoBehaviour
 
     void Start()
     {
-        m_NpcState = NpcState.Idle;
         isMoving = false;
         moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
         waitTimeSeconds = Random.Range(minMoveTime, maxMoveTime);

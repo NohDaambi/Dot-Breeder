@@ -36,13 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\NpcRandomMovementScript\NavAgentScript.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Random Tile\Scripts\RandomTile.cs" />
      <Compile Include="Assets\Tilemap\GridInformation\Scripts\GridInformation.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
      <Compile Include="Assets\Scripts\IceDungeonScript\Icetile_PlayerMove.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
      <Compile Include="Assets\Scripts\ForestDungeonScript\LevelBuilder.cs" />
+     <Compile Include="Assets\Scripts\NPC\BoundedNPC.cs" />
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\WaterDropWhite.cs" />
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\WaterDropBrown.cs" />
      <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />

@@ -223,14 +223,14 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 1.9999748, y: -2.00001}
+    - - {x: 1.9999708, y: -2}
       - {x: 1.9999708, y: 2}
       - {x: -2, y: 1.9999708}
-      - {x: -1.9999748, y: -2.00001}
-    - - {x: 0.99999, y: -0.9999606}
-      - {x: -1, y: -0.9999606}
+      - {x: -1.9999708, y: -2}
+    - - {x: 1, y: -0.9999706}
+      - {x: -1, y: -0.9999706}
       - {x: -0.9999706, y: 1}
-      - {x: 0.99999, y: 0.9999706}
+      - {x: 1, y: 0.9999706}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!19719996 &869619845
@@ -523,26 +523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1278596210507795264, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596210507795264, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596210507795264, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596210507795265, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596210507795267, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 1278596210755248720, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
       propertyPath: m_Name
       value: NPC Holder
@@ -590,26 +570,6 @@ PrefabInstance:
     - target: {fileID: 1278596210755248723, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596211261867859, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596211261867859, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: maxMoveTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596211261867859, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: maxWaitTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1278596211261867868, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2757298984738394219, guid: ad1960fc8401b164a99fb43765b6f535, type: 3}
-    - target: {fileID: 1278596211261867868, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff5474253f034506944421ac26d0dd8, type: 3}

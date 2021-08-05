@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1110; Version 2009; 64bit' Language: 'ko' Physical Memory: 32687 MB
+OS: 'Windows 10 Pro; OS build 19043.1151; Version 2009; 64bit' Language: 'ko' Physical Memory: 32687 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Unity/Dot-Breeder/dotbreeder
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58113
+59227
 Successfully changed project path to: C:/Unity/Dot-Breeder/dotbreeder
 C:/Unity/Dot-Breeder/dotbreeder
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 29.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 30.15 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -35,37 +35,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56856
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001248 seconds.
+Registered in 0.001282 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 30.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 30.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.695 seconds
+- Completed reload, in  0.703 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002604 seconds.
+Registered in 0.002612 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 29.82 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 29.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.757 seconds
+- Completed reload, in  0.758 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2102 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 96.6 MB.
+System memory in use before: 96.7 MB.
 System memory in use after: 96.6 MB.
 
 Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2537.
-Total: 1.564400 ms (FindLiveObjects: 0.154900 ms CreateObjectMapping: 0.066900 ms MarkObjects: 1.258600 ms  DeleteObjects: 0.083400 ms)
+Total: 1.544500 ms (FindLiveObjects: 0.145400 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.249700 ms  DeleteObjects: 0.085300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -79,170 +79,294 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/NPC
-  artifactKey: Guid(8971eece68224a1468cc3791b0584ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/NPC using Guid(8971eece68224a1468cc3791b0584ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d85c4f9157edbca338a5bfbae4556f6') in 0.002836 seconds 
-  Import took 0.004915 seconds .
+  path: Assets/Sprites/WaterDropWhite.png
+  artifactKey: Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropWhite.png using Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d9bbba02420ffdd80ed2823bb784f8') in 0.088679 seconds 
+  Import took 0.090882 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000139 seconds.
-  path: Assets/Scripts/DefaltPlayerMove
-  artifactKey: Guid(dbe6065768b32a94a97947ffbf2ab763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/DefaltPlayerMove using Guid(dbe6065768b32a94a97947ffbf2ab763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3efc7aba7dac2d9bec6e5d40241d4729') in 0.004176 seconds 
-  Import took 0.006293 seconds .
+  Time since last request: 0.000111 seconds.
+  path: Assets/Sprites/WaterDropBrown.png
+  artifactKey: Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBrown.png using Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca7129842a319749b647f1abbbc4be4') in 0.007338 seconds 
+  Import took 0.009434 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 85.867025 seconds.
-  path: Assets/Prefabs/SquareBlue.prefab
-  artifactKey: Guid(eac22cd86d741994e807325817faf5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SquareBlue.prefab using Guid(eac22cd86d741994e807325817faf5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248f8748683d3fb96bf6a37217cc0f31') in 0.063694 seconds 
-  Import took 0.066131 seconds .
+  Time since last request: 0.000111 seconds.
+  path: Assets/Sprites/WaterDropOrange.png
+  artifactKey: Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropOrange.png using Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725a283fc7fdd03cc6bba610ef23031e') in 0.008119 seconds 
+  Import took 0.010308 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000109 seconds.
-  path: Assets/Prefabs/SquareOrange.prefab
-  artifactKey: Guid(ada62fdb68198db45ba07d98b48468ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SquareOrange.prefab using Guid(ada62fdb68198db45ba07d98b48468ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03b6a47658beb58d26cf31037937357e') in 0.007872 seconds 
-  Import took 0.010146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000120 seconds.
-  path: Assets/Prefabs/SquareGreen.prefab
-  artifactKey: Guid(f5cf41efd50fc1a4e88a40f1f84b9545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SquareGreen.prefab using Guid(f5cf41efd50fc1a4e88a40f1f84b9545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4da1e25eb9d62a9ddd75699e0771c45') in 0.007521 seconds 
-  Import took 0.009964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000110 seconds.
-  path: Assets/Prefabs/SquareBrown.prefab
-  artifactKey: Guid(0f199502e3ed4ee4fa75169f95eee28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/SquareBrown.prefab using Guid(0f199502e3ed4ee4fa75169f95eee28e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '121e76a2268bb005817d5c9c1575db64') in 0.007187 seconds 
-  Import took 0.009594 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.866942 seconds.
-  path: Assets/Prefabs/WaterDropBlue.prefab
-  artifactKey: Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WaterDropBlue.prefab using Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323d078fd9b9c02337c60b52227cd34c') in 0.005315 seconds 
-  Import took 0.007765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000100 seconds.
-  path: Assets/Prefabs/WaterDropGreen.prefab
-  artifactKey: Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WaterDropGreen.prefab using Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2158aa7b6b063e8a4490b86b5563aaa3') in 0.002300 seconds 
-  Import took 0.004406 seconds .
+  Time since last request: 0.000102 seconds.
+  path: Assets/Sprites/WaterDropGreen.png
+  artifactKey: Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropGreen.png using Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a58c2aba415c4f3a2080ea5ef66aa09') in 0.007016 seconds 
+  Import took 0.009141 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000099 seconds.
-  path: Assets/Prefabs/WaterDropBrown.prefab
-  artifactKey: Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WaterDropBrown.prefab using Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3fd65b54c15eddb3df19c79fdd0dc32') in 0.005263 seconds 
-  Import took 0.007480 seconds .
+  path: Assets/Sprites/WaterDropBlue.png
+  artifactKey: Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue.png using Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df8df2aee54d8f6d6ecc13f1192cd17') in 0.007100 seconds 
+  Import took 0.009203 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000096 seconds.
+  Time since last request: 19.737853 seconds.
+  path: Assets/Sprites/WaterDropBlue.png
+  artifactKey: Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue.png using Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c557a92e7f8d8f7b7f55f5dc3733ab') in 0.020753 seconds 
+  Import took 0.023102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/Sprites/WaterDropWhite.png
+  artifactKey: Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropWhite.png using Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3bf6f960734767c57904f7e342f0d17') in 0.007190 seconds 
+  Import took 0.009340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Sprites/WaterDropBrown.png
+  artifactKey: Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBrown.png using Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aaf49023a79dde66bd0fa7d494e723f') in 0.010661 seconds 
+  Import took 0.012819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Sprites/WaterDropOrange.png
+  artifactKey: Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropOrange.png using Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b55ca8900e3c657cd63fc38681853fcc') in 0.016234 seconds 
+  Import took 0.018416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Sprites/WaterDropGreen.png
+  artifactKey: Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropGreen.png using Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e9c9320c85e8d896b458d4b202c68c') in 0.012642 seconds 
+  Import took 0.014873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.403206 seconds.
+  path: Assets/Scenes/Lava Dungeon.unity
+  artifactKey: Guid(825e3f5e8c7e5c1489ef05ab88228f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Lava Dungeon.unity using Guid(825e3f5e8c7e5c1489ef05ab88228f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '200d25995912db674453570207edf765') in 0.004329 seconds 
+  Import took 0.006628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.589711 seconds.
+  path: Assets/Prefabs/WaterDropBlue.prefab
+  artifactKey: Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropBlue.prefab using Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7208926500cbcdf938c29ce14d127959') in 0.025700 seconds 
+  Import took 0.028278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Prefabs/WaterDropGreen.prefab
+  artifactKey: Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropGreen.prefab using Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d427e9fbc4edd75e486666ea321908') in 0.008360 seconds 
+  Import took 0.010640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
   path: Assets/Prefabs/WaterDropWhite.prefab
   artifactKey: Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WaterDropWhite.prefab using Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7959e9b789ced54727ce2bcfe0eb89') in 0.002737 seconds 
-  Import took 0.005003 seconds .
+Start importing Assets/Prefabs/WaterDropWhite.prefab using Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9640d1a8b3029bd5f7529da14b4adbe8') in 0.009791 seconds 
+  Import took 0.012071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Prefabs/WaterDropOrange.prefab
+  artifactKey: Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropOrange.prefab using Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de8b53fb9bfac7be72fe777186c22603') in 0.008409 seconds 
+  Import took 0.010672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.082359 seconds.
+  path: Assets/Prefabs/NPC
+  artifactKey: Guid(e22a1f7d3b19ecc47932304afd24524f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NPC using Guid(e22a1f7d3b19ecc47932304afd24524f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d1e2d850c078400c76819798a84e6f9') in 0.004267 seconds 
+  Import took 0.006551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.938676 seconds.
+  path: Assets/Sprites/WaterDropBlue.png
+  artifactKey: Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue.png using Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d9fccdb7d87ab9e7aa9da2868be1421') in 0.043169 seconds 
+  Import took 0.045802 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000112 seconds.
-  path: Assets/Prefabs/WaterDropOrange.prefab
-  artifactKey: Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/WaterDropOrange.prefab using Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64442921a558db35e7440573ac1f948e') in 0.002444 seconds 
-  Import took 0.004741 seconds .
+  path: Assets/Sprites/WaterDropWhite.png
+  artifactKey: Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropWhite.png using Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26aacf05917a1d5397f9a48630970bd3') in 0.004273 seconds 
+  Import took 0.006360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/Sprites/WaterDropBrown.png
+  artifactKey: Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBrown.png using Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '282b47f91b8fb49f6fe722de05702281') in 0.004545 seconds 
+  Import took 0.006707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Sprites/WaterDropOrange.png
+  artifactKey: Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropOrange.png using Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b11c973d850b80a1af1840539d11e28d') in 0.004100 seconds 
+  Import took 0.006178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Sprites/WaterDropGreen.png
+  artifactKey: Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropGreen.png using Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e9b0f7aa933882fd04614b3465b615c') in 0.004886 seconds 
+  Import took 0.007285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 298.187835 seconds.
+  path: Assets/Sprites/WaterDropBlue.png
+  artifactKey: Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue.png using Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c136f8db7fffc4ce74ec7f4909d2cfed') in 0.037883 seconds 
+  Import took 0.041111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Sprites/WaterDropWhite.png
+  artifactKey: Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropWhite.png using Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa0d6ba996f80531125a0f551a2daf15') in 0.005905 seconds 
+  Import took 0.008121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Sprites/WaterDropBrown.png
+  artifactKey: Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBrown.png using Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696f3e60d5bcff2e6c4e7adb0afb42bd') in 0.005711 seconds 
+  Import took 0.007874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Sprites/WaterDropOrange.png
+  artifactKey: Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropOrange.png using Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528ae49ad5a2269221c82c3cb1c4a477') in 0.006146 seconds 
+  Import took 0.008402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Sprites/WaterDropGreen.png
+  artifactKey: Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropGreen.png using Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c29708783c86cca341364de7ed20e37') in 0.006842 seconds 
+  Import took 0.009018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.631065 seconds.
+  path: Assets/Sprites/WaterDropBlue.png
+  artifactKey: Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue.png using Guid(bbea33f6db7871643a19225a691fd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8487cc0e26cda366b6ab3427c26fd298') in 0.046578 seconds 
+  Import took 0.049049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.482968 seconds.
+  path: Assets/Sprites/WaterDropBrown.png
+  artifactKey: Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBrown.png using Guid(16e12c5119729184f85a19f605a1be68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc39a14d34f6bacf169d61516d84348c') in 0.049444 seconds 
+  Import took 0.051891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.626488 seconds.
+  path: Assets/Sprites/WaterDropGreen.png
+  artifactKey: Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropGreen.png using Guid(68833b3a4781092408eeb4957e36f287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ffa87c63dbc7bc8b6c21a54531f2d54') in 0.017638 seconds 
+  Import took 0.020120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.324057 seconds.
+  path: Assets/Sprites/WaterDropOrange.png
+  artifactKey: Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropOrange.png using Guid(681c6f7481b630d4fb9e25152d1e5614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbad2240171177d12fbd7d6a69eb3d46') in 0.031994 seconds 
+  Import took 0.034413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.409476 seconds.
+  path: Assets/Sprites/WaterDropWhite.png
+  artifactKey: Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropWhite.png using Guid(807f3f240e888c64dab9235c96e4f5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48213b72d05300d3dd5054835480738c') in 0.016406 seconds 
+  Import took 0.018825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.087247 seconds.
+  path: Assets/Sprites/WaterDropBlue
+  artifactKey: Guid(0eefd1e46fd10234bb2423a59373a89c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WaterDropBlue using Guid(0eefd1e46fd10234bb2423a59373a89c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf8fd7a5e842847ee6b458783e274c7e') in 0.001225 seconds 
+  Import took 0.003508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.369895 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBlue.controller
+  artifactKey: Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBlue.controller using Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7d541db4134a380d19ff55430d1346') in 0.002828 seconds 
+  Import took 0.005238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBlue.controller
+  artifactKey: Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBlue.controller using Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7d541db4134a380d19ff55430d1346') in 0.001696 seconds 
+  Import took 0.003782 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002474 seconds.
+Registered in 0.002580 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.681 seconds
+- Completed reload, in  0.688 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.5 MB.
+System memory in use before: 99.6 MB.
 System memory in use after: 99.5 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2547.
-Total: 1.489300 ms (FindLiveObjects: 0.140700 ms CreateObjectMapping: 0.061400 ms MarkObjects: 1.221300 ms  DeleteObjects: 0.065300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002516 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.681 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.5 MB.
-System memory in use after: 99.5 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2550.
-Total: 1.508700 ms (FindLiveObjects: 0.141700 ms CreateObjectMapping: 0.064300 ms MarkObjects: 1.233100 ms  DeleteObjects: 0.068700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002459 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.679 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.5 MB.
-System memory in use after: 99.5 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2553.
-Total: 1.514100 ms (FindLiveObjects: 0.142500 ms CreateObjectMapping: 0.062500 ms MarkObjects: 1.237700 ms  DeleteObjects: 0.070800 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2552.
+Total: 1.493800 ms (FindLiveObjects: 0.143200 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.218100 ms  DeleteObjects: 0.068300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -256,16 +380,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 88.827035 seconds.
-  path: Assets/Scenes/Forest Dungeon.unity
-  artifactKey: Guid(0020b2452056c3149828ae80261921df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Forest Dungeon.unity using Guid(0020b2452056c3149828ae80261921df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc49e7aa41722c7922732214cac9b0c7') in 0.008126 seconds 
-  Import took 0.010592 seconds .
+  Time since last request: 39.966714 seconds.
+  path: Assets/Prefabs/WaterDropBlue.prefab
+  artifactKey: Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropBlue.prefab using Guid(25ec0f44aae9d0441969ef1267d7e9f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33696529ea1f329e41c30c38589bfb15') in 0.037985 seconds 
+  Import took 0.040313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.455855 seconds.
+  path: Assets/Prefabs/WaterDropBrown.prefab
+  artifactKey: Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropBrown.prefab using Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e5b36ef21d012217f7639b2c4ad20a1') in 0.017574 seconds 
+  Import took 0.020086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032057 seconds.
+  path: Assets/Prefabs/WaterDropBrown.prefab
+  artifactKey: Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropBrown.prefab using Guid(b63342b88d17afd42a2e361e406f72d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e5b36ef21d012217f7639b2c4ad20a1') in 0.006119 seconds 
+  Import took 0.008494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.243709 seconds.
+  path: Assets/Prefabs/WaterDropGreen.prefab
+  artifactKey: Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropGreen.prefab using Guid(429f2582b6a518c4ebeb140636c8e1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3feff15ab601394105fbf261865d8992') in 0.016078 seconds 
+  Import took 0.018508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.265877 seconds.
+  path: Assets/Prefabs/WaterDropOrange.prefab
+  artifactKey: Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropOrange.prefab using Guid(c1b14c8fc3516554fa7b45905c121231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d983c0c651bc095a80c8c6460ac863') in 0.016413 seconds 
+  Import took 0.018890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.140204 seconds.
+  path: Assets/Prefabs/WaterDropWhite.prefab
+  artifactKey: Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropWhite.prefab using Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cffcde21ff364b5c966a0dd310fd34e8') in 0.015051 seconds 
+  Import took 0.017519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.589951 seconds.
+  path: Assets/Prefabs/WaterDropWhite.prefab
+  artifactKey: Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/WaterDropWhite.prefab using Guid(84557e7550ab75d4e8475cf5db41d0dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bc126ffa61a5536bf12aa8fee346d87') in 0.007702 seconds 
+  Import took 0.010183 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002457 seconds.
+Registered in 0.002851 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
@@ -273,14 +445,14 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.673 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.6 MB.
-System memory in use after: 99.5 MB.
+System memory in use after: 99.6 MB.
 
 Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2556.
-Total: 1.502300 ms (FindLiveObjects: 0.141200 ms CreateObjectMapping: 0.060900 ms MarkObjects: 1.230500 ms  DeleteObjects: 0.069300 ms)
+Total: 1.499200 ms (FindLiveObjects: 0.142700 ms CreateObjectMapping: 0.060200 ms MarkObjects: 1.231000 ms  DeleteObjects: 0.064600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -295,7 +467,293 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002439 seconds.
+Registered in 0.002700 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.668 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.6 MB.
+System memory in use after: 99.6 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2559.
+Total: 1.522000 ms (FindLiveObjects: 0.144900 ms CreateObjectMapping: 0.063800 ms MarkObjects: 1.240200 ms  DeleteObjects: 0.072300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 120.685163 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBlue_0.controller
+  artifactKey: Guid(5869dcf09a8db034daa4ff6e4b590eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBlue_0.controller using Guid(5869dcf09a8db034daa4ff6e4b590eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b06b50003b387379acc49189ce1098') in 0.012605 seconds 
+  Import took 0.014988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.036173 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBlue.anim
+  artifactKey: Guid(91f586a1a73dbcd49bc35f9393b13dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBlue.anim using Guid(91f586a1a73dbcd49bc35f9393b13dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8322c25256061d12b3fafe57ca173eef') in 0.002891 seconds 
+  Import took 0.005111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002024 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBlue.anim
+  artifactKey: Guid(91f586a1a73dbcd49bc35f9393b13dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBlue.anim using Guid(91f586a1a73dbcd49bc35f9393b13dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8322c25256061d12b3fafe57ca173eef') in 0.001825 seconds 
+  Import took 0.004172 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.719853 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBrown.controller
+  artifactKey: Guid(08183b4cb99450e4f9e848c8f085caf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBrown.controller using Guid(08183b4cb99450e4f9e848c8f085caf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f44c9cbd6d56f04c89f999e08030852') in 0.002160 seconds 
+  Import took 0.004452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.283059 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBrown_0.controller
+  artifactKey: Guid(ab15558815dd3cc4cae868834619a6fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBrown_0.controller using Guid(ab15558815dd3cc4cae868834619a6fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ef1e1c6597ef22d6773678e6f0162d') in 0.004792 seconds 
+  Import took 0.007102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.419707 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropGreen.controller
+  artifactKey: Guid(1a5870c672aaeee46b4a4266bef0bb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropGreen.controller using Guid(1a5870c672aaeee46b4a4266bef0bb0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5ad3c458d955a2cfce373a1f7364f35') in 0.001865 seconds 
+  Import took 0.004156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.133553 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropOrange.controller
+  artifactKey: Guid(69975c608ccaf76449de7140dcb4494b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropOrange.controller using Guid(69975c608ccaf76449de7140dcb4494b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8096b46799f0cdcc98a89c4da2dfd77f') in 0.001904 seconds 
+  Import took 0.004193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.840435 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropWhite.controller
+  artifactKey: Guid(5a40a72d7e65ce546857112a5cef6f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropWhite.controller using Guid(5a40a72d7e65ce546857112a5cef6f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee776c3aaddf2bdafb72f4e2c3f9e76') in 0.002017 seconds 
+  Import took 0.004321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.178727 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropWhite_0.controller
+  artifactKey: Guid(5a9d0e620a955de4eab9e7d3a5ff585d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropWhite_0.controller using Guid(5a9d0e620a955de4eab9e7d3a5ff585d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77dc710252b4946969062f84cf131421') in 0.004513 seconds 
+  Import took 0.006813 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002532 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.7 MB.
+System memory in use after: 99.6 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2562.
+Total: 1.513500 ms (FindLiveObjects: 0.147800 ms CreateObjectMapping: 0.063500 ms MarkObjects: 1.227900 ms  DeleteObjects: 0.073300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002536 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.666 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.7 MB.
+System memory in use after: 99.7 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2565.
+Total: 1.556700 ms (FindLiveObjects: 0.144500 ms CreateObjectMapping: 0.067100 ms MarkObjects: 1.272500 ms  DeleteObjects: 0.071600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 162.368234 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBrown.anim
+  artifactKey: Guid(a8a16c98d104adf4782ee6e4ab9baa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBrown.anim using Guid(a8a16c98d104adf4782ee6e4ab9baa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcf6e3f35e5afd8a87609a22540f6a9') in 0.008351 seconds 
+  Import took 0.010815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000497 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropBrown.anim
+  artifactKey: Guid(a8a16c98d104adf4782ee6e4ab9baa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropBrown.anim using Guid(a8a16c98d104adf4782ee6e4ab9baa18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcf6e3f35e5afd8a87609a22540f6a9') in 0.001430 seconds 
+  Import took 0.003514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 135.964426 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropOrange_0.controller
+  artifactKey: Guid(07c8e442352b84b4eb061eeb97260f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropOrange_0.controller using Guid(07c8e442352b84b4eb061eeb97260f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f9c03c6daf5c266698faa5c552d19f') in 0.005521 seconds 
+  Import took 0.007888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropOrange_0.controller
+  artifactKey: Guid(07c8e442352b84b4eb061eeb97260f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropOrange_0.controller using Guid(07c8e442352b84b4eb061eeb97260f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f9c03c6daf5c266698faa5c552d19f') in 0.001661 seconds 
+  Import took 0.003775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.174265 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropOrange.anim
+  artifactKey: Guid(5f85187d9cd904149827b029786b872d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropOrange.anim using Guid(5f85187d9cd904149827b029786b872d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29c7522b4237a2f877d3b81456dd98b') in 0.001834 seconds 
+  Import took 0.004087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005498 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropOrange.anim
+  artifactKey: Guid(5f85187d9cd904149827b029786b872d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropOrange.anim using Guid(5f85187d9cd904149827b029786b872d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f29c7522b4237a2f877d3b81456dd98b') in 0.001499 seconds 
+  Import took 0.003711 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002560 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.674 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.7 MB.
+System memory in use after: 99.7 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2568.
+Total: 1.512900 ms (FindLiveObjects: 0.143500 ms CreateObjectMapping: 0.062900 ms MarkObjects: 1.234100 ms  DeleteObjects: 0.071800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 19.087413 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropGreen.anim
+  artifactKey: Guid(3ef6b76d26c33c341bb428481a304e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropGreen.anim using Guid(3ef6b76d26c33c341bb428481a304e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090d392e1058fe594ac23c2773cedd11') in 0.008306 seconds 
+  Import took 0.010659 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002558 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.669 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.7 MB.
+System memory in use after: 99.7 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2571.
+Total: 1.527100 ms (FindLiveObjects: 0.149700 ms CreateObjectMapping: 0.067000 ms MarkObjects: 1.236600 ms  DeleteObjects: 0.073100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 90.449582 seconds.
+  path: Assets/Animation/WaterDrop/WaterDropWhite.anim
+  artifactKey: Guid(a52e31acae01a574286de984390aa383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/WaterDrop/WaterDropWhite.anim using Guid(a52e31acae01a574286de984390aa383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80853b5233d8d1bf39feee517d09913d') in 0.008000 seconds 
+  Import took 0.010382 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002483 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
@@ -303,82 +761,14 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.678 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.6 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2559.
-Total: 1.504700 ms (FindLiveObjects: 0.147200 ms CreateObjectMapping: 0.063500 ms MarkObjects: 1.224400 ms  DeleteObjects: 0.068900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002417 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.679 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.6 MB.
+System memory in use before: 99.7 MB.
+System memory in use after: 99.7 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2562.
-Total: 1.537300 ms (FindLiveObjects: 0.141600 ms CreateObjectMapping: 0.061800 ms MarkObjects: 1.260800 ms  DeleteObjects: 0.072500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 101.478383 seconds.
-  path: Assets/Animation/WaterDrop/WaterDropBlue.controller
-  artifactKey: Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation/WaterDrop/WaterDropBlue.controller using Guid(54673f574edd4ba44a5f2339accbfac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6945d3a626e9306016f120dfcb9641') in 0.010591 seconds 
-  Import took 0.013229 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002529 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.679 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.6 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2565.
-Total: 1.566100 ms (FindLiveObjects: 0.151200 ms CreateObjectMapping: 0.065500 ms MarkObjects: 1.277200 ms  DeleteObjects: 0.071400 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2574.
+Total: 1.531900 ms (FindLiveObjects: 0.149500 ms CreateObjectMapping: 0.065800 ms MarkObjects: 1.243000 ms  DeleteObjects: 0.072600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -393,76 +783,22 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002443 seconds.
+Registered in 0.002573 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.671 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.6 MB.
-System memory in use after: 99.6 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2568.
-Total: 1.517900 ms (FindLiveObjects: 0.140600 ms CreateObjectMapping: 0.062400 ms MarkObjects: 1.242400 ms  DeleteObjects: 0.072000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 67.343372 seconds.
-  path: Assets/Sprites/NPC_test.png
-  artifactKey: Guid(ad1960fc8401b164a99fb43765b6f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/NPC_test.png using Guid(ad1960fc8401b164a99fb43765b6f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee7420c1f8ac4d6ade5a72de15a856e') in 0.055299 seconds 
-  Import took 0.057865 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000102 seconds.
-  path: Assets/Sprites/NPC_test_copy.png
-  artifactKey: Guid(6581692d248a3e741a00f709b062fa0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/NPC_test_copy.png using Guid(6581692d248a3e741a00f709b062fa0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeb10eb4067e3c5d83a462ffb0007f84') in 0.043524 seconds 
-  Import took 0.045848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000110 seconds.
-  path: Assets/Sprites/Square.png
-  artifactKey: Guid(a467048f3821d9342a95dd1106efd056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Square.png using Guid(a467048f3821d9342a95dd1106efd056) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2455f873c8eb9a85517eec502a720bd9') in 0.012248 seconds 
-  Import took 0.014587 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002531 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.679 seconds
+- Completed reload, in  0.667 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.7 MB.
-System memory in use after: 99.6 MB.
+System memory in use after: 99.7 MB.
 
 Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2577.
-Total: 1.514300 ms (FindLiveObjects: 0.139000 ms CreateObjectMapping: 0.061300 ms MarkObjects: 1.244100 ms  DeleteObjects: 0.069300 ms)
+Total: 1.523100 ms (FindLiveObjects: 0.148000 ms CreateObjectMapping: 0.064800 ms MarkObjects: 1.236800 ms  DeleteObjects: 0.072800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -475,39 +811,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 110.739135 seconds.
-  path: Assets/Sprites/BluePortal.png
-  artifactKey: Guid(3058ede830b459949b34c717675415d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BluePortal.png using Guid(3058ede830b459949b34c717675415d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e99c9cda6fdf42b08c0eab34730d4ff') in 0.054568 seconds 
-  Import took 0.057119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/Sprites/DarkPortal.png
-  artifactKey: Guid(1f3f7d6cd5023e34eae00de733ca3eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/DarkPortal.png using Guid(1f3f7d6cd5023e34eae00de733ca3eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3410c3928b3a839453ca636b4a4b6cd1') in 0.027014 seconds 
-  Import took 0.029343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004959 seconds.
-  path: Assets/Sprites/DarkPortal.png
-  artifactKey: Guid(1f3f7d6cd5023e34eae00de733ca3eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/DarkPortal.png using Guid(1f3f7d6cd5023e34eae00de733ca3eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3410c3928b3a839453ca636b4a4b6cd1') in 0.023786 seconds 
-  Import took 0.026188 seconds .
-
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002439 seconds.
+Registered in 0.002814 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.681 seconds
+- Completed reload, in  0.673 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -515,76 +827,8 @@ Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.7 MB.
 System memory in use after: 99.7 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2584.
-Total: 1.657000 ms (FindLiveObjects: 0.142100 ms CreateObjectMapping: 0.060300 ms MarkObjects: 1.378900 ms  DeleteObjects: 0.074900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 69.245377 seconds.
-  path: Assets/Sprites/WaterDropBlue
-  artifactKey: Guid(0eefd1e46fd10234bb2423a59373a89c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/WaterDropBlue using Guid(0eefd1e46fd10234bb2423a59373a89c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90ae5523a7e2eeed5395e8dd7a68bec1') in 0.003320 seconds 
-  Import took 0.005855 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002466 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.671 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.7 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2587.
-Total: 1.592200 ms (FindLiveObjects: 0.147000 ms CreateObjectMapping: 0.059900 ms MarkObjects: 1.311700 ms  DeleteObjects: 0.072900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002494 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.664 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.7 MB.
-System memory in use after: 99.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2590.
-Total: 1.560900 ms (FindLiveObjects: 0.144200 ms CreateObjectMapping: 0.059500 ms MarkObjects: 1.284000 ms  DeleteObjects: 0.072600 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2580.
+Total: 1.532600 ms (FindLiveObjects: 0.145800 ms CreateObjectMapping: 0.064800 ms MarkObjects: 1.248500 ms  DeleteObjects: 0.072700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

@@ -21,6 +21,7 @@ public class BoundedNPC : MonoBehaviour
     private bool isLeft;
     private bool isUp;
     private bool isDown;
+    private bool isConectPlayer;
 
     void Start()
     {
@@ -44,7 +45,11 @@ public class BoundedNPC : MonoBehaviour
                 moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
                 isMoving = false;
             }
-            //나중에 플레이어가 말을걸때 이곳에 if(!isPlayerCollision)하나 줘서 멈추면 됨
+            //나중에 플레이어가 말을걸때 아래 Move 지우고 아래 OnCollisionEnter에서 기능 추가하면 됨
+            Move();
+        }
+        else if(isMoving && isConectPlayer)
+        {
             Move();
         }
         else
@@ -159,7 +164,14 @@ public class BoundedNPC : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        ChooseDifferentDirection();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isMoving = false;
+            isConectPlayer = true;
+        }
+        else
+            isConectPlayer = false;
+            ChooseDifferentDirection();
     }
     void IsRight()
     {

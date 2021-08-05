@@ -4843,6 +4843,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 699886065556383370, guid: 25ec0f44aae9d0441969ef1267d7e9f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5869dcf09a8db034daa4ff6e4b590eba, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ec0f44aae9d0441969ef1267d7e9f2, type: 3}
 --- !u!1001 &1474547299870987565
@@ -4957,6 +4961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1557228194675458396, guid: 429f2582b6a518c4ebeb140636c8e1d5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: be87299591e04f0439c0406d9909647f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429f2582b6a518c4ebeb140636c8e1d5, type: 3}
 --- !u!1001 &2842121493783736733
@@ -5189,6 +5197,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4234669327409106903, guid: 84557e7550ab75d4e8475cf5db41d0dc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5a9d0e620a955de4eab9e7d3a5ff585d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84557e7550ab75d4e8475cf5db41d0dc, type: 3}
 --- !u!1001 &5619198606589693442
@@ -5250,6 +5262,10 @@ PrefabInstance:
       propertyPath: Plate
       value: 
       objectReference: {fileID: 1629537147}
+    - target: {fileID: 5619198606084303238, guid: b63342b88d17afd42a2e361e406f72d4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ab15558815dd3cc4cae868834619a6fa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63342b88d17afd42a2e361e406f72d4, type: 3}
 --- !u!1001 &5970930639869931356
@@ -5259,6 +5275,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 119002730}
     m_Modifications:
+    - target: {fileID: 5970930641348702805, guid: c1b14c8fc3516554fa7b45905c121231, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 07c8e442352b84b4eb061eeb97260f1b, type: 2}
     - target: {fileID: 5970930641348702809, guid: c1b14c8fc3516554fa7b45905c121231, type: 3}
       propertyPath: m_Name
       value: WaterDropOrange

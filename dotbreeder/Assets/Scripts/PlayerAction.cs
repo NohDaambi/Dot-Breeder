@@ -26,7 +26,6 @@ public class PlayerAction : MonoBehaviour
     Animator Anim;
 
     public bool isDelay;
-    //public float delayTime = 0.5f;
 
     void Awake()
     {
@@ -35,7 +34,6 @@ public class PlayerAction : MonoBehaviour
         Rigid = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
     }
-
 
     void Update()
     {
@@ -115,8 +113,9 @@ public class PlayerAction : MonoBehaviour
         //Scan Object && Interaction 그 외 상호작용
         if (Input.GetKeyDown(KeyCode.E) && scanObject != null)
         {
-                Manager.Interaction();
-                Manager.Action(scanObject); 
+            Manager.Interaction();
+            Manager.Action(scanObject); 
+            //데이터조각얻기
         }
         //코루틴
         IEnumerator CountAttackDelay()

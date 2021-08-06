@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\StartScene\StartScene.cs" />
     <Compile Include="Assets\Scripts\Combination\Timer.cs" />
     <Compile Include="Assets\Scripts\TextUI\TextBox.cs" />
+    <Compile Include="Assets\Scripts\DataPiece\DataPieceSort.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
     <Compile Include="Assets\Scripts\Manager\QuestManager.cs" />

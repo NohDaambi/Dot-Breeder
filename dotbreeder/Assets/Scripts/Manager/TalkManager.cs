@@ -16,7 +16,6 @@ public class TalkManager : MonoBehaviour
         PortraitData = new Dictionary<int, Sprite>();
         GenerateData();
         Time.timeScale = 1;
-       
     }
    
     //´ëÈ­ ÇÒ´ç
@@ -25,6 +24,18 @@ public class TalkManager : MonoBehaviour
         //Talk
         talkData.Add(1000, new string[] { "¸»°ÉÁö ¸»¾ÆÁÙ·¡?:3"});
         talkData.Add(2000, new string[] { "³Í ´©±¸´Ï?:3" });
+
+        //dataPiece
+        talkData.Add(10000, new string[] { "µ¥ÀÌÅÍ Á¶°¢1À» È¹µæÇß´Ù!" });
+        talkData.Add(20000, new string[] { "µ¥ÀÌÅÍ Á¶°¢2À» È¹µæÇß´Ù!" });
+        talkData.Add(30000, new string[] { "µ¥ÀÌÅÍ Á¶°¢3À» È¹µæÇß´Ù!" });
+        talkData.Add(40000, new string[] { "µ¥ÀÌÅÍ Á¶°¢4À» È¹µæÇß´Ù!" });
+        talkData.Add(50000, new string[] { "µ¥ÀÌÅÍ Á¶°¢5À» È¹µæÇß´Ù!" });
+        talkData.Add(60000, new string[] { "µ¥ÀÌÅÍ Á¶°¢6À» È¹µæÇß´Ù!" });
+        talkData.Add(70000, new string[] { "µ¥ÀÌÅÍ Á¶°¢7À» È¹µæÇß´Ù!" });
+        talkData.Add(80000, new string[] { "µ¥ÀÌÅÍ Á¶°¢8À» È¹µæÇß´Ù!" });
+        talkData.Add(90000, new string[] { "µ¥ÀÌÅÍ Á¶°¢9À» È¹µæÇß´Ù!" });
+        talkData.Add(100000, new string[] { "µ¥ÀÌÅÍ Á¶°¢10À» È¹µæÇß´Ù!" });
 
 
         //Quest Talk
@@ -46,8 +57,6 @@ public class TalkManager : MonoBehaviour
         PortraitData.Add(2000 + 1, portraitArr[5]);
         PortraitData.Add(2000 + 2, portraitArr[6]);
         PortraitData.Add(2000 + 3, portraitArr[7]);
-
-
     }
 
 
@@ -71,7 +80,6 @@ public class TalkManager : MonoBehaviour
                     else
                         return talkData[id - id % 10][talkIndex];
                 }
-         
         }
 
         if (talkIndex == talkData[id].Length)

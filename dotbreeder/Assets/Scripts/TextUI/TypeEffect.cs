@@ -8,6 +8,7 @@ public class TypeEffect : MonoBehaviour
     public int CharPerSeconds; //CPS
     public GameObject EndCursor;
     public bool isAnim;
+    public DataPieceSort DataPiece;
 
     Text msgText;
     AudioSource audioSource;
@@ -16,8 +17,6 @@ public class TypeEffect : MonoBehaviour
     string targetMsg;
     int index;
     float interval;
-
-
     void Awake()
     {
         msgText = GetComponent<Text>();
@@ -77,6 +76,8 @@ public class TypeEffect : MonoBehaviour
     {
         isAnim = false;
         EndCursor.SetActive(true);
+        //대화가 끝나면 데이터 조각 겟!
+        DataPiece.isGet = true;
     }
 }
 

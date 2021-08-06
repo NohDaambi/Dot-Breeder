@@ -11,7 +11,6 @@ public class UnlockSystem : MonoBehaviour
     public int DotLevel;
     public bool[] pageActive = new bool[4];
 
-
     void Update()
     {
         if(DotLevel == 1)
@@ -21,9 +20,7 @@ public class UnlockSystem : MonoBehaviour
             {
                 LockBtn[i].SetActive(false);
             }
-
             pageActive[0] = true;
-          
         }
         if (DotLevel == 2)
         {
@@ -53,19 +50,29 @@ public class UnlockSystem : MonoBehaviour
             pageActive[3] = true;
         }
         //1페이지
-        if (combine.pageNum == 1)
+        if (combine.pageNumItem == 1)
         {
             PageActiveFuncA(0);
             PageActiveFuncB(1);
         }
         //2페이지
-        else if (combine.pageNum == 2)
+        else if (combine.pageNumItem == 2)
         {
             PageActiveFuncA(2);
             PageActiveFuncB(3);
         }
-        //3페이지
-        else if (combine.pageNum == 3)
+        else if (combine.pageNumItem == 3)
+        {
+            LockBtn[0].SetActive(true);
+            LockBtn[1].SetActive(true);
+            LockBtn[2].SetActive(true);
+            LockBtn[3].SetActive(true);
+            LockBtn[4].SetActive(true);
+            LockBtn[5].SetActive(true);
+        }
+
+        //건축물 1페이지
+        if (combine.pageNumBuilding == 1 && combine.BuildingPage)
         {
             if(DotLevel == 1)
             {
@@ -104,6 +111,27 @@ public class UnlockSystem : MonoBehaviour
                 LockBtn[5].SetActive(true);
             }
         }
+        // 2페이지
+        if (combine.pageNumBuilding == 2 && combine.BuildingPage)
+        {
+            LockBtn[0].SetActive(true);
+            LockBtn[1].SetActive(true);
+            LockBtn[2].SetActive(true);
+            LockBtn[3].SetActive(true);
+            LockBtn[4].SetActive(true);
+            LockBtn[5].SetActive(true);
+        }
+        // 3페이지
+        if (combine.pageNumBuilding == 3 && combine.BuildingPage)
+        {
+            LockBtn[0].SetActive(true);
+            LockBtn[1].SetActive(true);
+            LockBtn[2].SetActive(true);
+            LockBtn[3].SetActive(true);
+            LockBtn[4].SetActive(true);
+            LockBtn[5].SetActive(true);
+        }
+
     }
     //홀수 레벨
     public void PageActiveFuncA(int num)

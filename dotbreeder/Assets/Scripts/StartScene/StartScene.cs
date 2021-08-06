@@ -14,8 +14,6 @@ public class StartScene : MonoBehaviour
 
     public Button ContinueBtn;
 
-    public 
-
     void Update()
     {
         if(ExitBox.activeSelf)
@@ -29,8 +27,6 @@ public class StartScene : MonoBehaviour
                 StartBox.SetActive(false);
         }
     }
-
-
     public void GameStart()
     {
         //새로하기 이어하기 팝업창 액티브
@@ -44,7 +40,6 @@ public class StartScene : MonoBehaviour
 
 
     }
-
     public void NewGame()
     {
         //숲-1 
@@ -75,7 +70,4 @@ public class StartScene : MonoBehaviour
     {
         DiaryBox.SetActive(true);
     }
-
-
-
 }

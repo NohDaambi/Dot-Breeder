@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     public QuestManager questManager;
     public Image portraitImg;
     public Sprite PrevPortrait;
-    public DropTextBox DropBox;
-    public StartScene startScene;
+    public DropTextBox DropBox;    
+    public DataPieceSort dataPiece;
 
     public Rscore Rtext;
     public Gscore Gtext;
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     public Text questTextEd;
     public Text NpcName;
 
-
     public GameObject scanObject;
     public GameObject menuSet;
     public GameObject TabMenu;
@@ -36,7 +35,6 @@ public class GameManager : MonoBehaviour
     public GameObject Combining;
     public GameObject CombinEnd;
     public GameObject Study;
-
 
     public int talkIndex;    
     public int Rcount;
@@ -52,8 +50,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //게임 불러오기
-        //GameLoad();
         //퀘스트 이름
         questText.text = questManager.CheckQuest();
         questTextIng.text = questManager.CheckQuest();
@@ -68,16 +64,15 @@ public class GameManager : MonoBehaviour
                 menuSet.SetActive(false);
             else if (!menuSet.activeSelf && !CombinationUI.activeSelf && !TabMenu.activeSelf 
                   && SceneManager.GetActiveScene().buildIndex != 0) 
-            {
                 menuSet.SetActive(true);
-            }
             else
             {
                 //두개가 중복으로 켜지지 않음
                 menuSet.SetActive(false);
+                dataPiece.DataInterpret.SetActive(false);
+                dataPiece.DataPieceContents.SetActive(true);
                 TabMenu.SetActive(false);
             }
-
 
             if (CombinationUI.activeSelf && CombinationChild.activeSelf)
             {
@@ -88,22 +83,23 @@ public class GameManager : MonoBehaviour
             {
                 CombinationUI.SetActive(false);
             }
-            
         }
 
         //Tab키 키기,끄기
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (TabMenu.activeSelf)
+            {
+                dataPiece.DataPieceContents.SetActive(true);
+                dataPiece.DataInterpret.SetActive(false);
                 TabMenu.SetActive(false);
+            }
             else
             {
                 TabMenu.SetActive(true);
                 menuSet.SetActive(false);
             }
-                
         }
-        
     }
 
     void Awake()
@@ -115,13 +111,9 @@ public class GameManager : MonoBehaviour
         {
             ManagerExist = true;            
             DontDestroyOnLoad(gameObject);
-
         }
         else
-        {
             Destroy(gameObject);
-        }
-
     }
 
     //채집 액션
@@ -184,12 +176,18 @@ public class GameManager : MonoBehaviour
         {
             CombinationUI.SetActive(true);
             if(!CombinationChild.activeSelf && !Combining.activeSelf && !CombinEnd.activeSelf)
-                CombinationAnim.SetTrigger("isInit");
+                CombinationAnim.SetBool("isButton", false);
 
             if (CombinationUI.activeSelf)
                 isAction = true;
             else if (!CombinationUI.activeSelf)
                 isAction = false;
+        }
+
+        //데이터 조각
+        if(player.scanObject.tag == "DataPiece")
+        {
+            dataPiece.FindDataPiece();
         }
     }
 
@@ -201,23 +199,19 @@ public class GameManager : MonoBehaviour
         ObjData objData = scanObject.GetComponent<ObjData>();
 
         //Npc 일 경우에만 대화가능
-        if (objData.isNpc)
+        if (objData.isNpc || objData.isDataPiece)
         {
             Talk(objData.Id);
-        }
-
-        //이야기 보여주기
-        if(player.scanObject.tag == "Npc")
-            talkPanel.SetBool("isShow", isAction);
-
-        if (objData.isNpc)
-        {
             NpcName.gameObject.SetActive(true);
-            NpcName.text = scanObject.name;
+            NpcName.text = scanObject.name;            
         }
         else
             NpcName.gameObject.SetActive(false);
+        
 
+        //이야기 보여주기
+        if(player.scanObject.tag == "Npc" || player.scanObject.tag == "DataPiece")
+            talkPanel.SetBool("isShow", isAction);
     }
 
     //대화 set, end
@@ -240,35 +234,36 @@ public class GameManager : MonoBehaviour
 
         //end talk
         if (talkData == null)
-        {
+        {            
             isAction = false;
             talkIndex = 0;
             questText.text = questManager.CheckQuest(id);
             questTextIng.text = questManager.CheckQuest(id);
-            //이전 퀘스트 번호 받아와서 출력 -> 완료된 퀘스트 출력
-            //if(questManager.questId >)
             return;
         }
 
-        //Continue Talk      
-        
-        talk.SetMsg(talkData.Split(':')[0]);
-
         //Show Portrait
-        portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
-        portraitImg.color = new Color(1, 1, 1, 1);
-
-        //Anim Portrait
-        if (PrevPortrait != portraitImg.sprite)
+        if (player.scanObject.tag == "Npc")
         {
-            PortraitAnim.SetTrigger("doEffect");
-            PrevPortrait = portraitImg.sprite;
+            //Continue Talk      
+            talk.SetMsg(talkData.Split(':')[0]);
+            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
+            portraitImg.color = new Color(1, 1, 1, 1);
+
+            //Anim Portrait
+            if (PrevPortrait != portraitImg.sprite)
+            {
+                PortraitAnim.SetTrigger("doEffect");
+                PrevPortrait = portraitImg.sprite;
+            }
         }
-
-
+        else
+        {
+            talk.SetMsg(talkData);            
+            portraitImg.color = new Color(1, 1, 1, 0);
+        }
         isAction = true;
         talkIndex++;
-    
     }
 
 

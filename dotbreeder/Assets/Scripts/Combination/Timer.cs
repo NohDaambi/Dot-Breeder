@@ -30,7 +30,6 @@ public class Timer : MonoBehaviour
         currentTime = Time.time;
         timerSlider.maxValue = combineTIme * combine.produceNum;
     }
-
     void Update()
     {
         TImeIng = Time.time;
@@ -59,7 +58,6 @@ public class Timer : MonoBehaviour
         }
      
     }
-
     public void CombineEnded()
     {
         if (timeFlow <= 0 && isPlus)

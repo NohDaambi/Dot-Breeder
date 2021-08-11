@@ -8,33 +8,19 @@ public class GameManager : MonoBehaviour
 {
     public TalkManager talkManager;
     public PlayerAction player;
-    public Plants Plant;   
     public Animator talkPanel;
-    public Animator PortraitAnim;
-    public Animator CombinationAnim;
     public QuestManager questManager;
-    public Image portraitImg;
-    public Sprite PrevPortrait;
-    public DropTextBox DropBox;    
-    public DataPieceSort dataPiece;
+    public DropTextBox DropBox;
+    public DataPieceSort DataPiece;
+    public Interaction PlayerInteraction;
 
     public Rscore Rtext;
     public Gscore Gtext;
-    public Bscore Btext;
-    public TypeEffect talk;
-    public Text questText;
-    public Text questTextIng;
-    public Text questTextEd;
-    public Text NpcName;
+    public Bscore Btext;   
 
     public GameObject scanObject;
     public GameObject menuSet;
     public GameObject TabMenu;
-    public GameObject CombinationUI;
-    public GameObject CombinationChild;
-    public GameObject Combining;
-    public GameObject CombinEnd;
-    public GameObject Study;
 
     public int talkIndex;    
     public int Rcount;
@@ -51,8 +37,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //퀘스트 이름
-        questText.text = questManager.CheckQuest();
-        questTextIng.text = questManager.CheckQuest();
+        PlayerInteraction.questText.text = questManager.CheckQuest();
+        PlayerInteraction.questTextIng.text = questManager.CheckQuest();
     }
 
     void Update()
@@ -62,26 +48,26 @@ public class GameManager : MonoBehaviour
         {
             if (menuSet.activeSelf)
                 menuSet.SetActive(false);
-            else if (!menuSet.activeSelf && !CombinationUI.activeSelf && !TabMenu.activeSelf 
+            else if (!menuSet.activeSelf && !PlayerInteraction.CombinationUI.activeSelf && !TabMenu.activeSelf 
                   && SceneManager.GetActiveScene().buildIndex != 0) 
                 menuSet.SetActive(true);
             else
             {
                 //두개가 중복으로 켜지지 않음
                 menuSet.SetActive(false);
-                dataPiece.DataInterpret.SetActive(false);
-                dataPiece.DataPieceContents.SetActive(true);
+                DataPiece.DataInterpret.SetActive(false);
+                DataPiece.DataPieceContents.SetActive(true);
                 TabMenu.SetActive(false);
             }
 
-            if (CombinationUI.activeSelf && CombinationChild.activeSelf)
+            if (PlayerInteraction.CombinationUI.activeSelf && PlayerInteraction.CombinationChild.activeSelf)
             {
-                CombinationChild.SetActive(false);                
-                CombinationAnim.SetTrigger("isInit");
+                PlayerInteraction.CombinationChild.SetActive(false);
+                PlayerInteraction.CombinationAnim.SetTrigger("isInit");
             }
-            if(CombinationUI.activeSelf && !CombinationChild.activeSelf)
+            if(PlayerInteraction.CombinationUI.activeSelf && !PlayerInteraction.CombinationChild.activeSelf)
             {
-                CombinationUI.SetActive(false);
+                PlayerInteraction.CombinationUI.SetActive(false);
             }
         }
 
@@ -90,8 +76,8 @@ public class GameManager : MonoBehaviour
         {
             if (TabMenu.activeSelf)
             {
-                dataPiece.DataPieceContents.SetActive(true);
-                dataPiece.DataInterpret.SetActive(false);
+                DataPiece.DataPieceContents.SetActive(true);
+                DataPiece.DataInterpret.SetActive(false);
                 TabMenu.SetActive(false);
             }
             else
@@ -114,158 +100,7 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
-    }
-
-    //채집 액션
-    public void Forage()
-    {
-        //채집
-        if (player.scanObject.tag == "G")
-        {
-            Plant.FlowerDestory();
-            if (PrevGcount != Gcount)
-                DropBox.DropPixel("G", 1);
-
-            PrevGcount = Gcount;
-        }
-        else if (player.scanObject.tag == "R")
-        {
-            Plant.RockDestory();
-            if (PrevRcount != Rcount)
-                DropBox.DropPixel("R", 1);
-
-            PrevRcount = Rcount;
-        }
-        else if (player.scanObject.tag == "B")
-        {
-            Plant.BoxDestory();
-            if (PrevBcount != Bcount)
-                DropBox.DropPixel("B", 1);
-
-            PrevBcount = Bcount;
-        }
-    }
-
-    //상호작용 액션
-    public void Interaction()
-    {        
-        //첫번째 퀘스트 클리어
-        if (Gcount >= 3 && player.scanObject.name == "NpcB" && questManager.questId == 20)
-        {
-            questManager.questId += 10;
-            questManager.questActionIndex = 0;
-            Gcount -= 3;
-
-            //바뀐 count를 prev값에 할당하지 않으면 텍스트가 한번더 출력됨
-            PrevGcount = Gcount;
-        }
-
-        //교육하러가기
-        if(player.scanObject.name == "Study")
-        {
-            Study.SetActive(true);
-
-            if (Study.activeSelf)
-                isAction = true;
-            else if (!Study.activeSelf)
-                isAction = false;
-        }
-
-        //조합기
-        if(player.scanObject.name == "Combination")
-        {
-            CombinationUI.SetActive(true);
-            if(!CombinationChild.activeSelf && !Combining.activeSelf && !CombinEnd.activeSelf)
-                CombinationAnim.SetBool("isButton", false);
-
-            if (CombinationUI.activeSelf)
-                isAction = true;
-            else if (!CombinationUI.activeSelf)
-                isAction = false;
-        }
-
-        //데이터 조각
-        if(player.scanObject.tag == "DataPiece")
-        {
-            dataPiece.FindDataPiece();
-        }
-    }
-
-    //대화 액션
-    public void Action(GameObject scanObj)
-    {
-        //현재 오브젝트 가져오기
-        scanObject = scanObj;
-        ObjData objData = scanObject.GetComponent<ObjData>();
-
-        //Npc 일 경우에만 대화가능
-        if (objData.isNpc || objData.isDataPiece)
-        {
-            Talk(objData.Id);
-            NpcName.gameObject.SetActive(true);
-            NpcName.text = scanObject.name;            
-        }
-        else
-            NpcName.gameObject.SetActive(false);
-        
-
-        //이야기 보여주기
-        if(player.scanObject.tag == "Npc" || player.scanObject.tag == "DataPiece")
-            talkPanel.SetBool("isShow", isAction);
-    }
-
-    //대화 set, end
-    void Talk(int id)
-    {
-        //set talk
-        int questTalkIndex = 0;
-        string talkData = "";
-
-        if (talk.isAnim)
-        {
-            talk.SetMsg("");
-            return;
-        }
-        else
-        {
-            questTalkIndex = questManager.GetQuestTalkIndex(id);
-            talkData = talkManager.GetTalk(id + questTalkIndex, talkIndex);
-        }
-
-        //end talk
-        if (talkData == null)
-        {            
-            isAction = false;
-            talkIndex = 0;
-            questText.text = questManager.CheckQuest(id);
-            questTextIng.text = questManager.CheckQuest(id);
-            return;
-        }
-
-        //Show Portrait
-        if (player.scanObject.tag == "Npc")
-        {
-            //Continue Talk      
-            talk.SetMsg(talkData.Split(':')[0]);
-            portraitImg.sprite = talkManager.GetPortrait(id, int.Parse(talkData.Split(':')[1]));
-            portraitImg.color = new Color(1, 1, 1, 1);
-
-            //Anim Portrait
-            if (PrevPortrait != portraitImg.sprite)
-            {
-                PortraitAnim.SetTrigger("doEffect");
-                PrevPortrait = portraitImg.sprite;
-            }
-        }
-        else
-        {
-            talk.SetMsg(talkData);            
-            portraitImg.color = new Color(1, 1, 1, 0);
-        }
-        isAction = true;
-        talkIndex++;
-    }
-
+    }  
 
     //게임 저장
     public void GameSave()

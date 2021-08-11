@@ -9,6 +9,7 @@ public class TypeEffect : MonoBehaviour
     public GameObject EndCursor;
     public bool isAnim;
     public DataPieceSort DataPiece;
+    public PlayerAction Player;
 
     Text msgText;
     AudioSource audioSource;
@@ -77,7 +78,8 @@ public class TypeEffect : MonoBehaviour
         isAnim = false;
         EndCursor.SetActive(true);
         //대화가 끝나면 데이터 조각 겟!
-        DataPiece.isGet = true;
+        if(Player.scanObject.tag == "DataPiece")
+            DataPiece.isGet = true;
     }
 }
 

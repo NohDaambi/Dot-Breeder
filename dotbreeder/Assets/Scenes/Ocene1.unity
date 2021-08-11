@@ -162,6 +162,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &179632502
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -292,6 +309,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &209493312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -741,6 +775,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &980265683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -871,6 +922,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1033022018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1001,6 +1069,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1080951454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5554,6 +5639,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1266111532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5694,6 +5796,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1540641904
 Transform:
   m_ObjectHideFlags: 0
@@ -5759,6 +5878,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1581559714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6090,6 +6226,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1705478659
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6410,6 +6563,8 @@ MonoBehaviour:
   Id: 0
   isNpc: 0
   isStudy: 1
+  isCombination: 0
+  isDataPiece: 0
 --- !u!1 &1815207190
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,6 +6604,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1815207192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6579,6 +6751,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1953646428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6709,6 +6898,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1975218904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6839,6 +7045,23 @@ MonoBehaviour:
   Fhealth: 2
   Rhealth: 3
   Bhealth: 2
+  FloAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  RockAnim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  BoxAnim:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &2135554888
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -290,9 +290,6 @@
     <Reference Include="unityplastic">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-        <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
@@ -712,6 +709,12 @@
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>

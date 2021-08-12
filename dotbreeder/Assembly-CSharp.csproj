@@ -60,12 +60,16 @@
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\WaterDropGreen.cs" />
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\Lavatile_PlayerMove.cs" />
      <Compile Include="Assets\Scripts\DesertDungeonScript\CameraManager.cs" />
-     <Compile Include="Assets\Scripts\DefaltPlayerMove\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\PlayerMoveScript\PlayerMove.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
      <Compile Include="Assets\Scripts\ForestDungeonScript\Levels.cs" />
      <Compile Include="Assets\Scripts\LavaDungeonScro[t\WaterDropManager.cs" />
+     <Compile Include="Assets\Scripts\CutSceneScript\PotionSetActiveFalse.cs" />
+     <Compile Include="Assets\Scripts\CutSceneScript\PlayCutScene.cs" />
+     <None Include="Assets\Effect\Projectiles Vol 2\Shaders\Blend_CenterGlow.shader" />
      <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
+     <None Include="Assets\Effect\Projectiles Vol 2\Shaders\Add_CenterGlow.shader" />
      <None Include="Assets\Resources\Levels.txt" />
      <None Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <Reference Include="UnityEngine">
@@ -700,6 +704,12 @@
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
         <HintPath>C:/Unity/Dot-Breeder/dotbreeder/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>

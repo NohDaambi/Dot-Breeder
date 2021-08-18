@@ -5,27 +5,55 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637607650599855194
     m_Hash: 606984132
+=======
+<<<<<<< Updated upstream
+      ticks: 637643528365841451
+    m_Hash: 547236370
+=======
+      ticks: 637607650599855194
+    m_Hash: 606984132
+>>>>>>> Stashed changes
+>>>>>>> DongChan
   m_LockFileStatus:
     m_FilePath: "C:/Users/\uB2F4\uBE44/Desktop/Dot-Breeder/dotbreeder/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< HEAD
       ticks: 637607650783014665
     m_Hash: 740463830
+=======
+<<<<<<< Updated upstream
+      ticks: 637643528365871369
+    m_Hash: 1125919496
+=======
+      ticks: 637607650783014665
+    m_Hash: 740463830
+>>>>>>> Stashed changes
+>>>>>>> DongChan
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.2d.animation@5.0.5
+    - packageId: com.unity.2d.animation@5.0.7
       testable: 0
       isDirectDependency: 1
-      version: 5.0.5
+      version: 5.0.7
       source: 1
+<<<<<<< HEAD
       resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.animation@5.0.5"
+=======
+<<<<<<< Updated upstream
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.2d.animation@5.0.7
+=======
+      resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.animation@5.0.5"
+>>>>>>> Stashed changes
+>>>>>>> DongChan
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -77,6 +105,7 @@ m_PackageAssets:
         - 3.2.5
         - 3.2.6
         - 3.2.9
+        - 3.2.10
         - 4.0.0
         - 4.0.1
         - 4.1.0
@@ -95,16 +124,20 @@ m_PackageAssets:
         - 5.0.4
         - 5.0.5
         - 5.0.6
+        - 5.0.7
         - 6.0.0-pre.1
         - 6.0.0-pre.2
         - 6.0.1
         - 6.0.3
         - 6.0.4
+        - 6.0.5
         - 7.0.0-pre.2
+        - 7.0.0-pre.3
         compatible:
         - 5.0.5
         - 5.0.6
-        verified: 5.0.6
+        - 5.0.7
+        verified: 5.0.7
       dependencies:
       - name: com.unity.2d.common
         version: 4.0.3
@@ -150,13 +183,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637568738450000000
+      datePublishedTicks: 637637510960000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 03eb2fe90133273bcb1bd74654bdc02023cdfc7f
+        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
         path: 
     - packageId: com.unity.2d.pixel-perfect@4.0.1
       testable: 0
@@ -202,6 +235,7 @@ m_PackageAssets:
         - 5.0.0-pre.1
         - 5.0.0-pre.2
         - 5.0.0
+        - 5.0.1
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -293,6 +327,7 @@ m_PackageAssets:
         - 5.0.4
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.1.0
@@ -320,7 +355,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.animation
-        version: 5.0.5
+        version: 5.0.7
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.modules.animation
@@ -400,12 +435,20 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.2d.spriteshape@5.1.2
+    - packageId: com.unity.2d.spriteshape@5.1.4
       testable: 0
       isDirectDependency: 1
-      version: 5.1.2
+      version: 5.1.4
       source: 1
+<<<<<<< HEAD
       resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.spriteshape@5.1.2"
+=======
+<<<<<<< Updated upstream
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.2d.spriteshape@5.1.4
+=======
+      resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.spriteshape@5.1.2"
+>>>>>>> Stashed changes
+>>>>>>> DongChan
       assetPath: Packages/com.unity.2d.spriteshape
       name: com.unity.2d.spriteshape
       displayName: 2D SpriteShape
@@ -470,6 +513,7 @@ m_PackageAssets:
         - 5.1.1
         - 5.1.2
         - 5.1.3
+        - 5.1.4
         - 6.0.0-pre.1
         - 6.0.0-pre.2
         - 6.0.0
@@ -479,14 +523,15 @@ m_PackageAssets:
         compatible:
         - 5.1.2
         - 5.1.3
-        verified: 5.1.3
+        - 5.1.4
+        verified: 5.1.4
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.common
         version: 4.0.3
       - name: com.unity.2d.path
-        version: 4.0.1
+        version: 4.0.2
       - name: com.unity.modules.physics2d
         version: 1.0.0
       resolvedDependencies:
@@ -507,7 +552,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.path
-        version: 4.0.1
+        version: 4.0.2
       - name: com.unity.modules.physics2d
         version: 1.0.0
       keywords:
@@ -529,13 +574,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637568738720000000
+      datePublishedTicks: 637637511330000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 03eb2fe90133273bcb1bd74654bdc02023cdfc7f
+        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
         path: 
     - packageId: com.unity.2d.tilemap@1.0.0
       testable: 0
@@ -587,6 +632,145 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
+    - packageId: com.unity.cinemachine@2.6.9
+      testable: 0
+      isDirectDependency: 1
+      version: 2.6.9
+      source: 1
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.cinemachine@2.6.9
+      assetPath: Packages/com.unity.cinemachine
+      name: com.unity.cinemachine
+      displayName: Cinemachine
+      author:
+        name: 
+        email: 
+        url: 
+      category: cinematography
+      type: 
+      description: "Smart camera tools for passionate creators. \n\nIMPORTANT NOTE:
+        If you are upgrading from the Asset Store version of Cinemachine, delete
+        the Cinemachine asset from your project BEFORE installing this version from
+        the Package Manager."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.1.11-beta.1
+        - 2.1.12
+        - 2.1.13
+        - 2.2.0
+        - 2.2.7
+        - 2.2.8
+        - 2.2.9
+        - 2.2.10-preview.3
+        - 2.2.10-preview.4
+        - 2.3.1
+        - 2.3.3
+        - 2.3.4
+        - 2.3.5-preview.3
+        - 2.4.0-preview.3
+        - 2.4.0-preview.4
+        - 2.4.0-preview.6
+        - 2.4.0-preview.7
+        - 2.4.0-preview.8
+        - 2.4.0-preview.9
+        - 2.4.0-preview.10
+        - 2.4.0
+        - 2.5.0
+        - 2.6.0-preview.2
+        - 2.6.0-preview.3
+        - 2.6.0-preview.5
+        - 2.6.0-preview.8
+        - 2.6.0
+        - 2.6.1-preview.6
+        - 2.6.1
+        - 2.6.2-preview.1
+        - 2.6.2
+        - 2.6.3-preview.2
+        - 2.6.3
+        - 2.6.4
+        - 2.6.5
+        - 2.6.9
+        - 2.7.1
+        - 2.7.2
+        - 2.7.3
+        - 2.7.4
+        - 2.7.5
+        - 2.8.0-exp.1
+        - 2.8.0-exp.2
+        - 2.8.0-pre.1
+        - 2.8.0
+        compatible:
+        - 2.5.0
+        - 2.6.0-preview.2
+        - 2.6.0-preview.3
+        - 2.6.0-preview.5
+        - 2.6.0-preview.8
+        - 2.6.0
+        - 2.6.1-preview.6
+        - 2.6.1
+        - 2.6.2-preview.1
+        - 2.6.2
+        - 2.6.3-preview.2
+        - 2.6.3
+        - 2.6.4
+        - 2.6.5
+        - 2.6.9
+        - 2.7.1
+        - 2.7.2
+        - 2.7.3
+        - 2.7.4
+        - 2.7.5
+        - 2.8.0-exp.1
+        - 2.8.0-exp.2
+        - 2.8.0-pre.1
+        - 2.8.0
+        verified: 2.6.9
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - camera
+      - follow
+      - rig
+      - fps
+      - cinematography
+      - aim
+      - orbit
+      - cutscene
+      - cinematic
+      - collision
+      - freelook
+      - cinemachine
+      - compose
+      - composition
+      - dolly
+      - track
+      - clearshot
+      - noise
+      - framing
+      - handheld
+      - lens
+      - impulse
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637641896800000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/com.unity.cinemachine.git
+        revision: 9b5976153830563c8e94c9bcd9131d4452a02c0f
+        path: 
     - packageId: com.unity.collab-proxy@1.5.7
       testable: 0
       isDirectDependency: 1
@@ -629,6 +813,10 @@ m_PackageAssets:
         - 1.3.9
         - 1.4.9
         - 1.5.7
+        - 1.6.0
+        - 1.7.1
+        - 1.8.0
+        - 1.9.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -641,6 +829,8 @@ m_PackageAssets:
         - 2.1.0-preview.6
         compatible:
         - 1.5.7
+        - 1.6.0
+        - 1.8.0
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -768,7 +958,7 @@ m_PackageAssets:
         version: 1.1.1
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.26
+        version: 1.1.27
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -796,12 +986,20 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
         revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.9
+    - packageId: com.unity.ide.visualstudio@2.0.11
       testable: 0
       isDirectDependency: 1
-      version: 2.0.9
+      version: 2.0.11
       source: 1
+<<<<<<< HEAD
       resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.9"
+=======
+<<<<<<< Updated upstream
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+=======
+      resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.9"
+>>>>>>> Stashed changes
+>>>>>>> DongChan
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -855,7 +1053,7 @@ m_PackageAssets:
         version: 1.1.9
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.26
+        version: 1.1.27
       - name: com.unity.ext.nunit
         version: 1.0.6
       - name: com.unity.modules.imgui
@@ -875,13 +1073,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637580705480000000
+      datePublishedTicks: 637613656180000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: c7cd4c6319806423b3d918b3e9599244e3993d41
+        revision: 680e06d94ffca728223ae2cb14bb919cd354e2c1
         path: 
     - packageId: com.unity.ide.vscode@1.2.3
       testable: 0
@@ -952,12 +1150,20 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.test-framework@1.1.26
+    - packageId: com.unity.test-framework@1.1.27
       testable: 0
       isDirectDependency: 1
-      version: 1.1.26
+      version: 1.1.27
       source: 1
+<<<<<<< HEAD
       resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.test-framework@1.1.26"
+=======
+<<<<<<< Updated upstream
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.test-framework@1.1.27
+=======
+      resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.test-framework@1.1.26"
+>>>>>>> Stashed changes
+>>>>>>> DongChan
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -1035,13 +1241,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637576439750000000
+      datePublishedTicks: 637594751620000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-        revision: ea9d07e64e6d63c4f2fd8b6bc57df0f452ff4fae
+        revision: c2f2cc9b7ea61d42964257363595dff5e8c47c42
         path: 
     - packageId: com.unity.textmeshpro@3.0.6
       testable: 0
@@ -1121,6 +1327,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.5.5
         - 1.5.6
+        - 1.6.0-preview.1
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1
@@ -1142,6 +1349,7 @@ m_PackageAssets:
         - 2.1.4
         - 2.1.5
         - 2.1.6
+        - 2.2.0-preview.1
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -1159,8 +1367,10 @@ m_PackageAssets:
         - 3.0.4
         - 3.0.5
         - 3.0.6
+        - 3.2.0-pre.1
         compatible:
         - 3.0.6
+        - 3.2.0-pre.1
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
@@ -3405,6 +3615,7 @@ m_PackageAssets:
         - 5.0.0
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.0.3
@@ -3449,12 +3660,20 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: c97def465b1932276762fc13f4cfee58da99d5e9
         path: 
-    - packageId: com.unity.2d.path@4.0.1
+    - packageId: com.unity.2d.path@4.0.2
       testable: 0
       isDirectDependency: 0
-      version: 4.0.1
+      version: 4.0.2
       source: 1
+<<<<<<< HEAD
       resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.path@4.0.1"
+=======
+<<<<<<< Updated upstream
+      resolvedPath: C:\Unity\Dot-Breeder\dotbreeder\Library\PackageCache\com.unity.2d.path@4.0.2
+=======
+      resolvedPath: "C:\\Users\\\uB2F4\uBE44\\Desktop\\Dot-Breeder\\dotbreeder\\Library\\PackageCache\\com.unity.2d.path@4.0.1"
+>>>>>>> Stashed changes
+>>>>>>> DongChan
       assetPath: Packages/com.unity.2d.path
       name: com.unity.2d.path
       displayName: 2D Path
@@ -3484,12 +3703,14 @@ m_PackageAssets:
         - 3.0.2
         - 4.0.0
         - 4.0.1
+        - 4.0.2
         - 5.0.0-pre.1
         - 5.0.0-pre.2
         - 5.0.0
         compatible:
         - 4.0.1
-        verified: 4.0.1
+        - 4.0.2
+        verified: 4.0.2
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -3507,13 +3728,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637328350450000000
+      datePublishedTicks: 637637511040000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 7d7470f4ca0ea8353d4c9640b3b6ae9d1ebd9c1d
+        revision: 6f9c488e4d487ead34ee4d516f0a2f4a911a8b25
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []

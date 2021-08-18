@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637642590304599492
+      ticks: 637643528365841451
     m_Hash: 547236370
   m_LockFileStatus:
     m_FilePath: C:/Unity/Dot-Breeder/dotbreeder/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637642590304619439
+      ticks: 637643528365871369
     m_Hash: 1125919496
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -1275,6 +1275,7 @@ m_PackageAssets:
         - 1.5.4
         - 1.5.5
         - 1.5.6
+        - 1.6.0-preview.1
         - 2.0.0
         - 2.0.1-preview.1
         - 2.0.1

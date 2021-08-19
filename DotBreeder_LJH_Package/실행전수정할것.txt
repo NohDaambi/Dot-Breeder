@@ -1,0 +1,31 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+-->시작화면하고 미니게임은 그냥 프리팹만 가져다 놓아도 바로 실행가능 플레이어 행동은 몇가지 할당해줘야댐!
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. 미니게임 
+
+- Minigame-MiniGame SetActive키기 (플레이어가 상호작용해야 켜지는 식이라 따로 정리했을 땐 켜줘야댐)
+
+2. 플레이어 행동 및 UI
+
+- Broken text PPtr in file(~~~). Local file identifier (~~~~) doesn't exist! 오류 뜨는데 실행하면 바로 오류 해결되는데 뭔지 모르겠음..
+
+- 안에 씬 2개 포함되어있어서 원래있는 scenes폴더 삭제하고 File - Build Settings에 새로운 씬 할당해주기
+
+- Prefab은 씬 안에 없는거만 넣어주면댐
+
+- Layer 추가해서 6번에 Object 추가하기
+
+- (패키지로하면 할당안해도 되는듯) PlayerAction 에서 GameManager -> Player -> S Manager에 SoundManager 할당하기 (프리팹끼리 분리되어있어서 따로 할당해줘야함) 
+
+- Edit - ProjectSettings - Input Manager - Fire1에서 Mouse 0인거 삭제하고 left ctrl으로만 가능하게끔 해놓기, 아니면 걍 호버링으로 된 시스템(예람이가 만든거!) 가지고오기
+
+- Game Play 스크린 비율 FullHD로..(아마 조합기만 깨질거임 캔버스 따로 만들어서 비율)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+window - package manager - visual studio editor - remove or Update 2.0.11 안하면
+
+Visual Studio Editor Package version 2.0.11 is available, we strongly encourage you to update from the Unity Package Manager for a better Visual Studio integration 이 버그 뜨는데 뭐냐
+
+아마 내 유니티만 업데이트 안해서 그런다고 나오는듯

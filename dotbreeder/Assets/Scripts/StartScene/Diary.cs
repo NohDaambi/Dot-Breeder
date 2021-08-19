@@ -8,13 +8,13 @@ public class Diary : MonoBehaviour
     public GameObject Diary1;
     public GameObject Image;
     public Image sceneImg;
+    public GameObject ConstraintImg;
 
     public Text[] text = new Text[4];
     public Button[] Btn = new Button[32];
 
     public GameObject[] textObj = new GameObject[4];
     public GameObject[] btnObj = new GameObject[32];
-
 
     public Animator ImgAnim1;
     public Animator Change1;
@@ -30,8 +30,7 @@ public class Diary : MonoBehaviour
 
     //코루틴
     IEnumerator ImgHide()
-    {
-        
+    {        
         yield return new WaitForSecondsRealtime(0.35f);
         Image.SetActive(false);
     }
@@ -40,6 +39,7 @@ public class Diary : MonoBehaviour
     {       
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            ConstraintImg.SetActive(false);
             if (num == 1)
             {
                 ImgAnim1.SetBool("isBtn1", false);
@@ -205,6 +205,7 @@ public class Diary : MonoBehaviour
     //버튼 이미지 가져오기
     public void ImgControl(int arr, int n)
     {
+        ConstraintImg.SetActive(true);
         Image.SetActive(true);
         sceneImg.sprite = Btn[arr + btnNum].image.sprite;
         num = n;

@@ -74,6 +74,16 @@ public class SceneTransition : MonoBehaviour
                 gameObject.transform.position = new Vector3(-9, -4, -1);
                 break;
 
+            //House
+            case "GoHouse":
+                SceneManager.LoadScene("House");
+                gameObject.transform.position = new Vector3(2.2f, -4.3f, -1);
+                break;
+            case "ExitHouse":
+                SceneManager.LoadScene("Forest1");
+                gameObject.transform.position = new Vector3(5.8f, -4f, -1);
+                break;
+
 
         }
     }

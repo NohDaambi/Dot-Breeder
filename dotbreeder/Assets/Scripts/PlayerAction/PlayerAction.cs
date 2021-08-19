@@ -15,8 +15,6 @@ public class PlayerAction : MonoBehaviour
 
     public AudioClip clip;
 
-    private static bool PlayerExist;    
-
     float h;
     float v;
     bool isHorizonMove;
@@ -28,6 +26,7 @@ public class PlayerAction : MonoBehaviour
     Animator Anim;
 
     public bool isDelay;
+    private static bool PlayerExist;
 
     void Awake()
     {

@@ -80,9 +80,12 @@
     <Compile Include="Assets\Scripts\MinIGameScripts\CountDown.cs" />
     <Compile Include="Assets\Scripts\Data_quest,obj\QuestData.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
+    <Compile Include="Assets\Scripts\PlayerAction\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\PlayerAction\PlayerAction.cs" />
+    <Compile Include="Assets\Scripts\PlayerAction\Interaction.cs" />
     <Compile Include="Assets\Scripts\Manager\TalkManager.cs" />
     <Compile Include="Assets\Scripts\TextUI\DropTextBox.cs" />
+    <Compile Include="Assets\Scripts\MinIGameScripts\MIniGameDontDestroy.cs" />
     <Compile Include="Assets\Scripts\Plants.cs" />
     <Compile Include="Assets\Scripts\TextUI\TypeEffect.cs" />
     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
@@ -92,8 +95,6 @@
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\ScoreScripts\Gscore.cs" />
     <Compile Include="Assets\Scripts\Manager\TabManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerAction\Interaction.cs" />
-    <Compile Include="Assets\Scripts\PlayerAction\SceneTransition.cs" />
     <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
     <None Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
     <Reference Include="UnityEngine">

@@ -41,12 +41,9 @@ public class MiniGame : MonoBehaviour
     public Animator Text7;
     public Animator Text8;
 
-    public SoundManager sManager;
     public AudioClip clip;
     public AudioClip clip1;
-    public AudioClip clip2;
-
-    public GameManager manager;    
+    public AudioClip clip2; 
 
     public bool isAlive = true;
     public int Score = 0;
@@ -63,17 +60,14 @@ public class MiniGame : MonoBehaviour
         for (int i = 0; i < 8; i++)
         {
             Result[i] = false;            
-        }
-
-
+        }        
     }
 
     void Update()
     {
         //시간 제한 키 입력 제한
         if (isAlive)
-        {
-            
+        {            
             //방향키 입력값
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -114,7 +108,6 @@ public class MiniGame : MonoBehaviour
             ScoreText.text = Score.ToString();
             ScoreText2.text = Score.ToString();
         }
-
     }
 
     public void InitKey()
@@ -269,7 +262,6 @@ public class MiniGame : MonoBehaviour
         InputKeyText6.text = InputKeyArr[5];
         InputKeyText7.text = InputKeyArr[6];
         InputKeyText8.text = InputKeyArr[7];
-
     }
 
     //정답 텍스트
@@ -284,8 +276,5 @@ public class MiniGame : MonoBehaviour
         AnswerPrevText7.text = AnswerKeyArr[6];
         AnswerPrevText8.text = AnswerKeyArr[7];
     }
-
-
-
 }
 

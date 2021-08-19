@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Volcano2.unity
     guid: ebf28d59ae1ce69428ce0f1d50a772e6
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: fce8bd1fd00353c4cb636256808d82de
   - enabled: 0
     path: 
     guid: 5ddea0aa8b09de54dbcc25d530e91f00

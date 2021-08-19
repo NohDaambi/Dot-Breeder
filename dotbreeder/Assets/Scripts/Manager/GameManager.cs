@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject menuSet;
     public GameObject TabMenu;
+    public GameObject PlantObj;
+    public GameObject DataPieceObj;
+    public GameObject House;
 
     public int talkIndex;    
     public int Rcount;
@@ -86,6 +89,19 @@ public class GameManager : MonoBehaviour
                 menuSet.SetActive(false);
             }
         }
+
+        //숲-1에서만 활성화
+        if (SceneManager.GetActiveScene().name == "Forest1")
+        {
+            PlantObj.SetActive(true);
+            DataPieceObj.SetActive(true);         
+        }
+        else
+        {
+            PlantObj.SetActive(false);
+            DataPieceObj.SetActive(false); 
+        }
+
     }
 
     void Awake()

@@ -28,6 +28,8 @@ TagManager:
   - G
   - B
   - DataPiece
+  - GoHouse
+  - ExitHouse
   layers:
   - Default
   - TransparentFX

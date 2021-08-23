@@ -15,6 +15,29 @@ TagManager:
   - SqureGreen
   - SqureOrange
   - ActivePortal
+  - DataPiece
+  - R
+  - G
+  - GoHouse
+  - B
+  - FoRight
+  - Npc
+  - Flower
+  - GoOcene
+  - Rock
+  - FoLeft
+  - OcRight
+  - GoForest
+  - GoDesert
+  - OcLeft
+  - ExitHouse
+  - GoVolcano
+  - DeLeft
+  - DeRight
+  - BackOcene
+  - GoForestDg
+  - GoOceneDg
+  - GoDesertDg
   layers:
   - Default
   - TransparentFX

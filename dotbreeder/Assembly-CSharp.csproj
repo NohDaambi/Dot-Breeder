@@ -54,50 +54,134 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Tilemap\Tiles\Random Tile\Scripts\RandomTile.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Tilemap\GridInformation\Scripts\GridInformation.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Terrain Tile\Scripts\TerrainTile.cs" />
     <Compile Include="Assets\Prefabs\IceDungeonPrefabs\Script\Icetile_PlayerMove.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Pipeline Tile\Scripts\PipelineTile.cs" />
-    <Compile Include="Assets\Prefabs\StartScene\Scripts\StartScene.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\ScoreScripts\Rscore.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\TextUI\DropArr.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\ScoreScripts\Bscore.cs" />
+    <Compile Include="Assets\Prefabs\StartScene\Scripts\StartScene\StartScene.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\DataPiece\PieceInform.cs" />
     <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\LevelBuilder.cs" />
     <Compile Include="Assets\Prefabs\NPCPrefabs\Script\BoundedNPC.cs" />
+    <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\PlayerNameManager.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropWhite.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Combination\Timer.cs" />
+    <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\GameStart.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropBrown.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\TextUI\TextBox.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\DataPiece\DataPieceSort.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Scripts\TintTextureGenerator.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Override Tile\Scripts\RuleOverrideTile.cs" />
     <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\Player.cs" />
     <Compile Include="Assets\Prefabs\DesertDungeonPrefabs\Script\Deserttile_PlayerMove.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Manager\SceneDestroyManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Manager\QuestManager.cs" />
     <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\ForestDungeonManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Prefabs\MiniGame\Scripts\MinIGameScripts\MiniGame.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropBlue.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Isometric Rule Tile\IsometricRuleTile.cs" />
-    <Compile Include="Assets\Prefabs\StartScene\Scripts\Diary.cs" />
+    <Compile Include="Assets\Prefabs\StartScene\Scripts\StartScene\Diary.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Combination\UnlockSystem.cs" />
     <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\Box.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Combination\Combination.cs" />
     <Compile Include="Assets\Prefabs\IceDungeonPrefabs\Script\FollowPlayer.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Hexagonal Rule Tile\HexagonalRuleTile.cs" />
     <Compile Include="Assets\Prefabs\DesertDungeonPrefabs\Script\DesertScript.cs" />
     <Compile Include="Assets\Prefabs\MiniGame\Scripts\MinIGameScripts\CountDown.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Data_quest,obj\QuestData.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Rule Tile\Scripts\RuleTile.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropOrange.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\PlayerAction\SceneTransition.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropGreen.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\PlayerAction\PlayerAction.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\PlayerAction\Interaction.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Manager\TalkManager.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\TextUI\DropTextBox.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Prefabs\MiniGame\Scripts\MinIGameScripts\MIniGameDontDestroy.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Plants.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\Lavatile_PlayerMove.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\TextUI\TypeEffect.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Prefabs\DesertDungeonPrefabs\Script\CameraManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMoveScript\PlayerMove.cs" />
     <Compile Include="Assets\Prefabs\CutScenePrefabs\Script\PotionSetActiveFalse.cs" />
+    <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\NameInputField.cs" />
     <Compile Include="Assets\Prefabs\MiniGame\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Data_quest,obj\ObjData.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\Levels.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Prefabs\CutScenePrefabs\Script\PlayCutScene.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Manager\GameManager.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\ScoreScripts\Gscore.cs" />
+    <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropManager.cs" />
+    <Compile Include="Assets\Prefabs\PlayerAction\scripts\Manager\TabManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Prefabs\CutScenePrefabs\Effect\Projectiles Vol 2\Shaders\Blend_CenterGlow.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Tilemap\Tiles\Rule Tile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Prefabs\CutScenePrefabs\Effect\Projectiles Vol 2\Shaders\Add_CenterGlow.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Prefabs\ForestDungeonPrefabs\Resources\Levels.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Tilemap\Brushes\Tint Brush Smooth\Shaders\TintedTilemap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -688,11 +772,17 @@
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>

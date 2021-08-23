@@ -4735,6 +4735,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5623474567253917993, guid: 616c72a22ca051c40b101377995fee27, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623474567253917993, guid: 616c72a22ca051c40b101377995fee27, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623474567253917993, guid: 616c72a22ca051c40b101377995fee27, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 376
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623474567253917993, guid: 616c72a22ca051c40b101377995fee27, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 266
+      objectReference: {fileID: 0}
     - target: {fileID: 9213363320070130740, guid: 616c72a22ca051c40b101377995fee27, type: 3}
       propertyPath: m_Name
       value: CutScenePrefab

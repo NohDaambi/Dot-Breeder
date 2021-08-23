@@ -12,7 +12,7 @@ public class CountDown : MonoBehaviour
     public MiniGame miniGame;
     public GameObject GameOver;
     public GameObject MiniGame;
-    //public GameManager manger;
+    public GameManager manger;
 
 
     void Awake()
@@ -45,9 +45,8 @@ public class CountDown : MonoBehaviour
     public void Exit()
     {
         MiniGame.SetActive(false);
-        InitGame();
-        //플레이어 행동제한 풀리는거는 매니져 델꼬오면 주석풀기
-        //manger.isAction = false;
+        InitGame();        
+        manger.isAction = false;
 
         //점수 할당
     }

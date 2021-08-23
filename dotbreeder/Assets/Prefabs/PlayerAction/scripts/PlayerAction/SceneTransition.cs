@@ -43,7 +43,7 @@ public class SceneTransition : MonoBehaviour
                 break;
             case "GoOceneDg":
                 SceneManager.LoadScene("Ice Dungeon");
-                gameObject.transform.position = new Vector3(-4, -3, -1);
+                gameObject.transform.position = new Vector3(-5.1f, -3, -1);
                 break;
 
             //Desert
@@ -65,7 +65,7 @@ public class SceneTransition : MonoBehaviour
                 break;
             case "GoDesertDg":
                 SceneManager.LoadScene("Desert Dungeon");
-                gameObject.transform.position = new Vector3(0.9f, 2, -1);
+                gameObject.transform.position = new Vector3(-0.5f, 2, -1);
                 break;
 
             //Volcano

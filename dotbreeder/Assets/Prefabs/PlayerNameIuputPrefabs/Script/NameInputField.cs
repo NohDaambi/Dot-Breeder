@@ -7,14 +7,14 @@ using System.Text.RegularExpressions;
 
 public class NameInputField : MonoBehaviour
 {
-    private GameManager thePlayer;
+    private PlayerNameManager thePlayer;
     public TextMeshProUGUI _playerName;
     public TMP_InputField inputField;
     public TextMeshProUGUI errorMasage;
 
     void Start()
     {
-        thePlayer = FindObjectOfType<GameManager>();
+        thePlayer = FindObjectOfType<PlayerNameManager>();
         inputField.characterLimit = 20;
         inputField.onValueChanged.AddListener(
             (word) => inputField.text = Regex.Replace(word, @"[^0-9a-zA-Z가-힣]", "")

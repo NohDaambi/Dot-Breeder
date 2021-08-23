@@ -65,12 +65,12 @@
      <Compile Include="Assets\Scripts\PlayerMoveScript\PlayerMove.cs" />
      <Compile Include="Assets\Prefabs\CutScenePrefabs\Script\PotionSetActiveFalse.cs" />
      <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\NameInputField.cs" />
-     <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\GameManager.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Animated Tile\Scripts\AnimatedTile.cs" />
      <Compile Include="Assets\Tilemap\Tiles\Weighted Random Tile\WeightedRandomTile.cs" />
      <Compile Include="Assets\Prefabs\ForestDungeonPrefabs\Script\Levels.cs" />
      <Compile Include="Assets\Prefabs\CutScenePrefabs\Script\PlayCutScene.cs" />
      <Compile Include="Assets\Prefabs\LavaDungeonPrefabs\Scripts\WaterDropManager.cs" />
+     <Compile Include="Assets\Prefabs\PlayerNameIuputPrefabs\Script\PlayerNameManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

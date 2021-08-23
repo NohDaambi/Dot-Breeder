@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MIniGameDontDestroy : MonoBehaviour
 {
@@ -18,5 +19,4 @@ public class MIniGameDontDestroy : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
 }

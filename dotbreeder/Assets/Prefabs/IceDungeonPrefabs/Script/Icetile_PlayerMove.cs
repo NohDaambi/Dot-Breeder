@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Icetile_PlayerMove : MonoBehaviour
 {
@@ -153,6 +154,7 @@ public class Icetile_PlayerMove : MonoBehaviour
             Debug.Log("Clear");
             h = 0;
             v = 0;
+            SceneManager.LoadScene("Ocene2");
         }
     }
 }

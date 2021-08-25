@@ -5,6 +5,7 @@ using UnityEngine;
 public class UnlockSystem : MonoBehaviour
 {
     public Combination combine;
+    public GameManager Manager;
 
     public GameObject[] LockBtn = new GameObject[6];
 
@@ -174,5 +175,6 @@ public class UnlockSystem : MonoBehaviour
     {
         if(DotLevel < 4)
             DotLevel++;
+        
     }
 }

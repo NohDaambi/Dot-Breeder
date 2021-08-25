@@ -8,11 +8,8 @@ public class Timer : MonoBehaviour
 {
     public GameObject CombineEnd;
     public GameObject CombineIng;
-    public GameObject House;
-    public GameObject Player;
-    public GameObject Combination;
 
-    public Combination combine;    
+    public Combination combine;
 
     public Slider timerSlider;
     public Text timerText;
@@ -23,17 +20,16 @@ public class Timer : MonoBehaviour
     public float TImeIng;
 
     public bool isPlus;
-    public bool HouseOn;
+
+    public bool isGive = false;
+    public bool isOnShack = false;
+    public bool ShackOn;
+    public bool isOnIgloo = false;
+    public bool IglooOn;
 
     //조합끝 UI
     public Text TitleEnd;
     public Image imageEnd;
-
-    //현재 조합중인 것 1~10번대 건축물 100번대 이후 아이템으로 분류
-    public int CurrentCombinging;
-
-    public bool isGive = false;
-    public bool isOnHouse = false;
 
 
     IEnumerator CurrentTime()
@@ -67,53 +63,6 @@ public class Timer : MonoBehaviour
 
             if(timeFlow > 0)
                 isPlus = true;
-        }
-
-        //집 들어가면 UI안보이게하고 or 숲-1에서만 보여줘
-        if (SceneManager.GetActiveScene().name == "House" || SceneManager.GetActiveScene().name != "Forest1")
-            House.SetActive(false);
-        //집 나와서 원래 집 켜져있던거라면 켜줘
-        else if (HouseOn && SceneManager.GetActiveScene().name == "Forest1")
-            House.SetActive(true);
-
-        //통나무 집
-        if (CurrentCombinging == 1 && isGive)
-        {
-            HouseOn = true;
-            House.SetActive(true);            
-            Player.transform.position = new Vector3(5.8f, -4f, -1);
-            isGive = false;
-        }
-        if (SceneManager.GetActiveScene().name == "House" && HouseOn)
-        {            
-            Combination.SetActive(true);
-            Combination.transform.position = new Vector3(4.48f, 1.11f, -1);
-        }
-        if(SceneManager.GetActiveScene().name == "Forest1" && !HouseOn)
-            Combination.SetActive(true);
-
-        if ((SceneManager.GetActiveScene().name != "House" && HouseOn) || (SceneManager.GetActiveScene().name != "Forest1" && !HouseOn))
-        {
-            Combination.SetActive(false);
-        }
-
-        //침대
-        if (CurrentCombinging == 2 && isOnHouse)
-        {
-            Debug.Log("침대 소환");
-            isOnHouse = false;
-        }
-        //난로
-        if (CurrentCombinging == 3 && isOnHouse)
-        {
-            Debug.Log("난로 소환");
-            isOnHouse = false;
-        }
-        //테이블
-        if (CurrentCombinging == 4 && isOnHouse)
-        {
-            Debug.Log("테이블 소환");
-            isOnHouse = false;
         }
 
     }

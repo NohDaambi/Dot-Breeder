@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Combination : MonoBehaviour
 {
     public PlayerAction player;
     public GameManager Manager;
     public Timer timer;
+    public HouseManager houseManager;
 
     public GameObject CombineUI;
     public GameObject CombineChild;
@@ -184,8 +186,10 @@ public class Combination : MonoBehaviour
         else if (pageNumItem == 2 && ItemPage)
             Candy();
 
-        if (pageNumBuilding == 1 && BuildingPage)
+        if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 1)
             TreeHouse();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
+            Igloo();
     }
     public void Button2()
     {
@@ -194,8 +198,10 @@ public class Combination : MonoBehaviour
             Item();
         //else if (pageNum == 2)
 
-        if (pageNumBuilding == 1 && BuildingPage)
+        if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 1)
             Bed();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
+            IceBed();
     }
     public void Button3()
     {
@@ -204,8 +210,10 @@ public class Combination : MonoBehaviour
             Item();
         //else if (pageNum == 2)
 
-        if (pageNumBuilding == 1 && BuildingPage)
+        if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 1)
             Stove();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
+            FishingTool();
     }
     public void Button4()
     {
@@ -214,8 +222,10 @@ public class Combination : MonoBehaviour
             Item();
         //else if (pageNum == 2) 
 
-        if (pageNumBuilding == 1 && BuildingPage)
+        if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 1)
             Table();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
+            Aquarium();
     }
 
     //제작 버튼
@@ -288,11 +298,17 @@ public class Combination : MonoBehaviour
         //도트한테 해당 아이템 할당하기, 이름불러와서 그 값 할당
         DotItem += produceNum;
 
-        if (timer.HouseOn == false)
+        if (timer.ShackOn == false)
             timer.isGive = true;
-        else if (timer.HouseOn == true)
-            timer.isOnHouse = true;
+        else if (timer.ShackOn == true)
+            timer.isOnShack = true;
+
+        if (timer.IglooOn == false)
+            timer.isGive = true;
+        else if (timer.IglooOn == true)
+            timer.isOnIgloo = true;
     }
+
     //최대로 조합하기
     public void Max()
     {
@@ -422,7 +438,7 @@ public class Combination : MonoBehaviour
         timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
         //imageIng.sprtie = ~~
 
-        timer.CurrentCombinging = 1;
+        houseManager.CurrentCombinging = 1;
 
         ProduceCount();
     }
@@ -444,7 +460,7 @@ public class Combination : MonoBehaviour
         timeIng.text = "제작 시간 : " + GetBedTime.ToString();
         //imageIng.sprtie = ~~
 
-        timer.CurrentCombinging = 2;
+        houseManager.CurrentCombinging = 2;
 
         ProduceCount();
     }
@@ -466,7 +482,7 @@ public class Combination : MonoBehaviour
         timeIng.text = "제작 시간 : " + GetStoveTime.ToString();
         //imageIng.sprtie = ~~
 
-        timer.CurrentCombinging = 3;
+        houseManager.CurrentCombinging = 3;
 
         ProduceCount();
     }
@@ -488,7 +504,7 @@ public class Combination : MonoBehaviour
         timeIng.text = "제작 시간 : " + GetTableTime.ToString();
         //imageIng.sprtie = ~~
 
-        timer.CurrentCombinging = 4;
+        houseManager.CurrentCombinging = 4;
 
         ProduceCount();
     }
@@ -532,6 +548,101 @@ public class Combination : MonoBehaviour
         TitleIng.text = "1레벨 아이템";
         timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
         //imageIng.sprtie = ~~
+
+        ProduceCount();
+    }
+
+    public void Igloo()
+    {
+        RequiredR = 1;
+        RequiredG = 2;
+        RequiredB = 1;
+        GetHouseTime = 7;
+        timer.combineTIme = GetHouseTime;
+
+        //조합기 텍스트        
+        Title.text = "이글루";
+        time.text = "제작 시간 : " + GetHouseTime.ToString();
+        //image.sprite = 스프라이트 가져와서 각 할당
+        Content.text = "이글루랍니다! 추워,,";
+
+        //조합중 텍스트
+        TitleIng.text = "이글루";
+        timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
+        //imageIng.sprtie = ~~
+
+        houseManager.CurrentCombinging = 5;
+
+        ProduceCount();
+    }
+
+    public void IceBed()
+    {
+        RequiredR = 1;
+        RequiredG = 1;
+        RequiredB = 1;
+        GetHouseTime = 9;
+        timer.combineTIme = GetHouseTime;
+
+        //조합기 텍스트        
+        Title.text = "썰매 침대";
+        time.text = "제작 시간 : " + GetHouseTime.ToString();
+        //image.sprite = 스프라이트 가져와서 각 할당
+        Content.text = "썰매 침대! 와우,,";
+
+        //조합중 텍스트
+        TitleIng.text = "썰매 침대";
+        timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
+        //imageIng.sprtie = ~~
+
+        houseManager.CurrentCombinging = 6;
+
+        ProduceCount();
+    }
+
+    public void FishingTool()
+    {
+        RequiredR = 1;
+        RequiredG = 1;
+        RequiredB = 1;
+        GetHouseTime = 10;
+        timer.combineTIme = GetHouseTime;
+
+        //조합기 텍스트        
+        Title.text = "낚시용품 진열대";
+        time.text = "제작 시간 : " + GetHouseTime.ToString();
+        //image.sprite = 스프라이트 가져와서 각 할당
+        Content.text = "얼른 낚시해서 밥 먹자 배고프다.";
+
+        //조합중 텍스트
+        TitleIng.text = "낚시용품 진열대";
+        timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
+        //imageIng.sprtie = ~~
+
+        houseManager.CurrentCombinging = 7;
+
+        ProduceCount();
+    }
+    public void Aquarium()
+    {
+        RequiredR = 1;
+        RequiredG = 1;
+        RequiredB = 1;
+        GetHouseTime = 12;
+        timer.combineTIme = GetHouseTime;
+
+        //조합기 텍스트        
+        Title.text = "수족관";
+        time.text = "제작 시간 : " + GetHouseTime.ToString();
+        //image.sprite = 스프라이트 가져와서 각 할당
+        Content.text = "수족관을 만들어서 기르자";
+
+        //조합중 텍스트
+        TitleIng.text = "수족관";
+        timeIng.text = "제작 시간 : " + GetHouseTime.ToString();
+        //imageIng.sprtie = ~~
+
+        houseManager.CurrentCombinging = 8;
 
         ProduceCount();
     }

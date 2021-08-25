@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public bool isAction;
     private static bool ManagerExist;
 
+    public int stageNum;
+
     void Start()
     {
         //퀘스트 이름
@@ -45,8 +47,17 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //스테이지 넘버
+        if (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "Forest2")
+            stageNum = 1;
+        else if (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "Ocene2")
+            stageNum = 2;
+        else if (SceneManager.GetActiveScene().name == "Desert1" || SceneManager.GetActiveScene().name == "Desert2")
+            stageNum = 3;
+
+
         //메뉴 창 키기,끄기
-        if(Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel"))
         {
             if (menuSet.activeSelf)
                 menuSet.SetActive(false);

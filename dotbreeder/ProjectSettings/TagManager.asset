@@ -38,6 +38,8 @@ TagManager:
   - GoForestDg
   - GoOceneDg
   - GoDesertDg
+  - GoIgloo
+  - ExitIgloo
   layers:
   - Default
   - TransparentFX

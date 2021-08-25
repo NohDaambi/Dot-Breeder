@@ -96,6 +96,16 @@ public class SceneTransition : MonoBehaviour
                 gameObject.transform.position = new Vector3(5.8f, -4f, -1);
                 break;
 
+            //Igloo
+            case "GoIgloo":
+                SceneManager.LoadScene("House");
+                gameObject.transform.position = new Vector3(0.05f, -3.3f, -1);
+                break;
+            case "ExitIgloo":
+                SceneManager.LoadScene("Ocene1");
+                gameObject.transform.position = new Vector3(0.1f, -3.7f, -1);
+                break;
+
 
         }
     }

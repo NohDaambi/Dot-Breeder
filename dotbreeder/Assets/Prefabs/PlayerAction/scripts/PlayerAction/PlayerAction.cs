@@ -12,7 +12,7 @@ public class PlayerAction : MonoBehaviour
 
     public float Speed;
     public bool Attack;
-
+    public int weaponstrength=1;
     public AudioClip clip;
 
     float h;

@@ -25,9 +25,9 @@ public class GameManager : MonoBehaviour
     public GameObject DataPieceObj;
 
     public int talkIndex;    
-    public int Rcount;
-    public int Gcount;
-    public int Bcount;
+    public int Rcount=0;
+    public int Gcount=0;
+    public int Bcount=0;
 
     public int PrevRcount;
     public int PrevGcount;
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         //Äù½ºÆ® ÀÌ¸§
         PlayerInteraction.questText.text = questManager.CheckQuest();
         PlayerInteraction.questTextIng.text = questManager.CheckQuest();
+
     }
 
     void Update()

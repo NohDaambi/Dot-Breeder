@@ -8,7 +8,6 @@ public class Interaction : MonoBehaviour
     public PlayerAction Player;
     public GameManager Manager;
     public QuestManager questManager;
-    public Plants Plant;
     public PieceInform pieceInform;
     public TalkManager talkManager;
     public TypeEffect talk;
@@ -20,8 +19,6 @@ public class Interaction : MonoBehaviour
     public GameObject CombinEnd;
 
     public Text questText;
-    public Text questTextIng;
-    public Text questTextEd;
     public Text NpcName;
 
     public Image portraitImg;
@@ -35,26 +32,23 @@ public class Interaction : MonoBehaviour
     //채집 액션
     public void Forage()
     {
-        //채집
+        //채집 << 여기에 채집 카운트 적용해서 드랍시 나오는 텍스트UI 출력하게 해야함!
         if (Player.scanObject.tag == "G")
-        {
-            Plant.FlowerDestory();
+        {            
             if (Manager.PrevGcount != Manager.Gcount)
                 Manager.DropBox.DropPixel("G", 1);
 
             Manager.PrevGcount = Manager.Gcount;
         }
         else if (Player.scanObject.tag == "R")
-        {
-            Plant.RockDestory();
+        {           
             if (Manager.PrevRcount != Manager.Rcount)
                 Manager.DropBox.DropPixel("R", 1);
 
             Manager.PrevRcount = Manager.Rcount;
         }
         else if (Player.scanObject.tag == "B")
-        {
-            Plant.BoxDestory();
+        {           
             if (Manager.PrevBcount != Manager.Bcount)
                 Manager.DropBox.DropPixel("B", 1);
 
@@ -79,12 +73,19 @@ public class Interaction : MonoBehaviour
         //교육하러가기
         if (Player.scanObject.name == "Study")
         {
-            MiniGame.SetActive(true);
+            if (Manager.DotLevel == 1)
+            {
+                Debug.Log("사용하기엔 도트가 아직 어리다..");
+            }
+            else if (Manager.DotLevel >= 2)
+            {
+                MiniGame.SetActive(true);
 
-            if (MiniGame.activeSelf)
-                Manager.isAction = true;
-            else if (!MiniGame.activeSelf)
-                Manager.isAction = false;
+                if (MiniGame.activeSelf)
+                    Manager.isAction = true;
+                else if (!MiniGame.activeSelf)
+                    Manager.isAction = false;
+            }
         }
 
         //조합기
@@ -115,7 +116,7 @@ public class Interaction : MonoBehaviour
         ObjData objData = Manager.scanObject.GetComponent<ObjData>();
 
         //Npc 일 경우에만 대화가능
-        if (objData.isNpc || objData.isDataPiece)
+        if (objData.isNpc || objData.isDataPiece || (objData.isStudy && Manager.DotLevel == 1))
         {
             Talk(objData.Id);
             NpcName.gameObject.SetActive(true);
@@ -126,7 +127,7 @@ public class Interaction : MonoBehaviour
 
 
         //이야기 보여주기
-        if (Player.scanObject.tag == "Npc" || Player.scanObject.tag == "DataPiece")
+        if (Player.scanObject.tag == "Npc" || Player.scanObject.tag == "DataPiece" || (Player.scanObject.name == "Study" && Manager.DotLevel == 1))
             Manager.talkPanel.SetBool("isShow", Manager.isAction);
     }
 
@@ -153,8 +154,6 @@ public class Interaction : MonoBehaviour
         {
             Manager.isAction = false;
             talkIndex = 0;
-            questText.text = questManager.CheckQuest(id);
-            questTextIng.text = questManager.CheckQuest(id);
             return;
         }
 

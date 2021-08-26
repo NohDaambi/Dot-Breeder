@@ -9,12 +9,11 @@ public class UnlockSystem : MonoBehaviour
 
     public GameObject[] LockBtn = new GameObject[6];
 
-    public int DotLevel;
     public bool[] pageActive = new bool[4];
 
     void Update()
     {
-        if(DotLevel == 1)
+        if(Manager.DotLevel == 1)
         {
             //1페이지 1,2,3번 아이템 해금
             for (int i = 0; i < 3; i++)
@@ -23,7 +22,7 @@ public class UnlockSystem : MonoBehaviour
             }
             pageActive[0] = true;
         }
-        if (DotLevel == 2)
+        if (Manager.DotLevel == 2)
         {
             //1페이지 4,5,6번 아이템 해금
             for (int i = 3; i < 6; i++)
@@ -32,7 +31,7 @@ public class UnlockSystem : MonoBehaviour
             }
             pageActive[1] = true;
         }
-        if (DotLevel == 3)
+        if (Manager.DotLevel == 3)
         {
             //2페이지 1,2,3번 아이템 해금
             for (int i = 0; i < 3; i++)
@@ -41,7 +40,7 @@ public class UnlockSystem : MonoBehaviour
             }
             pageActive[2] = true;
         }
-        if (DotLevel == 4)
+        if (Manager.DotLevel == 4)
         {
             //2페이지 4,5,6번 아이템 해금
             for (int i = 3; i < 6; i++)
@@ -75,7 +74,7 @@ public class UnlockSystem : MonoBehaviour
         //건축물 1페이지
         if (combine.pageNumBuilding == 1 && combine.BuildingPage)
         {
-            if(DotLevel == 1)
+            if(Manager.DotLevel == 1)
             {
                 LockBtn[0].SetActive(false);
                 LockBtn[1].SetActive(true);
@@ -84,7 +83,7 @@ public class UnlockSystem : MonoBehaviour
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (DotLevel == 2)
+            if (Manager.DotLevel == 2)
             {
                 LockBtn[0].SetActive(false);
                 LockBtn[1].SetActive(false);
@@ -93,7 +92,7 @@ public class UnlockSystem : MonoBehaviour
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (DotLevel == 3)
+            if (Manager.DotLevel == 3)
             {
                 LockBtn[0].SetActive(false);
                 LockBtn[1].SetActive(false);
@@ -102,7 +101,7 @@ public class UnlockSystem : MonoBehaviour
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (DotLevel == 4)
+            if (Manager.DotLevel == 4)
             {
                 LockBtn[0].SetActive(false);
                 LockBtn[1].SetActive(false);
@@ -173,8 +172,7 @@ public class UnlockSystem : MonoBehaviour
     //일단 도트 성장 예시
     public void LevelUp()
     {
-        if(DotLevel < 4)
-            DotLevel++;
-        
+        if(Manager.DotLevel < 4)
+            Manager.DotLevel++;        
     }
 }

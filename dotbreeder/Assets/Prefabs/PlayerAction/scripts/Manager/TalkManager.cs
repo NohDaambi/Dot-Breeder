@@ -21,6 +21,9 @@ public class TalkManager : MonoBehaviour
     //대화 할당
     void GenerateData()
     {
+        //Study
+        talkData.Add(100, new string[] { "사용하기엔 도트가 아직 어리다.." });
+
         //Talk
         talkData.Add(1000, new string[] { "말걸지 말아줄래?:3"});
         talkData.Add(2000, new string[] { "넌 누구니?:3" });

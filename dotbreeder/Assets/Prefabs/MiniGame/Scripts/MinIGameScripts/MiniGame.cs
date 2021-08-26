@@ -7,43 +7,32 @@ using System.Linq;
 
 public class MiniGame : MonoBehaviour
 {
-    string[] InputKeyArr = new string[8]; //입력 값
-    string[] AnswerKeyArr = new string[8]; //정답
-    public bool[] Result = new bool[8];
+    public GameManager Manager;
 
-    public Text AnswerPrevText1;
-    public Text AnswerPrevText2;
-    public Text AnswerPrevText3;
-    public Text AnswerPrevText4;
-    public Text AnswerPrevText5;
-    public Text AnswerPrevText6;
-    public Text AnswerPrevText7;
-    public Text AnswerPrevText8;
+    string[] InputKeyArr = new string[7]; //입력 값
+    string[] AnswerKeyArr = new string[7]; //정답
+    public bool[] Result = new bool[7];
+    public Image[] InputImageArr = new Image[4]; // Donw 0 Left 1 Right 2 Up 3
+    public Image[] AnswerImageArr = new Image[4];
+    public Image[] AnswerImg = new Image[7];
+    public Image[] InputImg = new Image[7];
 
-    public Text InputKeyText1;
-    public Text InputKeyText2;
-    public Text InputKeyText3;
-    public Text InputKeyText4;
-    public Text InputKeyText5;
-    public Text InputKeyText6;
-    public Text InputKeyText7;
-    public Text InputKeyText8;
+    public GameObject DotLevel2;
+    public GameObject DotLevel3;
+    public GameObject DotLevel4;
 
     public Text ScoreText;
     public Text ScoreText2;
 
-    public Animator Text1;
-    public Animator Text2;
-    public Animator Text3;
-    public Animator Text4;
-    public Animator Text5;
-    public Animator Text6;
-    public Animator Text7;
-    public Animator Text8;
-
     public AudioClip clip;
     public AudioClip clip1;
-    public AudioClip clip2; 
+    public AudioClip clip2;
+
+    public Animator FoDot2Anim;
+    public Animator FoDot3Anim;
+    public Animator FoDot4Anim;
+    public Animator Wood;
+    public Animator[] FailAnim = new Animator[7];
 
     public bool isAlive = true;
     public int Score = 0;
@@ -57,7 +46,7 @@ public class MiniGame : MonoBehaviour
         InitKey();
         InputTextInit();
 
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 7; i++)
         {
             Result[i] = false;            
         }        
@@ -65,12 +54,28 @@ public class MiniGame : MonoBehaviour
 
     void Update()
     {
+        if (Manager.DotLevel == 2)
+            DotLevel2.SetActive(true);
+        else if (Manager.DotLevel == 3)
+        {
+            DotLevel2.SetActive(false);
+            DotLevel3.SetActive(true);
+        }
+        else if (Manager.DotLevel == 4)
+        {
+            DotLevel2.SetActive(false);
+            DotLevel3.SetActive(false);
+            DotLevel4.SetActive(true);
+        }
+        
+
         //시간 제한 키 입력 제한
         if (isAlive)
         {            
             //방향키 입력값
             if (Input.GetKeyDown(KeyCode.W))
             {
+                InputImg[InputIndex].color = new Color(1, 1, 1, 1);
                 InputKeyArr[InputIndex] = "Up";
                 InputIndex++;
                 InputKey();
@@ -78,6 +83,7 @@ public class MiniGame : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
+                InputImg[InputIndex].color = new Color(1, 1, 1, 1);
                 InputKeyArr[InputIndex] = "Down";
                 InputIndex++;
                 InputKey();
@@ -85,26 +91,28 @@ public class MiniGame : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
+                InputImg[InputIndex].color = new Color(1, 1, 1, 1);
                 InputKeyArr[InputIndex] = "Left";
                 InputIndex++;
                 InputKey();
-                SoundManager.instance.SFXPlay("Button", clip);
+                SoundManager.instance.SFXPlay("Button", clip); 
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
+                InputImg[InputIndex].color = new Color(1, 1, 1, 1);
                 InputKeyArr[InputIndex] = "Right";
                 InputIndex++;
                 InputKey();
                 SoundManager.instance.SFXPlay("Button", clip);
             }
 
-            //8의 배수일 경우에 출력으로 변경하기
-            if (InputIndex == 8)
+            //의 배수일 경우에 출력으로 변경하기
+            if (InputIndex == 7)
             {
                 InputIndex = 0;
                 InitKey(); //초기화 
             }
-
+            
             ScoreText.text = Score.ToString();
             ScoreText2.text = Score.ToString();
         }
@@ -145,7 +153,7 @@ public class MiniGame : MonoBehaviour
             AnswerIndex++;
         }
 
-        if (AnswerIndex == 8) //8의 배수일 경우에 출력으로 변경해!!
+        if (AnswerIndex == 7) //7의 배수일 경우에 출력으로 변경해!!
         {
             AnswerText();
             AnswerIndex = 0;
@@ -164,7 +172,7 @@ public class MiniGame : MonoBehaviour
             InputText();
 
             //초기화
-            if (InputIndex == 8)
+            if (InputIndex == 7)
             {
                 Score += 100;
                 InputInit();
@@ -173,6 +181,15 @@ public class MiniGame : MonoBehaviour
                 InputTextInit();
                 InputNum = 0;
                 SoundManager.instance.SFXPlay("Cler", clip1);
+                if (DotLevel2.activeSelf)
+                    FoDot2Anim.SetTrigger("Clear");
+                else if (DotLevel3.activeSelf)
+                    FoDot3Anim.SetTrigger("Clear");
+                else if (DotLevel4.activeSelf)
+                {
+                    FoDot4Anim.SetTrigger("Clear");
+                    Wood.SetTrigger("Clear");
+                }
             }
 
         }
@@ -183,14 +200,10 @@ public class MiniGame : MonoBehaviour
             Debug.Log("실패!");
             SoundManager.instance.SFXPlay("Falied", clip2);
 
-            Text1.SetTrigger("Fail");
-            Text2.SetTrigger("Fail");
-            Text3.SetTrigger("Fail");
-            Text4.SetTrigger("Fail");
-            Text5.SetTrigger("Fail");
-            Text6.SetTrigger("Fail");
-            Text7.SetTrigger("Fail");
-            Text8.SetTrigger("Fail");
+            for (int i = 0; i < FailAnim.Length; i++)
+            {
+                FailAnim[i].SetTrigger("Fail");
+            }
 
             InputInit();
             AnswerInit();
@@ -206,7 +219,7 @@ public class MiniGame : MonoBehaviour
         }
 
         // 정답이면서 모두 다 맞추지 못한 경우에만 다음으로 넘어가기
-        if (InputIndex < 8 && Result[InputNum])
+        if (InputIndex < 7 && Result[InputNum])
             InputNum++;
 
     }
@@ -241,40 +254,57 @@ public class MiniGame : MonoBehaviour
     //입력 텍스트 초기화
     public void InputTextInit()
     {
-        InputKeyText1.text = null;
-        InputKeyText2.text = null;
-        InputKeyText3.text = null;
-        InputKeyText4.text = null;
-        InputKeyText5.text = null;
-        InputKeyText6.text = null;
-        InputKeyText7.text = null;
-        InputKeyText8.text = null;
+        for (int i = 0; i < InputImg.Length; i++)
+        {
+            InputImg[i].color = new Color(1, 1, 1, 0);
+        }
     }
 
     //입력 텍스트
     public void InputText()
     {
-        InputKeyText1.text = InputKeyArr[0];
-        InputKeyText2.text = InputKeyArr[1];
-        InputKeyText3.text = InputKeyArr[2];
-        InputKeyText4.text = InputKeyArr[3];
-        InputKeyText5.text = InputKeyArr[4];
-        InputKeyText6.text = InputKeyArr[5];
-        InputKeyText7.text = InputKeyArr[6];
-        InputKeyText8.text = InputKeyArr[7];
+        InputImgFunc(0);
+        InputImgFunc(1);
+        InputImgFunc(2);
+        InputImgFunc(3);
+        InputImgFunc(4);
+        InputImgFunc(5);
+        InputImgFunc(6);
     }
 
     //정답 텍스트
     public void AnswerText()
     {
-        AnswerPrevText1.text = AnswerKeyArr[0];
-        AnswerPrevText2.text = AnswerKeyArr[1];
-        AnswerPrevText3.text = AnswerKeyArr[2];
-        AnswerPrevText4.text = AnswerKeyArr[3];
-        AnswerPrevText5.text = AnswerKeyArr[4];
-        AnswerPrevText6.text = AnswerKeyArr[5];
-        AnswerPrevText7.text = AnswerKeyArr[6];
-        AnswerPrevText8.text = AnswerKeyArr[7];
+        AnswerImgFunc(0);
+        AnswerImgFunc(1);
+        AnswerImgFunc(2);
+        AnswerImgFunc(3);
+        AnswerImgFunc(4);
+        AnswerImgFunc(5);
+        AnswerImgFunc(6);
+    }
+
+    public void InputImgFunc(int num)
+    {
+        if (InputKeyArr[num] == "Down")
+            InputImg[num].sprite = InputImageArr[0].sprite;
+        else if (InputKeyArr[num] == "Left")
+            InputImg[num].sprite = InputImageArr[1].sprite;
+        else if (InputKeyArr[num] == "Right")
+            InputImg[num].sprite = InputImageArr[2].sprite;
+        else if (InputKeyArr[num] == "Up")
+            InputImg[num].sprite = InputImageArr[3].sprite;
+    }
+    public void AnswerImgFunc(int num)
+    {
+        if (AnswerKeyArr[num] == "Down")
+            AnswerImg[num].sprite = AnswerImageArr[0].sprite;
+        else if (AnswerKeyArr[num] == "Left")
+            AnswerImg[num].sprite = AnswerImageArr[1].sprite;
+        else if (AnswerKeyArr[num] == "Right")
+            AnswerImg[num].sprite = AnswerImageArr[2].sprite;
+        else if (AnswerKeyArr[num] == "Up")
+            AnswerImg[num].sprite = AnswerImageArr[3].sprite;
     }
 }
 

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public QuestManager questManager;
     public DropTextBox DropBox;
     public DataPieceSort DataPiece;
-    public Interaction PlayerInteraction;
+    public Interaction PlayerInteraction;   
 
     public Rscore Rtext;
     public Gscore Gtext;
@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject scanObject;
     public GameObject menuSet;
     public GameObject TabMenu;
-    public GameObject PlantObj;
     public GameObject DataPieceObj;
+    public GameObject miniGame;    
 
     public int talkIndex;    
     public int Rcount=0;
@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public int PrevGcount;
     public int PrevBcount;
 
+    public int DotLevel;
+
     public bool isAction;
     private static bool ManagerExist;
 
@@ -42,8 +44,8 @@ public class GameManager : MonoBehaviour
     {
         //퀘스트 이름
         PlayerInteraction.questText.text = questManager.CheckQuest();
-        PlayerInteraction.questTextIng.text = questManager.CheckQuest();
 
+        DotLevel = 1;
     }
 
     void Update()
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
             if (menuSet.activeSelf)
                 menuSet.SetActive(false);
             else if (!menuSet.activeSelf && !PlayerInteraction.CombinationUI.activeSelf && !TabMenu.activeSelf 
-                  && SceneManager.GetActiveScene().buildIndex != 0) 
+                  && SceneManager.GetActiveScene().buildIndex != 0 && !miniGame.activeSelf) 
                 menuSet.SetActive(true);
             else
             {
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
                 DataPiece.DataInterpret.SetActive(false);
                 DataPiece.DataPieceContents.SetActive(true);
                 TabMenu.SetActive(false);
-            }
+            }            
 
             if (PlayerInteraction.CombinationUI.activeSelf && PlayerInteraction.CombinationChild.activeSelf)
             {
@@ -102,16 +104,10 @@ public class GameManager : MonoBehaviour
         }
 
         //숲-1에서만 활성화
-        if (SceneManager.GetActiveScene().name == "Forest1")
-        {
-            PlantObj.SetActive(true);
+        if (SceneManager.GetActiveScene().name == "Forest1")        
             DataPieceObj.SetActive(true);
-        }
         else
-        {
-            PlantObj.SetActive(false);
             DataPieceObj.SetActive(false);
-        }
     }
 
     void Awake()

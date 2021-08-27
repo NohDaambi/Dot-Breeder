@@ -27,8 +27,11 @@ public class SpawnZone : MonoBehaviour
 
     //[채집자원 프리팹]
     //Map LV.1
-    public GameObject flower; //random
-    public GameObject grass; //random
+    public GameObject flower1; //random
+    public GameObject flower2; //random
+    public GameObject flower3; //random
+    public GameObject grass1; //random
+    public GameObject grass2; //random
     public GameObject tree; //static position
 
 
@@ -76,14 +79,19 @@ public class SpawnZone : MonoBehaviour
     {
         if (Feature != SpawnZone_Feature.RANDOM) return StaticResources();
         //Ransdom Feature일 때만 실행..
-        int random = Random.Range(1, 3);
+        int random = Random.Range(1, 6);
         switch(random)
         {
             case 1:
-                return flower;
-
+                return flower1;
             case 2:
-                return grass;
+                return flower2;
+            case 3:
+                return flower3;
+            case 4:
+                return grass1;
+            case 5:
+                return grass2;
 
         }
         return Null;

@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6836825101932555468}
   - component: {fileID: 6836825101932555471}
-  - component: {fileID: 6836825101932555470}
   - component: {fileID: 4239201915001881109}
   - component: {fileID: 3730773534815036819}
   - component: {fileID: 4643412614577471476}
   m_Layer: 6
-  m_Name: Flower
+  m_Name: Flower1
   m_TagString: Redspawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2969016694365801900, guid: 20d6cce5c7ac33b4e97f0f98a09aa347, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fed111a09a94b184f971283157b67349, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,25 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6836825101932555470
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6836825101932555441}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 766c5d4aca5e92944a0a21f04bff5e98, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4239201915001881109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4375, y: 0.5625}
+    oldSize: {x: 0.4, y: 0.4}
     newSize: {x: 0.4375, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

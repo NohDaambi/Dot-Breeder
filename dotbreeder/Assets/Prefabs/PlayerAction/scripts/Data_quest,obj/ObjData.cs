@@ -10,6 +10,7 @@ public class ObjData : MonoBehaviour
     public bool isStudy;
     public bool isCombination;
     public bool isDataPiece;
+    public bool isTreasureChest;
 
     void Awake()
     {

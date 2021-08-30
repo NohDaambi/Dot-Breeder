@@ -40,7 +40,7 @@ public class ForestDungeonManager : MonoBehaviour
         }
         Debug.Log("clear");
         //if Clear, you go to other scenes
-        SceneManager.LoadScene("Forest2");
+        SceneManager.LoadScene("DungeonClearRoom");
         return true;
     }
 }

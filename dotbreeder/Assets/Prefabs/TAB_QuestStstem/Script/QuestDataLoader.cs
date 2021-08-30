@@ -8,12 +8,16 @@ using Mono.Data.SqliteClient;
 using System.IO;
 using System.Data;
 
+
+
 //기능
 //SQLite의 DB를 Parsing함.
 
 //Quest Db에서 파싱 -> ID, Name, Des ec.. ->
 public class QuestDataLoader : MonoBehaviour
 {
+    private static bool ManagerExist;
+    
     public GameObject questlist; 
     public GameObject contentprefab;
     public GameObject detail; //새끼 퀘스트 있는 경우 detail의 하위목록으로 instantiate.
@@ -23,6 +27,18 @@ public class QuestDataLoader : MonoBehaviour
     public List<GameObject> QuestList = new List<GameObject>(); //나중에 private으로 선언한 예정.
 
     public GameManager Manager;
+
+    void Awake()
+    {
+        //중복삭제
+        if (!ManagerExist)
+        {
+            ManagerExist = true;            
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }  
 
     void Start()
     {

@@ -72,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 25f91d5e1d3035749b479640462e2d14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f6cdc34a9af0f0d4d9debbb3327abc82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e14178da9e145b4ebf7491344104c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpriteBox: {fileID: 21300000, guid: 25f91d5e1d3035749b479640462e2d14, type: 3}
-  m_SpriteBoxEnd: {fileID: 21300000, guid: 67809adcaa726cf47960a14f0adde98c, type: 3}
+  m_SpriteBox: {fileID: 21300000, guid: f6cdc34a9af0f0d4d9debbb3327abc82, type: 3}
+  m_SpriteBoxEnd: {fileID: 21300000, guid: 1bc4e1145d0f54947b15c5e884d0b828, type: 3}
+  m_CrossEnd: {fileID: 8500042036263085, guid: 783196a0eec2dda42a951577ba45198a, type: 3}
   m_OnCross: 0

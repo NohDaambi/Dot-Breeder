@@ -40,17 +40,19 @@ TagManager:
   - GoDesertDg
   - GoIgloo
   - ExitIgloo
-  - TreasureChest
+  - Greenspawner
+  - Bluespawner
+  - Redspawner
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tilemap Position
   - Water
   - UI
   - Object
   - Clear
-  - 
+  - Resource
   - 
   - 
   - 

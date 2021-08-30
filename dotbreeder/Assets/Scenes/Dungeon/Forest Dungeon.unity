@@ -2261,18 +2261,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4622241939567647729, guid: 0bb30f56f2657db488ae4e93f2e8e49f, type: 3}
-      propertyPath: m_LevelElement.Array.data[0].m_Prefab
-      value: 
-      objectReference: {fileID: 5892416235765580857, guid: 25ef51ac360924c4faa9401d4c4ccd77, type: 3}
-    - target: {fileID: 4622241939567647729, guid: 0bb30f56f2657db488ae4e93f2e8e49f, type: 3}
-      propertyPath: m_LevelElement.Array.data[1].m_Prefab
-      value: 
-      objectReference: {fileID: 8500042036263085, guid: 783196a0eec2dda42a951577ba45198a, type: 3}
-    - target: {fileID: 4622241939567647729, guid: 0bb30f56f2657db488ae4e93f2e8e49f, type: 3}
-      propertyPath: m_LevelElement.Array.data[2].m_Prefab
-      value: 
-      objectReference: {fileID: 2961083424917858967, guid: b0b3524927762d945a85643070c164ea, type: 3}
     - target: {fileID: 8104631258235523615, guid: 0bb30f56f2657db488ae4e93f2e8e49f, type: 3}
       propertyPath: m_Name
       value: ForestDungeonPrefab

@@ -10,6 +10,7 @@ public class HouseManager : MonoBehaviour
     public GameManager Manager;
 
     //통나무 집
+    public GameObject BeforeShack;
     public GameObject House;
     public GameObject Player;
     public GameObject Combination;
@@ -17,6 +18,7 @@ public class HouseManager : MonoBehaviour
     public GameObject[] ShackGrid = new GameObject[4];
 
     //이글루
+    public GameObject BeforeIgloo;
     public GameObject IglooOutside;
     public GameObject IglooInside;
     public GameObject[] IglooGrid = new GameObject[4];
@@ -54,7 +56,10 @@ public class HouseManager : MonoBehaviour
     {
         //집 들어가면 UI안보이게하고 or 숲-1에서만 보여줘
         if (SceneManager.GetActiveScene().name == "House" || SceneManager.GetActiveScene().name != "Forest1")
+        {
+            BeforeShack.SetActive(false);
             House.SetActive(false);
+        }
         //집 나와서 원래 집 켜져있던거라면 켜줘
         else if (timer.ShackOn && SceneManager.GetActiveScene().name == "Forest1")
             House.SetActive(true);
@@ -62,6 +67,7 @@ public class HouseManager : MonoBehaviour
         //통나무 집
         if (CurrentCombinging == 1 && timer.isGive)
         {
+            BeforeShack.SetActive(false);
             timer.ShackOn = true;
             House.SetActive(true);
             Player.transform.position = new Vector3(5.8f, -4f, -1);
@@ -75,8 +81,9 @@ public class HouseManager : MonoBehaviour
             Combination.transform.position = new Vector3(-0.4f, 0.8f, -1);
 
         }
-        if (SceneManager.GetActiveScene().name == "Forest1" && !timer.ShackOn)
+        if (SceneManager.GetActiveScene().name == "Forest1" && !timer.ShackOn && !BeforeShack.activeSelf)
         {
+            BeforeShack.SetActive(true);
             Combination.SetActive(true);
             CombineRenderer.sprite = CombinObj;
             Combination.transform.position = new Vector3(5.8f, -0.45f, -1);
@@ -124,7 +131,10 @@ public class HouseManager : MonoBehaviour
     {
         //집 들어가면 UI안보이게하고 or 숲-1에서만 보여줘
         if (SceneManager.GetActiveScene().name == "House" || SceneManager.GetActiveScene().name != "Ocene1")
+        {
+            BeforeIgloo.SetActive(false);
             IglooOutside.SetActive(false);
+        }
         //집 나와서 원래 집 켜져있던거라면 켜줘
         else if (timer.IglooOn && SceneManager.GetActiveScene().name == "Ocene1")
             IglooOutside.SetActive(true);
@@ -132,6 +142,7 @@ public class HouseManager : MonoBehaviour
         //이글루
         if (CurrentCombinging == 5 && timer.isGive)
         {
+            BeforeIgloo.SetActive(false);
             timer.IglooOn = true;
             IglooOutside.SetActive(true);
             Player.transform.position = new Vector3(0.1f, -3.7f, -1);
@@ -145,8 +156,9 @@ public class HouseManager : MonoBehaviour
             Combination.transform.position = new Vector3(0.35f, 0.6f, -1);
 
         }
-        if (SceneManager.GetActiveScene().name == "Ocene1" && !timer.IglooOn)
+        if (SceneManager.GetActiveScene().name == "Ocene1" && !timer.IglooOn && !BeforeIgloo.activeSelf)
         {
+            BeforeIgloo.SetActive(true);
             Combination.SetActive(true);
             CombineRenderer.sprite = CombinObj;
             Combination.transform.position = new Vector3(0, 0, -1);

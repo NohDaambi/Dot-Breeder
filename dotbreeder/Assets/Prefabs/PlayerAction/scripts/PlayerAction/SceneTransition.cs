@@ -21,7 +21,7 @@ public class SceneTransition : MonoBehaviour
                 break;
             case "GoForestDg":
                 SceneManager.LoadScene("Forest Dungeon");
-                gameObject.transform.position = new Vector3(0.5f, -3.4f, -1);
+                gameObject.transform.position = new Vector3(5, -2.4f, -1);
                 break;
 
             //Ocene

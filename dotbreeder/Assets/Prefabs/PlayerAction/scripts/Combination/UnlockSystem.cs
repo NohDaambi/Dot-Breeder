@@ -13,125 +13,131 @@ public class UnlockSystem : MonoBehaviour
 
     void Update()
     {
-        if(Manager.DotLevel == 1)
+        if (Manager)
         {
-            //1페이지 1,2,3번 아이템 해금
-            for (int i = 0; i < 3; i++)
+            if (Manager.DotLevel == 1)
             {
-                LockBtn[i].SetActive(false);
+                //1페이지 1,2,3번 아이템 해금
+                for (int i = 0; i < 3; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[0] = true;
             }
-            pageActive[0] = true;
-        }
-        if (Manager.DotLevel == 2)
-        {
-            //1페이지 4,5,6번 아이템 해금
-            for (int i = 3; i < 6; i++)
+            if (Manager.DotLevel == 2)
             {
-                LockBtn[i].SetActive(false);
+                //1페이지 4,5,6번 아이템 해금
+                for (int i = 3; i < 6; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[1] = true;
             }
-            pageActive[1] = true;
-        }
-        if (Manager.DotLevel == 3)
-        {
-            //2페이지 1,2,3번 아이템 해금
-            for (int i = 0; i < 3; i++)
+            if (Manager.DotLevel == 3)
             {
-                LockBtn[i].SetActive(false);
+                //2페이지 1,2,3번 아이템 해금
+                for (int i = 0; i < 3; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[2] = true;
             }
-            pageActive[2] = true;
-        }
-        if (Manager.DotLevel == 4)
-        {
-            //2페이지 4,5,6번 아이템 해금
-            for (int i = 3; i < 6; i++)
+            if (Manager.DotLevel == 4)
             {
-                LockBtn[i].SetActive(false);
+                //2페이지 4,5,6번 아이템 해금
+                for (int i = 3; i < 6; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[3] = true;
             }
-            pageActive[3] = true;
-        }
-        //1페이지
-        if (combine.pageNumItem == 1)
-        {
-            PageActiveFuncA(0);
-            PageActiveFuncB(1);
-        }
-        //2페이지
-        else if (combine.pageNumItem == 2)
-        {
-            PageActiveFuncA(2);
-            PageActiveFuncB(3);
-        }
-        else if (combine.pageNumItem == 3)
-        {
-            LockBtn[0].SetActive(true);
-            LockBtn[1].SetActive(true);
-            LockBtn[2].SetActive(true);
-            LockBtn[3].SetActive(true);
-            LockBtn[4].SetActive(true);
-            LockBtn[5].SetActive(true);
         }
 
-        //건축물 1페이지
-        if (combine.pageNumBuilding == 1 && combine.BuildingPage)
+        if (combine)
         {
-            if(Manager.DotLevel == 1)
+            //1페이지
+            if (combine.pageNumItem == 1)
             {
-                LockBtn[0].SetActive(false);
+                PageActiveFuncA(0);
+                PageActiveFuncB(1);
+            }
+            //2페이지
+            else if (combine.pageNumItem == 2)
+            {
+                PageActiveFuncA(2);
+                PageActiveFuncB(3);
+            }
+            else if (combine.pageNumItem == 3)
+            {
+                LockBtn[0].SetActive(true);
                 LockBtn[1].SetActive(true);
                 LockBtn[2].SetActive(true);
                 LockBtn[3].SetActive(true);
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (Manager.DotLevel == 2)
+
+            //건축물 1페이지
+            if (combine.pageNumBuilding == 1 && combine.BuildingPage)
             {
-                LockBtn[0].SetActive(false);
-                LockBtn[1].SetActive(false);
+                if (Manager.DotLevel == 1)
+                {
+                    LockBtn[0].SetActive(false);
+                    LockBtn[1].SetActive(true);
+                    LockBtn[2].SetActive(true);
+                    LockBtn[3].SetActive(true);
+                    LockBtn[4].SetActive(true);
+                    LockBtn[5].SetActive(true);
+                }
+                if (Manager.DotLevel == 2)
+                {
+                    LockBtn[0].SetActive(false);
+                    LockBtn[1].SetActive(false);
+                    LockBtn[2].SetActive(true);
+                    LockBtn[3].SetActive(true);
+                    LockBtn[4].SetActive(true);
+                    LockBtn[5].SetActive(true);
+                }
+                if (Manager.DotLevel == 3)
+                {
+                    LockBtn[0].SetActive(false);
+                    LockBtn[1].SetActive(false);
+                    LockBtn[2].SetActive(false);
+                    LockBtn[3].SetActive(true);
+                    LockBtn[4].SetActive(true);
+                    LockBtn[5].SetActive(true);
+                }
+                if (Manager.DotLevel == 4)
+                {
+                    LockBtn[0].SetActive(false);
+                    LockBtn[1].SetActive(false);
+                    LockBtn[2].SetActive(false);
+                    LockBtn[3].SetActive(false);
+                    LockBtn[4].SetActive(true);
+                    LockBtn[5].SetActive(true);
+                }
+            }
+            // 2페이지
+            if (combine.pageNumBuilding == 2 && combine.BuildingPage)
+            {
+                LockBtn[0].SetActive(true);
+                LockBtn[1].SetActive(true);
                 LockBtn[2].SetActive(true);
                 LockBtn[3].SetActive(true);
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (Manager.DotLevel == 3)
+            // 3페이지
+            if (combine.pageNumBuilding == 3 && combine.BuildingPage)
             {
-                LockBtn[0].SetActive(false);
-                LockBtn[1].SetActive(false);
-                LockBtn[2].SetActive(false);
+                LockBtn[0].SetActive(true);
+                LockBtn[1].SetActive(true);
+                LockBtn[2].SetActive(true);
                 LockBtn[3].SetActive(true);
                 LockBtn[4].SetActive(true);
                 LockBtn[5].SetActive(true);
             }
-            if (Manager.DotLevel == 4)
-            {
-                LockBtn[0].SetActive(false);
-                LockBtn[1].SetActive(false);
-                LockBtn[2].SetActive(false);
-                LockBtn[3].SetActive(false);
-                LockBtn[4].SetActive(true);
-                LockBtn[5].SetActive(true);
-            }
         }
-        // 2페이지
-        if (combine.pageNumBuilding == 2 && combine.BuildingPage)
-        {
-            LockBtn[0].SetActive(true);
-            LockBtn[1].SetActive(true);
-            LockBtn[2].SetActive(true);
-            LockBtn[3].SetActive(true);
-            LockBtn[4].SetActive(true);
-            LockBtn[5].SetActive(true);
-        }
-        // 3페이지
-        if (combine.pageNumBuilding == 3 && combine.BuildingPage)
-        {
-            LockBtn[0].SetActive(true);
-            LockBtn[1].SetActive(true);
-            LockBtn[2].SetActive(true);
-            LockBtn[3].SetActive(true);
-            LockBtn[4].SetActive(true);
-            LockBtn[5].SetActive(true);
-        }
-
     }
     //홀수 레벨
     public void PageActiveFuncA(int num)

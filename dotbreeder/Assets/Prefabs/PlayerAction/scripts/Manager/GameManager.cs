@@ -5,9 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
-    public static GameManager instance;
-
+{    
     public TalkManager talkManager;
     public PlayerAction player;
     public Animator talkPanel;
@@ -35,7 +33,7 @@ public class GameManager : MonoBehaviour
     public int PrevGcount;
     public int PrevBcount;
 
-    public int DotLevel;//다른 스크립트에서 DotLevel변수를 쓰고있기 때문에 이대로 쓰겠음(숲-문식이 레벨)
+    public int DotLevel;
 
     public bool isAction;
     private static bool ManagerExist;
@@ -114,7 +112,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
         Time.timeScale = 1;
 
         //중복삭제

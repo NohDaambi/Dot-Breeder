@@ -7,27 +7,11 @@ public class Player : MonoBehaviour
     Animator anim;
     float h;
     float v;
-    float timer;
-    float waitingTime;
-    bool isDelay;
-
-    void Start()
+    private void Awake()
     {
-        timer = 0.0f;
-        waitingTime = 3.0f;
-        isDelay = true;
         anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
-    {
-        timer += Time.deltaTime;
-
-        if (timer > waitingTime)
-        {
-            isDelay = false;
-        }
-    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
@@ -50,7 +34,6 @@ public class Player : MonoBehaviour
             h = 0;
             v = -1;
         }
-
         //Animation
         if (anim.GetInteger("hAxisRaw") != h)
         {
@@ -69,19 +52,17 @@ public class Player : MonoBehaviour
     }
     public bool Move(Vector2 direction)
     {
-        if(isDelay == false)
+
+        //Debug.Log("Player is moving");
+        if (Mathf.Abs(direction.x) < 0.5)
         {
-            //Debug.Log("Player is moving");
-            if (Mathf.Abs(direction.x) < 0.5)
-            {
-                direction.x = 0;
-            }
-            else
-            {
-                direction.y = 0;
-            }
-            direction.Normalize();
+            direction.x = 0;
         }
+        else
+        {
+            direction.y = 0;
+        }
+        direction.Normalize();
         if (Blocked(transform.position, direction))
         {
             return false;

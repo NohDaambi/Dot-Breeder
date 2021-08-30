@@ -8,46 +8,50 @@ public class UnlockSystem : MonoBehaviour
     public GameManager Manager;
 
     public GameObject[] LockBtn = new GameObject[6];
+    public GameObject CombineUI;
 
     public bool[] pageActive = new bool[4];
 
     void Update()
     {
-        if(Manager.DotLevel == 1)
+        if (CombineUI.activeSelf)
         {
-            //1페이지 1,2,3번 아이템 해금
-            for (int i = 0; i < 3; i++)
+            if (Manager.DotLevel == 1)
             {
-                LockBtn[i].SetActive(false);
+                //1페이지 1,2,3번 아이템 해금
+                for (int i = 0; i < 3; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[0] = true;
             }
-            pageActive[0] = true;
-        }
-        if (Manager.DotLevel == 2)
-        {
-            //1페이지 4,5,6번 아이템 해금
-            for (int i = 3; i < 6; i++)
+            if (Manager.DotLevel == 2)
             {
-                LockBtn[i].SetActive(false);
+                //1페이지 4,5,6번 아이템 해금
+                for (int i = 3; i < 6; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[1] = true;
             }
-            pageActive[1] = true;
-        }
-        if (Manager.DotLevel == 3)
-        {
-            //2페이지 1,2,3번 아이템 해금
-            for (int i = 0; i < 3; i++)
+            if (Manager.DotLevel == 3)
             {
-                LockBtn[i].SetActive(false);
+                //2페이지 1,2,3번 아이템 해금
+                for (int i = 0; i < 3; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[2] = true;
             }
-            pageActive[2] = true;
-        }
-        if (Manager.DotLevel == 4)
-        {
-            //2페이지 4,5,6번 아이템 해금
-            for (int i = 3; i < 6; i++)
+            if (Manager.DotLevel == 4)
             {
-                LockBtn[i].SetActive(false);
+                //2페이지 4,5,6번 아이템 해금
+                for (int i = 3; i < 6; i++)
+                {
+                    LockBtn[i].SetActive(false);
+                }
+                pageActive[3] = true;
             }
-            pageActive[3] = true;
         }
         //1페이지
         if (combine.pageNumItem == 1)

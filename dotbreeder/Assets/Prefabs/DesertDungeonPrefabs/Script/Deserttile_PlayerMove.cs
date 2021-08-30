@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Deserttile_PlayerMove : MonoBehaviour
 {
@@ -192,6 +193,7 @@ public class Deserttile_PlayerMove : MonoBehaviour
         if (other.gameObject.tag == "ClearFront")
         {
             Debug.Log("Clear");
+            SceneManager.LoadScene("Desert2");
         }
     }
 }

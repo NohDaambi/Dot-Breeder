@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ClearFront
+  - Road
+  - Box
+  - Wall
+  - Cross
+  - Plate
+  - SqureBlue
+  - SqureBrown
+  - SqureGreen
+  - SqureOrange
+  - ActivePortal
+  - DataPiece
+  - R
+  - G
+  - GoHouse
+  - B
+  - FoRight
+  - Npc
+  - Flower
+  - GoOcene
+  - Rock
+  - FoLeft
+  - OcRight
+  - GoForest
+  - GoDesert
+  - OcLeft
+  - ExitHouse
+  - GoVolcano
+  - DeLeft
+  - DeRight
+  - BackOcene
+  - GoForestDg
+  - GoOceneDg
+  - GoDesertDg
+  - GoIgloo
+  - ExitIgloo
+  - Greenspawner
+  - Bluespawner
+  - Redspawner
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Tilemap Position
+  - Water
+  - UI
+  - Object
+  - Clear
+  - Resource
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

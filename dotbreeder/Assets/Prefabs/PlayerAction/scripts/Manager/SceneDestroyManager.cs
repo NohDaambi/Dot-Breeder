@@ -8,7 +8,6 @@ public class SceneDestroyManager : MonoBehaviour
     public GameObject GameManger;
     public GameObject SoundManger;
     public GameObject MiniGameManger;
-    public GameObject QuestGameManger;
 
     private static bool SceneManagerExist;
 

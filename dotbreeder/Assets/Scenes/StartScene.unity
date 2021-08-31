@@ -30227,12 +30227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09894e589a66bb6418dca1d6ca2b7d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Manager: {fileID: 0}
   questlist: {fileID: 4102942286416570614}
   contentprefab: {fileID: 935214626581499074}
   detail: {fileID: 4102942285169399537}
   detailprefab: {fileID: 6781657795833351207, guid: f0c5568b37802de49903a5e197cce769, type: 3}
   QuestList: []
-  Manager: {fileID: 0}
 --- !u!1 &3896543651701971075
 GameObject:
   m_ObjectHideFlags: 0
@@ -30243,6 +30243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3896543651701971073}
   - component: {fileID: 3896543651701971074}
+  - component: {fileID: 3896543651701971076}
   m_Layer: 0
   m_Name: QuestDataManager
   m_TagString: Untagged
@@ -30250,6 +30251,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3896543651701971076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896543651701971075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d7b0c6458c88d4a8324477ed1ce0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3901269977106923007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44296,6 +44309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7652990514911716004}
+  - component: {fileID: 8683610554736002748}
   m_Layer: 0
   m_Name: CombinationObj
   m_TagString: Untagged
@@ -44303,6 +44317,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8683610554736002748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683610554736002747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 597a4d8872248564cb576a6d65667423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DBloader: {fileID: 0}
+  Interaction: 452260499
+  IsbeonCall: 0
+  IsAvtive: 0
 --- !u!1 &8685607180959964145
 GameObject:
   m_ObjectHideFlags: 0

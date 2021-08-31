@@ -114,6 +114,7 @@ public class Interaction : MonoBehaviour
         {
             pieceInform.FindDataPiece();
         }
+        
     }
 
     //대화 액션

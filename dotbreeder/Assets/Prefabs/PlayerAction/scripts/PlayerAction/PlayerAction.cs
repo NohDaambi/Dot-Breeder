@@ -103,7 +103,21 @@ public class PlayerAction : MonoBehaviour
                     Anim.SetTrigger("Attack");
                     //상호작용 사운드 재생            
                     SoundManager.instance.SFXPlay("Attack", clip);
-                }          
+                }
+
+                //예람 추가: 자원 채집 시 ->
+                if (scanObject.tag == "RedSpawner"||scanObject.tag == "GreenSpawner"||scanObject.tag == "BlueSpawner")
+                {
+                    Debug.Log("[!]System: ScanObject :"+scanObject.tag);
+                    isDelay = true;
+                    StartCoroutine(CountAttackDelay());
+
+                    //코루틴        
+                    StartCoroutine(scanObject.GetComponent<Resource>().Damage_Resources());                                   
+                    Anim.SetTrigger("Attack");
+                    //상호작용 사운드 재생            
+                    SoundManager.instance.SFXPlay("Attack", clip);
+                }            
             }
             else
             {

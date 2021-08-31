@@ -59,25 +59,21 @@ public class Resource : MonoBehaviour
     //HP깎을 때 실행되는 코루틴
     public IEnumerator Damage_Resources()
     {
-        while (true)
+        hp -= player.GetComponent<PlayerAction>().weaponstrength;
+        Debug.Log("[!]System: ScanObject get damage:"+hp);
+
+        if (hp <= 0&& destroy_trigger!=true)
         {
-            hp -= player.GetComponent<PlayerAction>().weaponstrength;
+            destroy_trigger = true;
 
-            if (hp <= 0&& destroy_trigger!=true)
-            {
-                destroy_trigger = true;
-
-                StartCoroutine(Spon_Pixel());
-                Destroy(this.gameObject);
-                break;
-            }
-            else
-            {
-                break;
-            }
-
+            StartCoroutine(Spon_Pixel());
+            Destroy(this.gameObject);
+            yield return null;
         }
-        yield return null;
+        else
+        {
+            yield return null;
+            }
     }
 
     //오브젝트 파괴시 호출된다.
@@ -92,36 +88,6 @@ public class Resource : MonoBehaviour
         //pixel.transform.SetParent(PixelPiece.transform, false); //현재 자식으로 안들어가는 오류 있음 추후 수정.
         yield return null;
     }
-
-
-    //Flower의 충돌이 있거나 픽셀의 충돌이 있으면 호출되는 함수이다.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //충돌을 받았을 때 코루틴을 실행시킨다.
-        if (collision.gameObject.CompareTag("Player")/*&&플레이어가 공격상태*/)
-        {
-            if(damageCoroutine == null)
-            {
-                damageCoroutine = StartCoroutine(Damage_Resources());
-            }
-        }
-      
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        //충돌을 받았을 때 코루틴을 멈춘다.
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (damageCoroutine != null)
-            {
-                StopCoroutine(Damage_Resources());
-                damageCoroutine = null;
-            }
-        }
-    }
-
-
 
 
     private GameObject SetPixelColor(GameObject me) //스폰할 픽셀 컬러를 결정한다. 인수로는 자기자신을 넣는다.

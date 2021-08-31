@@ -3,60 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 //기능
 //퀘스트를 실행하는 오브젝트에만 부착되는 스크립트이다.
 //1. 퀘스트trigger가 실행되면 다른 기능 무력화
 //2. 말풍선 떠있는 상태에서는 E키 누르면 퀘스트 코루틴이 진행됨.
 //3. 퀘스트코루틴-> 다이어로그 나오고, 퀘스트 받음. 해
 
-//퀘스트가 발생되는 gamestructure과 대응하는 해쉬코드가 있다.
-public enum INTERACTION_STRUCTURE
-{
-   TUTORIAL_SIGN = 989052692,
-   BROKEN_COMBINER = 452260499,
-   DATA_PIECE = 1804506409,
-   RESOURCE = -1181451190,
-   PIXEL_PIECE = 766080093,
-   WOOD_SIGN = -1945051929,
-   BUILDING_RUBBLE = 467765935,
-   STUB = -648713566
-   
-}
-
 public class QuestObj : MonoBehaviour
 {
     //일단 combination.cs에 넣을 함수는 여기에다가 작성 할 예정
     //상호작용 E키 BOOL
     private GameManager Manager;
+    private GameObject questobj;
     public QuestDataLoader DBloader;
     public INTERACTION_STRUCTURE Interaction;//외부에서 지정. 조합기일 경우 Broken_combiner
-    public bool EActive;
+    public bool IsbeonCall;
+    public bool IsAvtive;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        questobj = GameObject.Find("Combination"); //combination img,collider
+        //DBloader = GameObject.Find("QuestDataManager").GetComponent<"QuestDataLoader">(); 
     }
     
-    public void OnTriggerStay2D(Collider2D col)
-    {
-       //scan기능 없어서 일단 충돌로 처리해서 디버깅하는중
 
-       //충돌을 통해서 특정 구역에 들어와 E키를 누를 시 상호작용 활성화. V
-       //Quest진행 상황 확인 후 튜토 퀘스트 지났으면 UI OPEN
-       //튜토퀘 아직 진행 X -> tutorial dialog발생 및 퀘스트 줌.
-       if(EActive==false) return;
-       Debug.Log("충돌");
-       
-
-       //EActive가 true일때 그리고 Player일때
-       //대상 오브젝트의 퀘스트 지정
-       Debug.Log("이제 퀘스트 줄차레"); 
-       int hashcode =Interaction.GetHashCode();
-       Debug.Log("Load HashCode Num:"+hashcode);
-       StartCoroutine(SearchQuest(hashcode)); //hashcode로 해당 퀘스트 찾아서 isActive()
-       EActive=false; //위의 함수들이 다중실행 되지 않도록 EActive 비활성화.
-    }
 
      public IEnumerator SearchQuest(int hash)
     {
@@ -64,13 +37,27 @@ public class QuestObj : MonoBehaviour
            //yield return StartCoroutine(UploadQuest()); //UI에 퀘스트를 업로드 한다.
     }
 
-    public void Combination_tutorial()
-    {
-       //주위를 둘러보자 튜토리얼이 실행되면 
-       //지금 튜토리얼Level=1이 됨.
-       
-    }
 
+    //퀘스트 대기 상태
+    public IEnumerator BeOnCall(int hash)
+    {
+        IsbeonCall=true;
+        Debug.Log("[!]Tutorial_System : ACCESS BEONCALL");
+        GameObject combination = Resources.Load<GameObject>("Prefabs/QuestFlag");
+        GameObject QuestFlag = Instantiate(combination,combination.transform.position,combination.transform.rotation);
+        QuestFlag.transform.SetParent(questobj.transform,false);
+        while(true)
+        {
+           yield return null;
+        }
+        yield return null;
+    }
+    
+    //메세지를 보여준다.
+    public void ShowMessage()
+    {
+      Debug.Log("[!]Tutorial_System : 픽셀조각을 모아 조합기를 고쳐주세요.");
+    }
     
 
     //Tutorial 실행 코루틴이다.
@@ -119,4 +106,3 @@ public class QuestObj : MonoBehaviour
         yield return null; //yield return이 null이 될 때 까지 돌아간다.
     }
 }
-

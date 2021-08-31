@@ -91,6 +91,14 @@ public class Interaction : MonoBehaviour
         //조합기
         if (Player.scanObject.name == "Combination")
         {
+            QuestObj questobj = Manager.transform.Find("CombinationObj").GetComponent<QuestObj>();
+            if(questobj.IsbeonCall==true||questobj.IsAvtive==true)
+            {
+                //퀘스트가 대기중이거나 실행중일때
+                questobj.ShowMessage();
+                return;
+            }
+            
             CombinationUI.SetActive(true);
             if (!CombinationChild.activeSelf && !Combining.activeSelf && !CombinEnd.activeSelf)
                 CombinationAnim.SetBool("isButton", false);

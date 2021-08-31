@@ -29,7 +29,7 @@ public enum INTERACTION_STRUCTURE
 public class QuestDataLoader : MonoBehaviour
 {
     private static bool ManagerExist;
-     public GameManager Manager;
+    public GameManager Manager;
     public GameObject questlist; 
     public GameObject contentprefab;
     public GameObject detail; //새끼 퀘스트 있는 경우 detail의 하위목록으로 instantiate.

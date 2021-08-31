@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{BDBA49D2-72C1-33A8-073D-AD0ABCAF6AA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity", "spine-unity.csproj", "{64FCD33D-B71B-BE10-E762-5F3DFAA6FDE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-editor", "spine-unity-editor.csproj", "{06B497FE-73FD-F2B8-B09D-3AAB94862533}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{0EB01C4D-0611-F97F-462F-FCB9B6D3EAC9}"
 EndProject
 Global
@@ -15,6 +19,14 @@ Global
 		{BDBA49D2-72C1-33A8-073D-AD0ABCAF6AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDBA49D2-72C1-33A8-073D-AD0ABCAF6AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDBA49D2-72C1-33A8-073D-AD0ABCAF6AA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FCD33D-B71B-BE10-E762-5F3DFAA6FDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FCD33D-B71B-BE10-E762-5F3DFAA6FDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FCD33D-B71B-BE10-E762-5F3DFAA6FDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FCD33D-B71B-BE10-E762-5F3DFAA6FDE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B497FE-73FD-F2B8-B09D-3AAB94862533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B497FE-73FD-F2B8-B09D-3AAB94862533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B497FE-73FD-F2B8-B09D-3AAB94862533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B497FE-73FD-F2B8-B09D-3AAB94862533}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0EB01C4D-0611-F97F-462F-FCB9B6D3EAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0EB01C4D-0611-F97F-462F-FCB9B6D3EAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EB01C4D-0611-F97F-462F-FCB9B6D3EAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU

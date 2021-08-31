@@ -4,42 +4,55 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Flower
-  - Rock
-  - FoRight
-  - FoLeft
-  - RightToMain
-  - GoOcene
-  - Right
-  - GoForest
-  - Left
-  - OcLeft
-  - OcRight
-  - GoDesert
-  - DeLeft
-  - DeRight
-  - GoVolcano
-  - VoLeft
-  - VoRight
-  - BackOcene
-  - BackDesert
-  - Npc
+  - ClearFront
+  - Road
+  - Box
+  - Wall
+  - Cross
+  - Plate
+  - SqureBlue
+  - SqureBrown
+  - SqureGreen
+  - SqureOrange
+  - ActivePortal
+  - DataPiece
   - R
   - G
-  - B
-  - DataPiece
   - GoHouse
+  - B
+  - FoRight
+  - Npc
+  - Flower
+  - GoOcene
+  - Rock
+  - FoLeft
+  - OcRight
+  - GoForest
+  - GoDesert
+  - OcLeft
   - ExitHouse
+  - GoVolcano
+  - DeLeft
+  - DeRight
+  - BackOcene
+  - GoForestDg
+  - GoOceneDg
+  - GoDesertDg
+  - GoIgloo
+  - ExitIgloo
+  - Greenspawner
+  - Bluespawner
+  - Redspawner
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tilemap Position
   - Water
   - UI
   - Object
-  - 
-  - 
+  - Clear
+  - Resource
   - 
   - 
   - 

@@ -6,36 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: 4992e18c8e3512c4bb39e78edb2ef661
+    path: Assets/Scenes/StartScene.unity
+    guid: ef50de089edaf894cad8f0e75d0d3afa
   - enabled: 1
-    path: Assets/Scenes/Forest1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Map/Forest1.unity
+    guid: ee6680f36532fdf4faf9b9b7046f41ac
   - enabled: 1
-    path: Assets/Scenes/Forest2.unity
+    path: Assets/Scenes/Map/Forest2.unity
     guid: e8e996afb4b0880449079de6a649d35b
   - enabled: 1
-    path: Assets/Scenes/Ocene1.unity
+    path: Assets/Scenes/Map/Ocene1.unity
     guid: 601ce82e1308db449b396c6b9b742516
   - enabled: 1
-    path: Assets/Scenes/Ocene2.unity
+    path: Assets/Scenes/Map/Ocene2.unity
     guid: 7f138ad1820ab45458b6b8baf3e395c6
   - enabled: 1
-    path: Assets/Scenes/Desert1.unity
+    path: Assets/Scenes/Map/Desert1.unity
     guid: 2e1304044bbf06948a6b9f3312b38daf
   - enabled: 1
-    path: Assets/Scenes/Desert2.unity
+    path: Assets/Scenes/Map/Desert2.unity
     guid: c487226fc7940d44d825c90b5dc3f626
   - enabled: 1
-    path: Assets/Scenes/Volcano1.unity
-    guid: d75437d0cdca9064c92deaa1893882f9
-  - enabled: 1
-    path: Assets/Scenes/Volcano2.unity
-    guid: ebf28d59ae1ce69428ce0f1d50a772e6
-  - enabled: 1
-    path: Assets/Scenes/House.unity
+    path: Assets/Scenes/Map/House.unity
     guid: fce8bd1fd00353c4cb636256808d82de
-  - enabled: 0
-    path: 
-    guid: 5ddea0aa8b09de54dbcc25d530e91f00
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/Forest Dungeon.unity
+    guid: 0020b2452056c3149828ae80261921df
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/Ice Dungeon.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/Desert Dungeon.unity
+    guid: 5f0029b1285f38b4f96e234736b028c7
   m_configObjects: {}

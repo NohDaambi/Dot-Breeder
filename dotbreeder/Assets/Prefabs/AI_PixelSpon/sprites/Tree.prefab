@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3660357492593967549}
   - component: {fileID: 683546141990632253}
   - component: {fileID: 7490092936268877757}
+  - component: {fileID: -4718101074726221481}
   m_Layer: 6
   m_Name: Tree
   m_TagString: Bluespawner
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008728504, y: 0.016677499}
@@ -151,3 +152,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4718101074726221481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992100323589715254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a47ceeb7da02e4a936af21d2ebfcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 0
+  isNpc: 0
+  isStudy: 0
+  isCombination: 0
+  isDataPiece: 0
+  isPlant: 0

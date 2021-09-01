@@ -106,7 +106,7 @@ public class PlayerAction : MonoBehaviour
                 }
 
                 //예람 추가: 자원 채집 시 ->
-                if (scanObject.tag == "RedSpawner"||scanObject.tag == "GreenSpawner"||scanObject.tag == "BlueSpawner")
+                if (scanObject.tag == "Redspawner"||scanObject.tag == "Greenspawner"||scanObject.tag == "Bluespawner")
                 {
                     Debug.Log("[!]System: ScanObject :"+scanObject.tag);
                     isDelay = true;

@@ -33,7 +33,11 @@ public class GameManager : MonoBehaviour
     public int PrevGcount;
     public int PrevBcount;
 
+    //About Dote
+    public char DoteName;
     public int DotLevel;
+    public int Dotstat;
+    public string Hobby;
 
     public bool isAction;
     private static bool ManagerExist;

@@ -73,7 +73,7 @@ public class Resource : MonoBehaviour
         else
         {
             yield return null;
-            }
+        }
     }
 
     //오브젝트 파괴시 호출된다.

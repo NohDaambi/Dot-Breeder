@@ -43,7 +43,7 @@ public class StartScene : MonoBehaviour
     public void NewGame()
     {
         //게임 처음 시작시 튜토리얼 퀘 활성화.
-        StartCoroutine(Manager.transform.Find("QuestDataManager").GetComponent<TutorialManager>().SetObject());
+       // StartCoroutine(Manager.transform.Find("QuestDataManager").GetComponent<TutorialManager>().SetObject());
         
         //숲-1 
         SceneManager.LoadScene(1);

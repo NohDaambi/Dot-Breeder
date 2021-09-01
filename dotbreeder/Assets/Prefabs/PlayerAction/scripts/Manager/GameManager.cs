@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public DropTextBox DropBox;
     public DataPieceSort DataPiece;
     public Interaction PlayerInteraction;   
+    public DoteStateManager DoteStateManager;
 
     public Rscore Rtext;
     public Gscore Gtext;
@@ -24,19 +25,26 @@ public class GameManager : MonoBehaviour
     public GameObject DataPieceObj;
     public GameObject miniGame;    
 
-    public int talkIndex;    
-    public int Rcount=0;
-    public int Gcount=0;
-    public int Bcount=0;
+    public int talkIndex;  
+
+    //Pixel count as Total_누적 픽셀 개수
+    public int totalR;
+    public int totalG;
+    public int totalB;
+
+    //Pixel count as DotLevel_레벨이 오르면 카운트 초기화.
+    public int Rcount=10;
+    public int Gcount=20;
+    public int Bcount=30;
 
     public int PrevRcount;
     public int PrevGcount;
     public int PrevBcount;
 
     //About Dote
-    public char DoteName;
+    public string DotName;
     public int DotLevel;
-    public int Dotstat;
+    public int DotStat;
     public string Hobby;
 
     public bool isAction;
@@ -44,13 +52,21 @@ public class GameManager : MonoBehaviour
 
     public int stageNum;
 
+
     void Start()
     {
         //퀘스트 이름
         PlayerInteraction.questText.text = questManager.CheckQuest();
-
+        DotName = "문식";
         DotLevel = 1;
+        DotStat = 23;
+        Hobby = "목공예";
+        DoteStateManager.LoadAllDoteInfo(); //도트상태매니저에서 UI에 정보 업로드
+        StartCoroutine(DoteStateManager.GrowthDataLoad()); //db정보 파싱.
+        DoteStateManager.PixelDataLoad();
+        DoteStateManager.BarDataLoad();
     }
+
 
     void Update()
     {

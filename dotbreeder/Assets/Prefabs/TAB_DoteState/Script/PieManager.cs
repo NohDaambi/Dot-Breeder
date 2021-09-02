@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class PieManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    public DoteStateManager DoteStateManager;
+    private GameManager Manager;
     private List<Wedge> pieWedges;
     public GameObject wedgePrefab;
     public Transform TotalPixelRate;
@@ -20,8 +20,6 @@ public class PieManager : MonoBehaviour
     private float total = 0;
 
     int wedgeCounter = 0;
-
-
 
     public class Wedge
     {
@@ -41,18 +39,23 @@ public class PieManager : MonoBehaviour
     }
     void Start()
     {
-        pieWedges = new List<Wedge>();
-        LoadWedge();
-        wedgeCounter = pieWedges.Count;
+        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
+    public void PixelDataLoad()
+    {
+       pieWedges = new List<Wedge>();
+       LoadWedge();
+       wedgeCounter = pieWedges.Count;
 
         //Debug
-        Debug.Log("WedgeCounter"+wedgeCounter); // must be 5
+       Debug.Log("WedgeCounter"+wedgeCounter); // must be 5
 
-        if(LoadSlow)
-           StartCoroutine(SlowLoadPieChart(1,0));
-        else{
-         UpadateAllWedges();
-        }
+       if(LoadSlow)
+        StartCoroutine(SlowLoadPieChart(1,0));
+       else{
+        UpadateAllWedges();
+       }
 
     }
 
@@ -73,27 +76,35 @@ public class PieManager : MonoBehaviour
               return Color.clear;
         }
     }
+    
+    //플레이어가 모아야 할 픽셀 개수를 계산한다.
+    private int CheckRemaining(int R,int G, int B)
+    {
+       int goal = DoteStateManager.GetGoalOfPixel((int)GROWTH_CONDITION.TOTAL_PIXEL);
+       int remaining= goal - (R+G+B);
+       if(remaining>0) return remaining;
+       return 0; 
+    }
+
     private void LoadWedge()
     {
-        TextAsset dataTextAsset = Resources.Load<TextAsset>("SavedData/data");
-        string data = dataTextAsset.text;
-        string[] splitData = data.Split('\n');
-        //Debug.Log("splitData_length"+splitData.Length);
-
-
-        var newArray = new string[splitData.Length - 2];
-        //Array.Copy( array_A, 1 , array_B, 0 , newArray.Length ):배열A의 1번째 값부터 newArray.Length개를 배열B, 0번째부터 복사  => using System
-        Array.Copy(splitData, 1, newArray, 0,newArray.Length);
-        //Debug.Log("newArray_length"+newArray.Length);
-
-        //Foreach Wedge in the CSV file
         //newArray = 2d array
         //[R , 10]
         //[G , 20]
         //[B , 30]
+        string R = "R"+','+Manager.Rcount.ToString();
+        string G = "G"+','+Manager.Gcount.ToString();
+        string B = "B"+','+Manager.Bcount.ToString();
+        string E = "E"+','+CheckRemaining(Manager.Rcount,Manager.Gcount, Manager.Bcount).ToString();
+
+        string[] RGBData = {R,G,B,E};
+
+
+        var RGBArray = new string[4]; 
+
         int indexcount=0;
         float totalRate =0;
-        foreach(string info in newArray)
+        foreach(string info in RGBData)
         {
     
             string[] values = info.Split(',');
@@ -124,8 +135,6 @@ public class PieManager : MonoBehaviour
             if(floating)
             {
                 string name = values[0];
-
-
                 //Radomly selected color
                 //NO RANDOM : R: RED / G:GREEN / B:BLUE / E:GRAY OR WHITE
                 //return color function
@@ -137,10 +146,7 @@ public class PieManager : MonoBehaviour
                 total += fillVal;
                 pieWedges.Add(wedge);
 
-                //GameObject legendItem = Instantiate(legendItemPrefab);
-                //legendItem.transform.SetParent(legend);
-                //legendItem.GetComponent<Image>().color = col;
-                //legendItem.GetComponentInChildren<Text>().text = name;
+     
             }
         }
 
@@ -215,9 +221,4 @@ public class PieManager : MonoBehaviour
         return(360*(fillAmount / ((float)(total))))+prevZ;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

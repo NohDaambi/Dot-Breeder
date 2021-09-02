@@ -31,30 +31,36 @@ public class Interaction : MonoBehaviour
     public static bool openDoor;
 
     //채집 액션
-    public void Forage()
+    public void Forage(GameObject scanobj)
     {
+
         //채집 << 여기에 채집 카운트 적용해서 드랍시 나오는 텍스트UI 출력하게 해야함!
-        if (Player.scanObject.tag == "G")
+        if (scanobj.tag == "G")
         {            
             if (Manager.PrevGcount != Manager.Gcount)
                 Manager.DropBox.DropPixel("G", 1);
 
+            Manager.Gcount+=1;
             Manager.PrevGcount = Manager.Gcount;
+           
         }
-        else if (Player.scanObject.tag == "R")
+        else if (scanobj.tag == "R")
         {           
             if (Manager.PrevRcount != Manager.Rcount)
                 Manager.DropBox.DropPixel("R", 1);
-
+            Manager.Rcount+=1;
             Manager.PrevRcount = Manager.Rcount;
         }
-        else if (Player.scanObject.tag == "B")
+        else if (scanobj.tag == "B")
         {           
             if (Manager.PrevBcount != Manager.Bcount)
                 Manager.DropBox.DropPixel("B", 1);
-
+            Manager.Bcount+=1;
             Manager.PrevBcount = Manager.Bcount;
         }
+        
+
+        scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
     }
 
     //상호작용 액션

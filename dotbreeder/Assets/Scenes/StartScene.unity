@@ -218,6 +218,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &34302581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6974256748165779915, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+  m_PrefabInstance: {fileID: 7465566523845928846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321100032
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +694,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &635790746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417072540900968258, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+  m_PrefabInstance: {fileID: 7465566523845928846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &695820749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,6 +1671,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &980759139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417072540478547709, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+  m_PrefabInstance: {fileID: 7465566523845928846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1036124572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2561,6 +2576,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1798251932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417072540417540563, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+  m_PrefabInstance: {fileID: 7465566523845928846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1816091254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,6 +2656,11 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1899896287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417072540547497476, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+  m_PrefabInstance: {fileID: 7465566523845928846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1904884786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4376,6 +4401,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4053864341401213157, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465566523639271729, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: DotInfo
+      value: 
+      objectReference: {fileID: 980759139}
+    - target: {fileID: 7465566523639271729, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: ExpectedLv
+      value: 
+      objectReference: {fileID: 1798251932}
+    - target: {fileID: 7465566523639271729, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: PixelChart
+      value: 
+      objectReference: {fileID: 34302581}
+    - target: {fileID: 7465566523639271729, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: TotalChart
+      value: 
+      objectReference: {fileID: 635790746}
+    - target: {fileID: 7465566523639271729, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: DotCondition
+      value: 
+      objectReference: {fileID: 1899896287}
+    - target: {fileID: 7618530400697209080, guid: 594476d22d779a349bbd376bae7f15de, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

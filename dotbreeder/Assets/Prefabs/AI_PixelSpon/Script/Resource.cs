@@ -11,6 +11,7 @@ public enum RESOURCES_STATE
 
 public class Resource : MonoBehaviour
 {
+    private GameManager Manager;
     public GameObject redpixelPrefab;
     public GameObject greenpixelPrefab;
     public GameObject bluepixelPrefab;
@@ -30,13 +31,13 @@ public class Resource : MonoBehaviour
 
     //Resources가 위치한 position gameobject information
     private GameObject positioninfo;
-    //Player정보 Get
-    public GameObject player;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //PixelPiece = transform.Find("PixelPiece").gameObject;
         int _layerMask = 1 << LayerMask.NameToLayer("Tilemap Position");
         Vector2 wp = gameObject.transform.position;
         Ray2D ray = new Ray2D(wp, Vector2.zero);
@@ -59,7 +60,7 @@ public class Resource : MonoBehaviour
     //HP깎을 때 실행되는 코루틴
     public IEnumerator Damage_Resources()
     {
-        hp -= player.GetComponent<PlayerAction>().weaponstrength;
+        hp -= Manager.player.GetComponent<PlayerAction>().weaponstrength;
         Debug.Log("[!]System: ScanObject get damage:"+hp);
 
         if (hp <= 0&& destroy_trigger!=true)
@@ -83,9 +84,9 @@ public class Resource : MonoBehaviour
         positioninfo.GetComponent<RespawnCounter>().delay_trigger = true;
         for(int i=0;i<RendomPixel();i++){
             GameObject pixel = Instantiate(SetPixelColor(gameObject), transform.position, transform.rotation);
-        }
-        
-        //pixel.transform.SetParent(PixelPiece.transform, false); //현재 자식으로 안들어가는 오류 있음 추후 수정.
+            
+            //pixel.transform.SetParent(PixelPiece.transform, false); //현재 자식으로 안들어가는 오류 있음 추후 수정.
+        }  
         yield return null;
     }
 

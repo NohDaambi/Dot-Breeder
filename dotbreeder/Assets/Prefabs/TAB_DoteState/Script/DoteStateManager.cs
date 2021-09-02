@@ -20,14 +20,15 @@ public class DoteStateManager : MonoBehaviour
 {
   public GameObject Conditions; //조건 부모 게임 오브젝트. db내용은 하위 목록에 생성 됨.
   public GameObject CondPrefab; //성장조건 프리팹.
+  public GameObject info;
   private GameManager Manager;
   private PieManager PieManager;
   private BarManager BarManager;
-  private GameObject DotInfo;
-  private GameObject DotCondition;
-  private GameObject PixelChart;
-  private GameObject TotalChart;
-  private GameObject ExpectedLv;
+  public GameObject DotInfo;
+  public GameObject DotCondition;
+  public GameObject PixelChart;
+  public GameObject TotalChart;
+  public GameObject ExpectedLv;
 
   public List<GameObject> GrowCondList = new List<GameObject>(); //성장조건 리스트
 
@@ -36,13 +37,7 @@ public class DoteStateManager : MonoBehaviour
     //게임매니저 불러오기.
     Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
     PieManager = transform.Find("PixelChart").Find("FullCircle").GetComponent<PieManager>();
-    BarManager = transform.Find("TotalChart").Find("FullBar").GetComponent<BarManager>();
-    //private으로 선언 한 도트상태 탭의 구성 게임오브젝트 초기화.
-    DotInfo = transform.Find("DotInfo").gameObject;
-    DotCondition = transform.Find("DotCondition").gameObject;
-    PixelChart = transform.Find("PixelChart").gameObject;
-    TotalChart = transform.Find("TotalChart").gameObject;
-    ExpectedLv = transform.Find("ExpectedLv").gameObject;      
+    BarManager = transform.Find("TotalChart").Find("FullBar").GetComponent<BarManager>();   
   }
 
   void Update()
@@ -58,36 +53,12 @@ public class DoteStateManager : MonoBehaviour
   //- 전체 도트정보를 업로드 한다.
   public void LoadAllDoteInfo()
   {
-    UpdatetDoteInfo("DotName");
-    UpdatetDoteInfo("DotLevel");
-    UpdatetDoteInfo("DotStat");
-    UpdatetDoteInfo("DotHobby");
+    DotInfo.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = Manager.DotName;
+    DotInfo.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = Manager.DotLevel.ToString();
+    DotInfo.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = Manager.DotStat.ToString();
+    DotInfo.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = Manager.Hobby;
   }
 
-
-  //- 항목별로 도트정보를 업로드 할 수 있다.(이름, 레벨, 스탯, 취미)
-  public void UpdatetDoteInfo(string infocontent) //매개변수: incontent=DoteName,DoteLevel..etc
-  {
-    GameObject info = DotInfo.transform.Find(infocontent).gameObject;
-    switch(infocontent)
-    {
-      case "DotName":
-      info.transform.GetChild(0).GetComponent<Text>().text = Manager.DotName;
-      //GetChild().GetComponentInChildren<Text>().text= Manager.DotName;
-      break;
-      case "DotLevel":
-      info.transform.GetChild(0).GetComponent<Text>().text = Manager.DotLevel.ToString();
-      break;
-      case "DotStat":
-      info.transform.GetChild(0).GetComponent<Text>().text = Manager.DotStat.ToString();
-      // Debug.Log("[!] Dote Stat: "+Manager.DotStat);
-      break;
-      case "DotHobby":
-      info.transform.GetChild(0).GetComponent<Text>().text = Manager.Hobby;
-      break;
-    }
-    //info.GetComponentInChildren<Text>().text= Manager.DoteName;
-  }
     
 
 //02. DotCondition DataBase Pharsing and Update on TAB UI

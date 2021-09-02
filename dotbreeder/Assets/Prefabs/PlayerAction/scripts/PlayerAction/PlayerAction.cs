@@ -91,18 +91,20 @@ public class PlayerAction : MonoBehaviour
             //상호작용 키 딜레이
             if (!isDelay)
             {
-                PlayerInteraction.Forage();
+                
 
                 //채집 시에만 사운드, 무한클릭방지
                 if (scanObject.tag == "R" || scanObject.tag == "G" || scanObject.tag == "B")
                 {
+                    PlayerInteraction.Forage(scanObject);
+
                     isDelay = true;
                     //코루틴 
                     StartCoroutine(CountAttackDelay());
 
                     Anim.SetTrigger("Attack");
                     //상호작용 사운드 재생            
-                    SoundManager.instance.SFXPlay("Attack", clip);
+                    //SoundManager.instance.SFXPlay("Attack", clip);
                 }
 
                 //예람 추가: 자원 채집 시 ->
@@ -116,7 +118,7 @@ public class PlayerAction : MonoBehaviour
                     StartCoroutine(scanObject.GetComponent<Resource>().Damage_Resources());                                   
                     Anim.SetTrigger("Attack");
                     //상호작용 사운드 재생            
-                    SoundManager.instance.SFXPlay("Attack", clip);
+                    //SoundManager.instance.SFXPlay("Attack", clip);
                 }            
             }
             else

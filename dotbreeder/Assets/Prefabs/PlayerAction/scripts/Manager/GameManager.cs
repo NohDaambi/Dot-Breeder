@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(DoteStateManager.GrowthDataLoad()); //db정보 파싱.
         DoteStateManager.PixelDataLoad();
         DoteStateManager.BarDataLoad();
+        
+
     }
 
 
@@ -145,6 +147,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+
+       
     }  
 
     //게임 저장

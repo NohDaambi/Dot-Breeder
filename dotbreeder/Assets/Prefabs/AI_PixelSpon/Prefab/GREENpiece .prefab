@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2442024114668799425}
   - component: {fileID: 2442024114668799424}
-  - component: {fileID: 2442024114668799427}
   - component: {fileID: 2442024114668799426}
   - component: {fileID: 2442024114668799430}
   - component: {fileID: 2442024114668799431}
-  m_Layer: 0
+  - component: {fileID: 7046120896635583717}
+  m_Layer: 6
   m_Name: 'GREENpiece '
-  m_TagString: Respawn
+  m_TagString: G
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2442024114668799437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.48, y: 3.2260702, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.0738, y: 5.0052, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2442024114668799427
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2442024114668799437}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2cc89ee26f02dcb4ca3ae831e0ebd6f4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2442024114668799426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: -1341230092
   SponPose: {fileID: 0}
+  posetrigger: 0
+  sponindex: 0
 --- !u!58 &2442024114668799430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -132,9 +115,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0014412701, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.04389593
 --- !u!50 &2442024114668799431
 Rigidbody2D:
   serializedVersion: 4
@@ -156,3 +139,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7046120896635583717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442024114668799437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a47ceeb7da02e4a936af21d2ebfcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 0
+  isNpc: 0
+  isStudy: 0
+  isCombination: 0
+  isDataPiece: 0
+  isPlant: 0
+  isTreasureChest: 0

@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{    
+{
+    public static GameManager instance;
+
     public TalkManager talkManager;
     public PlayerAction player;
     public Animator talkPanel;
@@ -132,6 +134,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         Time.timeScale = 1;
 
         //중복삭제

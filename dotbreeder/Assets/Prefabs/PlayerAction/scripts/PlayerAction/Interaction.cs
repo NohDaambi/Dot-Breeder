@@ -28,6 +28,7 @@ public class Interaction : MonoBehaviour
     public Animator PortraitAnim;
 
     public int talkIndex;
+    public static bool openDoor;
 
     //채집 액션
     public void Forage()
@@ -114,7 +115,13 @@ public class Interaction : MonoBehaviour
         {
             pieceInform.FindDataPiece();
         }
-        
+
+        //보물상자
+        if (Player.scanObject.tag == "TreasureChest")
+        {
+            openDoor = true;
+
+        }
     }
 
     //대화 액션

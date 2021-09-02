@@ -8,11 +8,28 @@ public class ForestDungeonManager : MonoBehaviour
     public LevelBuilder m_LevelBuilder;
     private bool m_ReadyForInput;
     public Player m_Player;
+    float waitingTime;
+    public static bool isDelay;
 
-    private void Start() {
+    private void Start()
+    {
+        waitingTime = 0.5f;
+        isDelay = true;
         m_LevelBuilder.Build();
         m_Player = FindObjectOfType<Player>();
     }
+
+    private void FixedUpdate()
+    {
+        waitingTime -= Time.deltaTime;
+
+        if (waitingTime <= 0)
+        {
+            isDelay = false;
+        }
+    }
+
+    
     void Update() {
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         input.Normalize();
@@ -22,7 +39,10 @@ public class ForestDungeonManager : MonoBehaviour
             if (m_ReadyForInput)
             {
                 m_ReadyForInput = false;
-                m_Player.Move(input);
+                if (isDelay == false)
+                {
+                    m_Player.Move(input);
+                }
                 IsLevelComplete();
                 
             }
@@ -40,7 +60,7 @@ public class ForestDungeonManager : MonoBehaviour
         }
         Debug.Log("clear");
         //if Clear, you go to other scenes
-        SceneManager.LoadScene("Forest2");
+        SceneManager.LoadScene("DungeonClearRoom");
         return true;
     }
 }

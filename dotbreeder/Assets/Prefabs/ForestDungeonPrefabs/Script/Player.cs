@@ -7,52 +7,55 @@ public class Player : MonoBehaviour
     Animator anim;
     float h;
     float v;
-    private void Awake()
+
+    void Start()
     {
         anim = GetComponent<Animator>();
     }
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if(!ForestDungeonManager.isDelay)
         {
-            h = 1;
-            v = 0;
+            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            {
+                h = 1;
+                v = 0;
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                h = -1;
+                v = 0;
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            {
+                h = 0;
+                v = 1;
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            {
+                h = 0;
+                v = -1;
+            }
+            //Animation
+            if (anim.GetInteger("hAxisRaw") != h)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("hAxisRaw", (int)h);
+            }
+            else if (anim.GetInteger("vAxisRaw") != v)
+            {
+                anim.SetBool("isChange", true);
+                anim.SetInteger("vAxisRaw", (int)v);
+            }
+            else
+            {
+                anim.SetBool("isChange", false);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-        {
-            h = -1;
-            v = 0;
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            h = 0;
-            v = 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            h = 0;
-            v = -1;
-        }
-        //Animation
-        if (anim.GetInteger("hAxisRaw") != h)
-        {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("hAxisRaw", (int)h);
-        }
-        else if (anim.GetInteger("vAxisRaw") != v)
-        {
-            anim.SetBool("isChange", true);
-            anim.SetInteger("vAxisRaw", (int)v);
-        }
-        else
-        {
-            anim.SetBool("isChange", false);
-        }
+        
     }
     public bool Move(Vector2 direction)
     {
-
         //Debug.Log("Player is moving");
         if (Mathf.Abs(direction.x) < 0.5)
         {

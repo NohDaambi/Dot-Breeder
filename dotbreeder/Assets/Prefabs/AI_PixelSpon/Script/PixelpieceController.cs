@@ -20,8 +20,8 @@ public class PixelpieceController : MonoBehaviour
     public PIXEL_STATE CurrentState = PIXEL_STATE.IDLE;
     public GameObject SponPose;
     private float stay_time = 10.0f; //하이딩
-    private bool posetrigger = false;
-    private int sponindex;
+    public bool posetrigger = false;
+    public int sponindex;
 
     void Start()
     {
@@ -37,6 +37,11 @@ public class PixelpieceController : MonoBehaviour
 
     }
 
+   public void Destroy_Pixel()
+   {
+       Debug.Log("[!]Player-Coin Interaction");
+       Destroy(gameObject);//자기 자신 삭제!
+   }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

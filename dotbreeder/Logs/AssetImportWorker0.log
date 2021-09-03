@@ -1,71 +1,101 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Education; OS build 18363.1734; Version 1909; 64bit' Language: 'ko' Physical Memory: 16335 MB
+OS: 'Windows 10 Pro; OS build 19042.1165; Version 2009; 64bit' Language: 'ko' Physical Memory: 16284 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\2020.3.13f1\Editor\Unity.exe
+E:\unity\2020.3.13f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/담비/Desktop/Dot-Breeder/dotbreeder
+E:/GitHub/Dot-Breeder/dotbreeder
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58966
-Successfully changed project path to: C:/Users/담비/Desktop/Dot-Breeder/dotbreeder
-C:/Users/담비/Desktop/Dot-Breeder/dotbreeder
+59709
+Successfully changed project path to: E:/GitHub/Dot-Breeder/dotbreeder
+E:/GitHub/Dot-Breeder/dotbreeder
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 92.38 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 75.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
-[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/담비/Desktop/Dot-Breeder/dotbreeder/Assets
+[Subsystems] Discovering subsystems at path E:/unity/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/GitHub/Dot-Breeder/dotbreeder/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
     Vendor:   
-    VRAM:     6052 MB
-    Driver:   27.21.14.6663
+    VRAM:     2988 MB
+    Driver:   27.21.14.5671
 Initialize mono
-Mono path[0] = 'C:/Program Files/2020.3.13f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Mono path[0] = 'E:/unity/2020.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'E:/unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007908 seconds.
+Register platform support module: E:/unity/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002618 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 70.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 57.37 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.431 seconds
+- Completed reload, in  2.855 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.021721 seconds.
+Registered in 0.013386 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 72.61 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 58.58 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.710 seconds
+- Completed reload, in  1.523 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2565 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 120.7 MB.
-System memory in use after: 119.6 MB.
+System memory in use before: 123.3 MB.
+System memory in use after: 122.3 MB.
 
-Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 2981.
-Total: 3.880000 ms (FindLiveObjects: 0.333000 ms CreateObjectMapping: 0.084600 ms MarkObjects: 2.375400 ms  DeleteObjects: 1.085100 ms)
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 2982.
+Total: 5.144400 ms (FindLiveObjects: 0.496400 ms CreateObjectMapping: 0.257300 ms MarkObjects: 2.792700 ms  DeleteObjects: 1.596700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013697 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.369 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.53 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 117.7 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2985.
+Total: 5.242200 ms (FindLiveObjects: 0.840700 ms CreateObjectMapping: 0.227300 ms MarkObjects: 2.790500 ms  DeleteObjects: 1.381800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -79,497 +109,141 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/GameManager.prefab
-  artifactKey: Guid(594476d22d779a349bbd376bae7f15de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GameManager.prefab using Guid(594476d22d779a349bbd376bae7f15de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f040eb9439c2daf8d48270be34b258c9') in 0.332760 seconds 
-  Import took 0.341187 seconds .
+  path: Assets/Scenes/Map
+  artifactKey: Guid(b1f29200bdb442142809b8278662605d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map using Guid(b1f29200bdb442142809b8278662605d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c85311262d0f31293c4b13a53c00f2') in 0.008228 seconds 
+  Import took 0.014184 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Editor/SpineSettings.asset
-  artifactKey: Guid(0ed19b3a14097b14d9e0186a64613345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Editor/SpineSettings.asset using Guid(0ed19b3a14097b14d9e0186a64613345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28e9d1a970657fd1bd73a6d5a0b3eac') in 0.008691 seconds 
-  Import took 0.013162 seconds .
+  Time since last request: 0.038219 seconds.
+  path: Assets/Scenes/Map
+  artifactKey: Guid(b1f29200bdb442142809b8278662605d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map using Guid(b1f29200bdb442142809b8278662605d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c85311262d0f31293c4b13a53c00f2') in 0.003995 seconds 
+  Import took 0.009079 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.161181 seconds.
-  path: Assets/Scenes/Dungeon
-  artifactKey: Guid(6aa55b085bfc9a444963f702b9c1c8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dungeon using Guid(6aa55b085bfc9a444963f702b9c1c8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc676e14fd5cfdf72c8f1d415d546b51') in 0.004801 seconds 
-  Import took 0.009355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.454547 seconds.
+  Time since last request: 0.849495 seconds.
   path: Assets/Scenes/Map/Forest1.unity
   artifactKey: Guid(ee6680f36532fdf4faf9b9b7046f41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Map/Forest1.unity using Guid(ee6680f36532fdf4faf9b9b7046f41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '672d19738763b8a84b1796148d20be4d') in 0.005338 seconds 
-  Import took 0.009899 seconds .
+Start importing Assets/Scenes/Map/Forest1.unity using Guid(ee6680f36532fdf4faf9b9b7046f41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42c98c47a6b6e6008411dd52e5e1756') in 0.018385 seconds 
+  Import took 0.026533 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.116896 seconds.
+  Time since last request: 142.170772 seconds.
+  path: Assets/Scenes/Map/Forest1.unity
+  artifactKey: Guid(ee6680f36532fdf4faf9b9b7046f41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Forest1.unity using Guid(ee6680f36532fdf4faf9b9b7046f41ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e722e6e9db1d333f8fe17635f9c8635') in 0.005995 seconds 
+  Import took 0.013466 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012241 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.470 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 117.8 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2988.
+Total: 4.890600 ms (FindLiveObjects: 0.337400 ms CreateObjectMapping: 0.243400 ms MarkObjects: 2.464800 ms  DeleteObjects: 1.843400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012767 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.785 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.19 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.9 MB.
+System memory in use after: 117.8 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2991.
+Total: 4.998500 ms (FindLiveObjects: 0.458300 ms CreateObjectMapping: 0.235200 ms MarkObjects: 2.814800 ms  DeleteObjects: 1.488400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 46.133535 seconds.
   path: Assets/Scenes/Map/Forest2.unity
   artifactKey: Guid(e8e996afb4b0880449079de6a649d35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Map/Forest2.unity using Guid(e8e996afb4b0880449079de6a649d35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75b9fdfb775d8d8993c9284d8fdd69c0') in 0.005005 seconds 
-  Import took 0.009662 seconds .
+Start importing Assets/Scenes/Map/Forest2.unity using Guid(e8e996afb4b0880449079de6a649d35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75b9fdfb775d8d8993c9284d8fdd69c0') in 0.025846 seconds 
+  Import took 0.031555 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 856.292620 seconds.
-  path: Assets/Resources/Forest/Origins
-  artifactKey: Guid(b0587522046d6b84285ed83485ad0861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins using Guid(b0587522046d6b84285ed83485ad0861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f79df70682d427650bbcd2db3bb18fc') in 0.004405 seconds 
-  Import took 0.009383 seconds .
+  Time since last request: 12.999235 seconds.
+  path: Assets/Scenes/Map/House.unity
+  artifactKey: Guid(fce8bd1fd00353c4cb636256808d82de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/House.unity using Guid(fce8bd1fd00353c4cb636256808d82de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '250cee8bc5e250f0c499fefe657950da') in 0.007872 seconds 
+  Import took 0.014739 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.085498 seconds.
-  path: Assets/Resources/Forest/Origins/BeforeShack.png
-  artifactKey: Guid(a9e8b53bc979fec4d9c92c4b692c9606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/BeforeShack.png using Guid(a9e8b53bc979fec4d9c92c4b692c9606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96468836d594e8de880af1562eacb3ca') in 0.118264 seconds 
-  Import took 0.123318 seconds .
+  Time since last request: 0.274606 seconds.
+  path: Assets/Scenes/Map/Ocene1.unity
+  artifactKey: Guid(601ce82e1308db449b396c6b9b742516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Ocene1.unity using Guid(601ce82e1308db449b396c6b9b742516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a5c9a90afa92032d07e45da96fc12b') in 0.017656 seconds 
+  Import took 0.075964 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/Forest/Origins/Tile2.png
-  artifactKey: Guid(5a6080ebd743d6740a5a9ff1e0709dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile2.png using Guid(5a6080ebd743d6740a5a9ff1e0709dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c03fd56ed45401aefa003fbb046731e5') in 0.011739 seconds 
-  Import took 0.016422 seconds .
+  Time since last request: 5.475682 seconds.
+  path: Assets/Scenes/Map/Ocene2.unity
+  artifactKey: Guid(7f138ad1820ab45458b6b8baf3e395c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Ocene2.unity using Guid(7f138ad1820ab45458b6b8baf3e395c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7889135b21928db9f8b827c6d964e3b4') in 0.007800 seconds 
+  Import took 0.014079 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000241 seconds.
-  path: Assets/Resources/Forest/Origins/Cave1.png
-  artifactKey: Guid(43a18a808c6d54847a7e4c4f25c2ec92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Cave1.png using Guid(43a18a808c6d54847a7e4c4f25c2ec92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c7923d5cf64372b07c217a6bbeadb83') in 0.025543 seconds 
-  Import took 0.030226 seconds .
+  Time since last request: 5.449300 seconds.
+  path: Assets/Scenes/Map/Desert2.unity
+  artifactKey: Guid(c487226fc7940d44d825c90b5dc3f626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Desert2.unity using Guid(c487226fc7940d44d825c90b5dc3f626) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1665dce88c3a22893646706414281937') in 0.005691 seconds 
+  Import took 0.011834 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Resources/Forest/Origins/Cliff2.png
-  artifactKey: Guid(b3f90956be4f73045ad816dcf90a8c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Cliff2.png using Guid(b3f90956be4f73045ad816dcf90a8c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c22dda180877baca7962727ed9604f') in 0.011067 seconds 
-  Import took 0.015515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Resources/Forest/Origins/CaveClose.png
-  artifactKey: Guid(ea54fab85b6169346a361c18bdab8ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveClose.png using Guid(ea54fab85b6169346a361c18bdab8ae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91c34a4b04fa1a919871a19c8156a06') in 0.023770 seconds 
-  Import took 0.028442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Resources/Forest/Origins/Tree3.png
-  artifactKey: Guid(42bd2f79afef3814884509d17bde338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tree3.png using Guid(42bd2f79afef3814884509d17bde338b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e1eccb52f3b9d1994bfb25ac2039d19') in 0.017246 seconds 
-  Import took 0.021477 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile6.png
-  artifactKey: Guid(1de928f50374bd443a2f6c3f587a8ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile6.png using Guid(1de928f50374bd443a2f6c3f587a8ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de4424bd530e4b53f785d028c92a1ec') in 0.011603 seconds 
-  Import took 0.016269 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/Resources/Forest/Origins/Tile3.png
-  artifactKey: Guid(451d79269a70bdd4b9ec5c1ed9406b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile3.png using Guid(451d79269a70bdd4b9ec5c1ed9406b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '050c8b55a964aa131c70c06539a27ab5') in 0.011251 seconds 
-  Import took 0.015969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Resources/Forest/Origins/Tile13.png
-  artifactKey: Guid(d5505ef7a3cb65b458611202eff8e594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile13.png using Guid(d5505ef7a3cb65b458611202eff8e594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5181f2b45d76f98073c25258b5f2e5f') in 0.010628 seconds 
-  Import took 0.015183 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000232 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile17.png
-  artifactKey: Guid(cc17d75f9322114468d90a52c90dac58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile17.png using Guid(cc17d75f9322114468d90a52c90dac58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e666a1b69468cc1309e968b25f05180') in 0.010371 seconds 
-  Import took 0.014767 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Resources/Forest/Origins/Water.png
-  artifactKey: Guid(cffca795aaa32244798a9fa331d76c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Water.png using Guid(cffca795aaa32244798a9fa331d76c7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61cae9391afbfe2ad3ec9c1207c0dd93') in 0.010704 seconds 
-  Import took 0.015006 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile4.png
-  artifactKey: Guid(0c57e80e9828fdf4eae5ebce99311197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile4.png using Guid(0c57e80e9828fdf4eae5ebce99311197) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4b79f56f258a9391520ac69affa921d') in 0.010122 seconds 
-  Import took 0.014814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile9.png
-  artifactKey: Guid(14ad30b11056e5645b9affa2ea10583b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile9.png using Guid(14ad30b11056e5645b9affa2ea10583b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61471be9bc0c3089bb0de6e13259c1b') in 0.010352 seconds 
-  Import took 0.015030 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile13.png
-  artifactKey: Guid(33ead32e6c7447140a4c17decb543c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile13.png using Guid(33ead32e6c7447140a4c17decb543c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '252f2830cc9e87d4978c5baa9254170b') in 0.010807 seconds 
-  Import took 0.015728 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile5.png
-  artifactKey: Guid(38277f4ee53ab1e4686fe7150873c6ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile5.png using Guid(38277f4ee53ab1e4686fe7150873c6ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67f957dc4504298772f09e63a4b82e75') in 0.010557 seconds 
-  Import took 0.015195 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000181 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile11.png
-  artifactKey: Guid(dc36a649d795aa24796a5646961de0f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile11.png using Guid(dc36a649d795aa24796a5646961de0f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e658df32da232b53ef69efdff76d14d7') in 0.010701 seconds 
-  Import took 0.015305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile2-2.png
-  artifactKey: Guid(f638d5569b44b0a44881787bbd7c4925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile2-2.png using Guid(f638d5569b44b0a44881787bbd7c4925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9701a13687b2c51aa794f36f757d6506') in 0.011159 seconds 
-  Import took 0.016826 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile2.png
-  artifactKey: Guid(dd16678a2cb4a604684a65ce2ca02f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile2.png using Guid(dd16678a2cb4a604684a65ce2ca02f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c75e275f7d6b08d8748a04695d7979e') in 0.010871 seconds 
-  Import took 0.015530 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Resources/Forest/Origins/Tile5.png
-  artifactKey: Guid(bb1394676df1b654aaed202f335047cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile5.png using Guid(bb1394676df1b654aaed202f335047cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdd6a847153e08549d5b8d3b126dbf9e') in 0.011016 seconds 
-  Import took 0.015584 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000217 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile15.png
-  artifactKey: Guid(4359e067884e31d4680fa28ebfafd4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile15.png using Guid(4359e067884e31d4680fa28ebfafd4e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc12ec348437f9cd1b023fffe7f74bd') in 0.010720 seconds 
-  Import took 0.015431 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Resources/Forest/Origins/GrassTile2.png
-  artifactKey: Guid(920b209f7d9d00448a1246e2aa6a4b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/GrassTile2.png using Guid(920b209f7d9d00448a1246e2aa6a4b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '267a69f114ccaeb63d098f7466a4d197') in 0.010681 seconds 
-  Import took 0.014864 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Resources/Forest/Origins/Tile12.png
-  artifactKey: Guid(aa1a4a8ee1f1c324e978f7f56286fed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile12.png using Guid(aa1a4a8ee1f1c324e978f7f56286fed5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43018a3d0656d48f6360f3d948b8d5cf') in 0.010967 seconds 
-  Import took 0.015490 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000194 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile2-1.png
-  artifactKey: Guid(0cd6939f6e6fc0244a1f83d730712b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile2-1.png using Guid(0cd6939f6e6fc0244a1f83d730712b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994df69253886df2a63a48b9bdd25db5') in 0.012040 seconds 
-  Import took 0.016303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Resources/Forest/Origins/Tile9.png
-  artifactKey: Guid(47e11ce715b994a41abd49f9a2efd90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile9.png using Guid(47e11ce715b994a41abd49f9a2efd90d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140c0e59789cc1acd9587278aa9b14e8') in 0.011175 seconds 
-  Import took 0.015439 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile5.png
-  artifactKey: Guid(15d5c3a39c1f1e44e99d206b9b104935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile5.png using Guid(15d5c3a39c1f1e44e99d206b9b104935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f80fca70cbc89af5a2ccb78f30c6d97b') in 0.010683 seconds 
-  Import took 0.014887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Resources/Forest/Origins/Tile11.png
-  artifactKey: Guid(eabf82a0d5754c24b9e81f4a214d2da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile11.png using Guid(eabf82a0d5754c24b9e81f4a214d2da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca21824edbc7f8c642350035710e612') in 0.011062 seconds 
-  Import took 0.015299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000201 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile1.png
-  artifactKey: Guid(874b7b437dcf49643b1e4dea887374f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile1.png using Guid(874b7b437dcf49643b1e4dea887374f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7deae9e2274438c3f96d555ff21574c') in 0.010405 seconds 
-  Import took 0.014955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000183 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile8.png
-  artifactKey: Guid(6cca505c681f8bd4a8a58ac22edec95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile8.png using Guid(6cca505c681f8bd4a8a58ac22edec95f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba99694d88999513747f46a69ae8062') in 0.011359 seconds 
-  Import took 0.015588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile2.png
-  artifactKey: Guid(929121f931ba3354da08c1d0c9e0c910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile2.png using Guid(929121f931ba3354da08c1d0c9e0c910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ce7867acf7a8038fb2d632724e41272') in 0.010814 seconds 
-  Import took 0.015505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/Resources/Forest/Origins/WaterPlant.png
-  artifactKey: Guid(142e7335eb599db40814afab36ca5a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterPlant.png using Guid(142e7335eb599db40814afab36ca5a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68846a97683fd605be39609039c79de9') in 0.010734 seconds 
-  Import took 0.015325 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Resources/Forest/Origins/Tile8.png
-  artifactKey: Guid(a767da1571c6eee4c9a3753e9660f269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile8.png using Guid(a767da1571c6eee4c9a3753e9660f269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade1caa03a68a267cd07c4275d5896de') in 0.010088 seconds 
-  Import took 0.014717 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile7.png
-  artifactKey: Guid(d007343a26648cd47ab2416298357de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile7.png using Guid(d007343a26648cd47ab2416298357de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e3f73ad239d202a10aa4abf8d62295') in 0.010535 seconds 
-  Import took 0.015268 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile4.png
-  artifactKey: Guid(2a1559129c87a9940a9722044b0c3196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile4.png using Guid(2a1559129c87a9940a9722044b0c3196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84de1d6d0d6f3cfa4a2d0af716125c65') in 0.010563 seconds 
-  Import took 0.015275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Resources/Forest/Origins/GrassTile4.png
-  artifactKey: Guid(cedb7358a1a50e947ad9a739f488a878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/GrassTile4.png using Guid(cedb7358a1a50e947ad9a739f488a878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a5bdb40685fd5dd81d3340b8778082') in 0.009882 seconds 
-  Import took 0.014792 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Resources/Forest/Origins/Tree1.png
-  artifactKey: Guid(a4bde51dc14ea864389de32e2b9ff0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tree1.png using Guid(a4bde51dc14ea864389de32e2b9ff0b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e505c2d2b45356626c4dad6bd13e798f') in 0.015021 seconds 
-  Import took 0.019836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/Resources/Forest/Origins/Cave2.png
-  artifactKey: Guid(eaa4c5c7743670a4b8315b6dbe1e8f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Cave2.png using Guid(eaa4c5c7743670a4b8315b6dbe1e8f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d02df2e891faeb5413e2327c5bad4c') in 0.023249 seconds 
-  Import took 0.027652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile3.png
-  artifactKey: Guid(ecbf4281b470db147b4f01f9b5baddde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile3.png using Guid(ecbf4281b470db147b4f01f9b5baddde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed347fdfa025f203b1035c18558d5d6d') in 0.010960 seconds 
-  Import took 0.015498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/Resources/Forest/Origins/Tile10.png
-  artifactKey: Guid(8274101519dfde14c9276d888cb82b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile10.png using Guid(8274101519dfde14c9276d888cb82b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '336d310f01be9fe1f2401f86c0137aca') in 0.011298 seconds 
-  Import took 0.015854 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile2-3.png
-  artifactKey: Guid(2acf343638a41a146adb809ef83383e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile2-3.png using Guid(2acf343638a41a146adb809ef83383e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdfdb5a6c196395a396b23968f322cad') in 0.010667 seconds 
-  Import took 0.014911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000262 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile6.png
-  artifactKey: Guid(bdd1d1c0544f89348ad00ba4fc14f0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile6.png using Guid(bdd1d1c0544f89348ad00ba4fc14f0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef2d704c7469668fee607cd34168f82') in 0.010883 seconds 
-  Import took 0.015429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile3.png
-  artifactKey: Guid(33839bb07fae643438d1d4793396a6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile3.png using Guid(33839bb07fae643438d1d4793396a6a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7fdbfa3db159cee1337755b620920fa') in 0.011326 seconds 
-  Import took 0.015791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile12.png
-  artifactKey: Guid(0f97152df73de2e43b772604bd1d69ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile12.png using Guid(0f97152df73de2e43b772604bd1d69ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c261a45680b59736e3ad38010bb88d9') in 0.012201 seconds 
-  Import took 0.016849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/Resources/Forest/Origins/Tree2.png
-  artifactKey: Guid(73369d26a39471041a7e0838723f8f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tree2.png using Guid(73369d26a39471041a7e0838723f8f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7689bcd515ed8cac54687c16683063fc') in 0.016614 seconds 
-  Import took 0.021418 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile16.png
-  artifactKey: Guid(eb2cb2683d98f2e488d66cedd7cbe866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile16.png using Guid(eb2cb2683d98f2e488d66cedd7cbe866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c18971258ca2219b3013e69e8ad3d1') in 0.012081 seconds 
-  Import took 0.016625 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Resources/Forest/Origins/GrassTile3.png
-  artifactKey: Guid(ea334451302ffaf43b59ed4dba451856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/GrassTile3.png using Guid(ea334451302ffaf43b59ed4dba451856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9472cff13fc0b806f8fbb92471ce9ae') in 0.011531 seconds 
-  Import took 0.015953 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000488 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile1.png
-  artifactKey: Guid(9250688028cc4014db989c7189342be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile1.png using Guid(9250688028cc4014db989c7189342be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2382bd72acc8b2e86f31711a7ee0fc5') in 0.010863 seconds 
-  Import took 0.015317 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Resources/Forest/Origins/CaveTile7.png
-  artifactKey: Guid(8079f70b42ff1a749a5a0e577dbe4dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveTile7.png using Guid(8079f70b42ff1a749a5a0e577dbe4dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c29bd754d5a75e89c7a5ada96ad9b3d') in 0.010492 seconds 
-  Import took 0.015241 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000206 seconds.
-  path: Assets/Resources/Forest/Origins/Tile7.png
-  artifactKey: Guid(0cd062cc3b254084096f5fdfd20a18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile7.png using Guid(0cd062cc3b254084096f5fdfd20a18fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e887e680e829dbc71fa7a2cb668c5d') in 0.010658 seconds 
-  Import took 0.015001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Resources/Forest/Origins/GrassTile1.png
-  artifactKey: Guid(b69c5b9af909b8e4dab3e0572572f81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/GrassTile1.png using Guid(b69c5b9af909b8e4dab3e0572572f81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6104848812a4eb7fe7d5610b6b25d1') in 0.015799 seconds 
-  Import took 0.020883 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000249 seconds.
-  path: Assets/Resources/Forest/Origins/Tile1.png
-  artifactKey: Guid(0c3dfc9b897081149ae18ea61e28036c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile1.png using Guid(0c3dfc9b897081149ae18ea61e28036c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bac3cc9235e9d4d1dddaf2e5d4915131') in 0.010761 seconds 
-  Import took 0.015429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000222 seconds.
-  path: Assets/Resources/Forest/Origins/CaveOpen.png
-  artifactKey: Guid(c26ca2cdbd4763343b32fe133a5909ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/CaveOpen.png using Guid(c26ca2cdbd4763343b32fe133a5909ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceb0449d57f131c35c5a0da5b165271f') in 0.025928 seconds 
-  Import took 0.030441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/Resources/Forest/Origins/Tile6.png
-  artifactKey: Guid(7f7a5edd931015c4ab906cce98b2a335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile6.png using Guid(7f7a5edd931015c4ab906cce98b2a335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a93ff4e879802efef1f6db612450d4') in 0.011205 seconds 
-  Import took 0.015419 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile10.png
-  artifactKey: Guid(17494f2ba2fbc8f448768030dd524155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile10.png using Guid(17494f2ba2fbc8f448768030dd524155) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95f064081960334d4c91cb3390eb5163') in 0.011484 seconds 
-  Import took 0.016123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000227 seconds.
-  path: Assets/Resources/Forest/Origins/Tile4.png
-  artifactKey: Guid(8617abb3d134c9a4287c2bc33a95cf5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Tile4.png using Guid(8617abb3d134c9a4287c2bc33a95cf5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bff9ab2a546f82e5c0199970f3cacb8') in 0.011289 seconds 
-  Import took 0.015759 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Resources/Forest/Origins/Cliff1.png
-  artifactKey: Guid(20cc4dbf8f1df3340bd13bbe13ed2196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/Cliff1.png using Guid(20cc4dbf8f1df3340bd13bbe13ed2196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892e41350d37119facaecfdd00a00875') in 0.011220 seconds 
-  Import took 0.015569 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000270 seconds.
-  path: Assets/Resources/Forest/Origins/WaterTile14.png
-  artifactKey: Guid(71ecf9fafbf59ad4b849ab32e7780f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Forest/Origins/WaterTile14.png using Guid(71ecf9fafbf59ad4b849ab32e7780f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11584787f0c095c46e04d78b05fb2094') in 0.011123 seconds 
-  Import took 0.015862 seconds .
+  Time since last request: 4.569121 seconds.
+  path: Assets/Scenes/Map/Desert1.unity
+  artifactKey: Guid(2e1304044bbf06948a6b9f3312b38daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Map/Desert1.unity using Guid(2e1304044bbf06948a6b9f3312b38daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aebd762bc6bd43de96350e101d4e679') in 0.009242 seconds 
+  Import took 0.017345 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -6,6 +6,8 @@ public class ForestDungeonScript : MonoBehaviour
 {
     public GameObject ForestDungeonClose;
     public GameObject ForestDungeonOpen;
+    public static bool isForestDungeon1Clear = false;
+    public static bool isForestDungeon2Clear = false;
 
     private void Start()
     {
@@ -16,15 +18,20 @@ public class ForestDungeonScript : MonoBehaviour
     private void Update()
     {
         Debug.Log("문식이 레벨 : " + GameManager.instance.DotLevel);
-        if (GameManager.instance.DotLevel == 3)
+        if (GameManager.instance.DotLevel == 3 && isForestDungeon1Clear == false && isForestDungeon2Clear == false)
         {
             ForestDungeonClose.SetActive(false);
             ForestDungeonOpen.SetActive(true);
         }
-        if (GameManager.instance.DotLevel == 4)
+        else if (GameManager.instance.DotLevel == 4 && isForestDungeon1Clear == true && isForestDungeon2Clear == false)
         {
             ForestDungeonClose.SetActive(false);
             ForestDungeonOpen.SetActive(true);
+        }
+        else if(GameManager.instance.DotLevel == 4 && isForestDungeon1Clear == true && isForestDungeon2Clear == true)
+        {
+            ForestDungeonClose.SetActive(true);
+            ForestDungeonOpen.SetActive(false);
         }
     }
 }

@@ -60,6 +60,15 @@ public class ForestDungeonManager : MonoBehaviour
         }
         Debug.Log("clear");
         //if Clear, you go to other scenes
+        if(ForestDungeonScript.isForestDungeon1Clear == true && ForestDungeonScript.isForestDungeon2Clear == false)
+        {
+            ForestDungeonScript.isForestDungeon2Clear = true;
+        }
+        if (ForestDungeonScript.isForestDungeon1Clear == false)
+        {
+            ForestDungeonScript.isForestDungeon1Clear = true;
+            LevelBuilder.m_CurrentLevel = 1;
+        }
         SceneManager.LoadScene("DungeonClearRoom");
         return true;
     }

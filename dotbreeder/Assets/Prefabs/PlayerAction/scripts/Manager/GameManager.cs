@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //퀘스트 이름
-        PlayerInteraction.questText.text = questManager.CheckQuest();
         DotName = "문식";
         DotLevel = 1;
         DotStat = 23;

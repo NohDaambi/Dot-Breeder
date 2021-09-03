@@ -9,9 +9,18 @@ public class LevelElement {
 }
 
 public class LevelBuilder : MonoBehaviour {
-    public int m_CurrentLevel;
+    public Camera m_camera;
+    public static int m_CurrentLevel;
     public List<LevelElement> m_LevelElement;
     private Level m_Level;
+
+    private void Update()
+    {
+        if(ForestDungeonScript.isForestDungeon1Clear == true)
+        {
+            m_CurrentLevel = 1;
+        }
+    }
 
     GameObject GetPrefab(char c) {
         LevelElement levelElement = m_LevelElement.Find(le => le.m_Character == c.ToString());
@@ -32,6 +41,16 @@ public class LevelBuilder : MonoBehaviour {
 
     public void Build() {
         m_Level = GetComponent<Levels>().m_Levels[m_CurrentLevel];
+        if(m_CurrentLevel == 0)
+        {
+            m_camera.transform.position = new Vector3(0, 0, -10);
+            m_camera.GetComponent<Camera>().orthographicSize = 5;
+        }
+        else if (m_CurrentLevel == 1)
+        {
+            m_camera.transform.position = new Vector3(0, -0.5f, -10);
+            m_camera.GetComponent<Camera>().orthographicSize = 8;
+        }
         //Offset coordinates so that centre of level is roughly at 0,0
         int startx = -m_Level.Whdth / 2;//Save start x since needs to be reset in loop
         int x = startx;

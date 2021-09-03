@@ -23,6 +23,9 @@ public class DropTextBox : MonoBehaviour
     public int num = 0;
     public bool Rotate;
 
+    public Image[] RGBarr = new Image[3]; // 이미지 값 0 : R ,1 : G ,2 : B
+    public Image[] RGBImgArr = new Image[4]; // 이미지 UI
+
     public void Start()
     {
         Pos = GetComponent<RectTransform>();
@@ -227,6 +230,7 @@ public class DropTextBox : MonoBehaviour
         Rotate = false;
     }
 
+    //RandomCount로 몇 개 드랍되었는지 텍스트 출력하면 됨
     public void Num0(string Name, int randomCount)
     {
         if(DropBox[3].activeSelf)
@@ -238,7 +242,13 @@ public class DropTextBox : MonoBehaviour
 
         DropBox[0].SetActive(true);
         Anim1.SetTrigger("isShow");
-        Text1.text = Name + " 픽셀 조각 " + randomCount.ToString() + "개를 얻었습니다.";
+        Text1.text = Name + " 픽셀 조각 ";
+        if(Name == "R")
+            RGBImgArr[0].sprite = RGBarr[0].sprite;
+        else if(Name == "G")
+            RGBImgArr[0].sprite = RGBarr[1].sprite;
+        else if (Name == "B")
+            RGBImgArr[0].sprite = RGBarr[2].sprite;
     }
 
     public void Num1(string Name, int randomCount)
@@ -252,7 +262,13 @@ public class DropTextBox : MonoBehaviour
 
         DropBox[1].SetActive(true);
         Anim2.SetTrigger("isShow");
-        Text2.text = Name + " 픽셀 조각 " + randomCount.ToString() + "개를 얻었습니다.";
+        Text2.text = Name + " 픽셀 조각 ";
+        if (Name == "R")
+            RGBImgArr[1].sprite = RGBarr[0].sprite;
+        else if (Name == "G")
+            RGBImgArr[1].sprite = RGBarr[1].sprite;
+        else if (Name == "B")
+            RGBImgArr[1].sprite = RGBarr[2].sprite;
     }
     public void Num2(string Name, int randomCount)
     {
@@ -265,7 +281,13 @@ public class DropTextBox : MonoBehaviour
 
         DropBox[2].SetActive(true);       
         Anim3.SetTrigger("isShow");
-        Text3.text = Name + " 픽셀 조각 " + randomCount.ToString() + "개를 얻었습니다.";
+        Text3.text = Name + " 픽셀 조각 ";
+        if (Name == "R")
+            RGBImgArr[2].sprite = RGBarr[0].sprite;
+        else if (Name == "G")
+            RGBImgArr[2].sprite = RGBarr[1].sprite;
+        else if (Name == "B")
+            RGBImgArr[2].sprite = RGBarr[2].sprite;
     }
 
     public void Num3(string Name, int randomCount)
@@ -279,7 +301,13 @@ public class DropTextBox : MonoBehaviour
 
         DropBox[3].SetActive(true);     
         Anim4.SetTrigger("isShow");
-        Text4.text = Name + " 픽셀 조각 " + randomCount.ToString() + "개를 얻었습니다.";
+        Text4.text = Name + " 픽셀 조각 ";
+        if (Name == "R")
+            RGBImgArr[3].sprite = RGBarr[0].sprite;
+        else if (Name == "G")
+            RGBImgArr[3].sprite = RGBarr[1].sprite;
+        else if (Name == "B")
+            RGBImgArr[3].sprite = RGBarr[2].sprite;
     }
 
 }

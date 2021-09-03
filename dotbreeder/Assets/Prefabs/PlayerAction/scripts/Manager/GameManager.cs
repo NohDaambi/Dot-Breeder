@@ -35,9 +35,9 @@ public class GameManager : MonoBehaviour
     public int totalB;
 
     //Pixel count as DotLevel_레벨이 오르면 카운트 초기화.
-    public int Rcount=10;
-    public int Gcount=20;
-    public int Bcount=30;
+    public int Rcount;
+    public int Gcount;
+    public int Bcount;
 
     public int PrevRcount;
     public int PrevGcount;

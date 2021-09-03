@@ -88,16 +88,14 @@ public class PlayerAction : MonoBehaviour
         //Scan Object && Interaction 채집
         if (Input.GetMouseButtonDown(0) && scanObject != null)
         {
+            PlayerInteraction.Forage(scanObject);
+
             //상호작용 키 딜레이
             if (!isDelay)
             {
-                
-
                 //채집 시에만 사운드, 무한클릭방지
                 if (scanObject.tag == "R" || scanObject.tag == "G" || scanObject.tag == "B")
                 {
-                    PlayerInteraction.Forage(scanObject);
-
                     isDelay = true;
                     //코루틴 
                     StartCoroutine(CountAttackDelay());

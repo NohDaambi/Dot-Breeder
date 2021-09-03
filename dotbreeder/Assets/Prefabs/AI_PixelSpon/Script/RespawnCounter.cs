@@ -13,7 +13,7 @@ public enum RESPAWN_STATE
 public class RespawnCounter : MonoBehaviour
 {
     public RESPAWN_STATE CurrentState = RESPAWN_STATE.ACTIVE;
-    private float creat_time = 3.0f; //채집자원이 생성되는 딜레이 타임
+    private float creat_time = 20.0f; //채집자원이 생성되는 딜레이 타임
     public bool spawned_trigger;
     public bool delay_trigger;
     //나중에 부모에게서 정보를 받아 자원마다 딜레이 타임 다르게 구성할 예정

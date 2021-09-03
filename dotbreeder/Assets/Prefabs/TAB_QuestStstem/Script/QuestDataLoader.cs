@@ -8,7 +8,19 @@ using Mono.Data.SqliteClient;
 using System.IO;
 using System.Data;
 
-
+//퀘스트가 발생되는 gamestructure과 대응하는 해쉬코드가 있다.
+public enum INTERACTION_STRUCTURE
+{
+   TUTORIAL_SIGN = 989052692,
+   BROKEN_COMBINER = 452260499,
+   DATA_PIECE = 1804506409,
+   RESOURCE = -1181451190,
+   PIXEL_PIECE = 766080093,
+   WOOD_SIGN = -1945051929,
+   BUILDING_RUBBLE = 467765935,
+   STUB = -648713566
+   
+}
 
 //기능
 //SQLite의 DB를 Parsing함.
@@ -17,7 +29,7 @@ using System.Data;
 public class QuestDataLoader : MonoBehaviour
 {
     private static bool ManagerExist;
-    
+    public GameManager Manager;
     public GameObject questlist; 
     public GameObject contentprefab;
     public GameObject detail; //새끼 퀘스트 있는 경우 detail의 하위목록으로 instantiate.
@@ -25,20 +37,6 @@ public class QuestDataLoader : MonoBehaviour
 
     //퀘스트 정보 DataList.
     public List<GameObject> QuestList = new List<GameObject>(); //나중에 private으로 선언한 예정.
-
-    public GameManager Manager;
-
-    void Awake()
-    {
-        //중복삭제
-        if (!ManagerExist)
-        {
-            ManagerExist = true;            
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
-    }  
 
     void Start()
     {

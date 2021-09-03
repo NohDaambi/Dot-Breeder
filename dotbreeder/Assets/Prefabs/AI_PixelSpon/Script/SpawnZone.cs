@@ -13,7 +13,7 @@ public enum SpawnZone_Feature
 public class SpawnZone : MonoBehaviour
 {
     public SpawnZone_Feature Feature; // 외부 컨포넌트에서 지정해준다.
-
+   
     private GameObject Null;
     public GameObject[] MySponZone;
     public RESPAWN_STATE[] SpawnState; //스폰가능 위치를 관리하는 배열

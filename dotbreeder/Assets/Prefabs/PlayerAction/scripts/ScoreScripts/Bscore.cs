@@ -19,6 +19,6 @@ public class Bscore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "B: " + manager.Bcount.ToString();
+        score.text = manager.Bcount.ToString();
     }
 }

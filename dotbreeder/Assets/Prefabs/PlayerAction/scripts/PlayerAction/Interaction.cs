@@ -28,31 +28,33 @@ public class Interaction : MonoBehaviour
     public Animator PortraitAnim;
 
     public int talkIndex;
+    public static bool openDoor;
 
     //채집 액션
-    public void Forage()
+    public void Forage(GameObject scanobj)
     {
+
         //채집 << 여기에 채집 카운트 적용해서 드랍시 나오는 텍스트UI 출력하게 해야함!
-        if (Player.scanObject.tag == "G")
+        if (scanobj.tag == "G")
         {            
-            if (Manager.PrevGcount != Manager.Gcount)
-                Manager.DropBox.DropPixel("G", 1);
-
+            Manager.Gcount+=1;
             Manager.PrevGcount = Manager.Gcount;
+            scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
+            Manager.DropBox.DropPixel("G", 1);        
         }
-        else if (Player.scanObject.tag == "R")
-        {           
-            if (Manager.PrevRcount != Manager.Rcount)
-                Manager.DropBox.DropPixel("R", 1);
-
+        else if (scanobj.tag == "R")
+        {            
+            Manager.Rcount+=1;
             Manager.PrevRcount = Manager.Rcount;
+            scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
+            Manager.DropBox.DropPixel("R", 1);   
         }
-        else if (Player.scanObject.tag == "B")
-        {           
-            if (Manager.PrevBcount != Manager.Bcount)
-                Manager.DropBox.DropPixel("B", 1);
-
+        else if (scanobj.tag == "B")
+        {            
+            Manager.Bcount+=1;
             Manager.PrevBcount = Manager.Bcount;
+            scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
+            Manager.DropBox.DropPixel("B", 1);  
         }
     }
 
@@ -91,6 +93,14 @@ public class Interaction : MonoBehaviour
         //조합기
         if (Player.scanObject.name == "Combination")
         {
+            QuestObj questobj = Manager.transform.Find("CombinationObj").GetComponent<QuestObj>();
+            if(questobj.IsbeonCall==true||questobj.IsAvtive==true)
+            {
+                //퀘스트가 대기중이거나 실행중일때
+                questobj.ShowMessage();
+                return;
+            }
+            
             CombinationUI.SetActive(true);
             if (!CombinationChild.activeSelf && !Combining.activeSelf && !CombinEnd.activeSelf)
                 CombinationAnim.SetBool("isButton", false);
@@ -105,6 +115,13 @@ public class Interaction : MonoBehaviour
         if (Player.scanObject.tag == "DataPiece")
         {
             pieceInform.FindDataPiece();
+        }
+
+        //보물상자
+        if (Player.scanObject.tag == "TreasureChest")
+        {
+            openDoor = true;
+
         }
     }
 

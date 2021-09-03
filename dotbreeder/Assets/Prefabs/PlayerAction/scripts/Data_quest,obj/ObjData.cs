@@ -11,6 +11,7 @@ public class ObjData : MonoBehaviour
     public bool isCombination;
     public bool isDataPiece;
     public bool isPlant;
+    public bool isTreasureChest;
 
     void Awake()
     {

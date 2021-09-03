@@ -19,6 +19,6 @@ public class Gscore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "G: " + manager.Gcount.ToString();
+        score.text = manager.Gcount.ToString();
     }
 }

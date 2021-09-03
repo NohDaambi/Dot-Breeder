@@ -19,6 +19,6 @@ public class Rscore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "R: " + manager.Rcount.ToString();
+        score.text = manager.Rcount.ToString();
     }
 }

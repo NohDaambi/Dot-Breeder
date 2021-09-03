@@ -1,0 +1,7 @@
+ID,Type,Region,Trigger,Name,Goal,Description,Previous,Count,Clear,Unlock
+0,Tutorial,Forest,989052692,주위를 둘러보자,"느낌표 말풍선 모두 확인하기, ""조합기를 고치자""퀘스트 완료",근처를 돌아다니며 도움이 될 만한 것을 찾아보자.,0,8,0,숲-2 이동 가능
+1,Tutorial,Forest,452260499,조합기를 고치자,망가진 조합기 고치기,"R 10개, G 10개, B 10개의 픽셀조각을 모아 망가진 조합기로 돌아가자.",1,3,0,조합기 획득
+101,Tutorial,Forest,null,조합기를 고치자,R조각 10개 모으기.,null,null,10,0,null
+102,Tutorial,Forest,null,조합기를 고치자,G조각 10개 모으기.,null,null,10,0,null
+103,Tutorial,Forest,null,조합기를 고치자,B조각 10개 모으기.,null,null,10,0,null
+2,Tutorial,Forest,1804506409,데이터 조각을 모으자,맵에 숨겨진 데이터 조각 10개 모으기,맵 이곳저곳에 있는 데이터 조각을 모으자,2,10,0,히든 엔딩 오픈

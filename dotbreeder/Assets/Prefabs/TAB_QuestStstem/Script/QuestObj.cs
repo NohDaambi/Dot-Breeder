@@ -15,6 +15,7 @@ public class QuestObj : MonoBehaviour
     //일단 combination.cs에 넣을 함수는 여기에다가 작성 할 예정
     //상호작용 E키 BOOL
     private GameManager Manager;
+    private DoteStateManager DoteStateManager;
     private GameObject questobj;
     public QuestDataLoader DBloader;
     public INTERACTION_STRUCTURE Interaction;//외부에서 지정. 조합기일 경우 Broken_combiner
@@ -43,11 +44,12 @@ public class QuestObj : MonoBehaviour
     {
         IsbeonCall=true;
         Debug.Log("[!]Tutorial_System : ACCESS BEONCALL");
-        GameObject combination = Resources.Load<GameObject>("Prefabs/QuestFlag");
+        GameObject combination = Resources.Load<GameObject>("ingame/QuestMark");
         GameObject QuestFlag = Instantiate(combination,combination.transform.position,combination.transform.rotation);
         QuestFlag.transform.SetParent(questobj.transform,false);
         while(true)
         {
+           
            yield return null;
         }
         yield return null;
@@ -79,6 +81,7 @@ public class QuestObj : MonoBehaviour
            List<int> RGB = new List<int>() {GetComponent<GameManager>().Rcount,GetComponent<GameManager>().Gcount,GetComponent<GameManager>().Bcount};
            List<string> RGBtxt = new List<string>() {quest.DesList[0].GetComponent<Text>().text,quest.DesList[1].GetComponent<Text>().text,quest.DesList[2].GetComponent<Text>().text};
            
+
           
            for(int i=0;i<RGB.Count;i++)  //RGB 순회
            {
@@ -96,10 +99,6 @@ public class QuestObj : MonoBehaviour
                  if(RGB[i]!=int.Parse(RGBtxt[j])) RGBtxt[j]=RGB[i].ToString();
                  //플레이어가 가지고 있는 RGB가 goal과 모두 같을 때, 해당 퀘스트의 조건 카운트가 증가한다.
                  if(RGB[i]==goal) descount+=1;
-
-
-                 
-
               }
            }
         }

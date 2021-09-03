@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(DoteStateManager.GrowthDataLoad()); //dbÁ¤º¸ ÆÄ½Ì.
         DoteStateManager.PixelDataLoad();
         DoteStateManager.BarDataLoad();
+        TabMenu.SetActive(false);
         
 
     }

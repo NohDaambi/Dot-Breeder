@@ -57,7 +57,6 @@ public class PixelpieceController : MonoBehaviour
             {
                 //playerController.GetPixel(GameObject); 메서드 실행: 플레이어에게 획득한 픽셀의 정보를 보낸다.
                 //Debug.Log("획득한 픽셀->플레이어 정보 전달 완료");
-                Debug.Log("획득한 픽셀->플레이어 정보 전달 요청");
                 //삭제하기전 위치에 없어지는거니까 메모리도 삭제 요청 다른 스크립트에 보내기.
                 Destroy(gameObject);//자기 자신 삭제!
             }

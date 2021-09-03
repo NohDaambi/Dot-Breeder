@@ -80,7 +80,6 @@ public class Resource : MonoBehaviour
     //오브젝트 파괴시 호출된다.
     public IEnumerator Spon_Pixel()
     {
-        Debug.Log("Start Coroutine Spon_Pixel!");
         positioninfo.GetComponent<RespawnCounter>().delay_trigger = true;
         for(int i=0;i<RendomPixel();i++){
             GameObject pixel = Instantiate(SetPixelColor(gameObject), transform.position, transform.rotation);

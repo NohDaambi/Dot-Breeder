@@ -8,6 +8,7 @@ public class Interaction : MonoBehaviour
     public PlayerAction Player;
     public GameManager Manager;
     public QuestManager questManager;
+    public PieManager PixelCountManager;
     public PieceInform pieceInform;
     public TalkManager talkManager;
     public TypeEffect talk;
@@ -40,7 +41,8 @@ public class Interaction : MonoBehaviour
             Manager.Gcount+=1;
             Manager.PrevGcount = Manager.Gcount;
             scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
-            Manager.DropBox.DropPixel("G", 1);        
+            Manager.DropBox.DropPixel("G", 1);  
+            PixelCountManager.PixelDataLoad();      
         }
         else if (scanobj.tag == "R")
         {            
@@ -48,6 +50,7 @@ public class Interaction : MonoBehaviour
             Manager.PrevRcount = Manager.Rcount;
             scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
             Manager.DropBox.DropPixel("R", 1);   
+            PixelCountManager.PixelDataLoad();
         }
         else if (scanobj.tag == "B")
         {            
@@ -55,7 +58,10 @@ public class Interaction : MonoBehaviour
             Manager.PrevBcount = Manager.Bcount;
             scanobj.GetComponent<PixelpieceController>().Destroy_Pixel();//자기 자신 삭제!
             Manager.DropBox.DropPixel("B", 1);  
+            PixelCountManager.PixelDataLoad();
         }
+
+       
     }
 
     //상호작용 액션

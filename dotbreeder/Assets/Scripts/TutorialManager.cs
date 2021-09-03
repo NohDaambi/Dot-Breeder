@@ -15,7 +15,7 @@ public class TutorialManager : MonoBehaviour
        QuestDataLoader questDB = transform.GetComponent<QuestDataLoader>();
         //일단 조합기 밖에 없어서..조합기 일회성으로 SET
        broken_combiner = GameObject.Find("CombinationObj");
-       Debug.Log("[!]Tutorial_System : Find Broken_Combiner");
+      
        QuestObj questobj = broken_combiner.GetComponent<QuestObj>();
        StartCoroutine(questDB.MatchHash((int)INTERACTION_STRUCTURE.TUTORIAL_SIGN));
        StartCoroutine(questobj.BeOnCall((int)INTERACTION_STRUCTURE.BROKEN_COMBINER));

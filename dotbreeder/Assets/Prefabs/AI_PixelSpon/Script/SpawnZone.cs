@@ -60,7 +60,6 @@ public class SpawnZone : MonoBehaviour
             {
                 //if(sponposes[i] ==true )아래 실행
                 //Active상태인 구역에는 채집 자원을 젠 해주어야 함. 위치 값을 받기 위해 transform 가져옴
-                Debug.Log("처리중인 sponposes 넘버:" + i);
                 Transform activezone = transform.GetChild(i).transform;
 
                 //해당 위치에 채집자원 젠해주기(채집자원은 SpawnZone의 특성에 따라 랜덤일 수도 아닐 수도 있음)

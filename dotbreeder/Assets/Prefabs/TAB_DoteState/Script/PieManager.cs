@@ -49,7 +49,7 @@ public class PieManager : MonoBehaviour
        wedgeCounter = pieWedges.Count;
 
         //Debug
-       Debug.Log("WedgeCounter"+wedgeCounter); // must be 5
+       //Debug.Log("WedgeCounter"+wedgeCounter); // must be 5
 
        if(LoadSlow)
         StartCoroutine(SlowLoadPieChart(1,0));

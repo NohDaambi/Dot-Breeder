@@ -104,7 +104,7 @@ public class QuestDataLoader : MonoBehaviour
                         
                         SaveSibligQuest(reader.GetInt32(3),reader.GetInt32(1), reader.GetString(4) , reader.GetString(5) ,reader.GetInt32(9), reader.GetInt32(10));
                         //Debug.Log(reader.GetInt32(3)+reader.GetInt32(1)+reader.GetString(4)+reader.GetString(5)+reader.GetInt32(9)+reader.GetInt32(10));
-                        Debug.Log("새끼퀘스트는 이때 다른 파일에 저장");
+                        //Debug.Log("새끼퀘스트는 이때 다른 파일에 저장");
                       }
                       
                   }
@@ -143,8 +143,7 @@ public class QuestDataLoader : MonoBehaviour
         {
             //지역변수 선언한 이유: data만 잠깐 가져올거라서.
             Quest data = QuestList[i].GetComponent<Quest>();
-            Debug.Log("Load HashCode Num in 매개변수:"+hashcode);
-            Debug.Log("Load HashCode Num in 멤버변수:"+data.Hash);
+
 
             if(data.Hash!=hashcode) continue; //hashcode가 같지 않을 경우 아래는 시행하지 않고 다시 탐색.
 
@@ -185,7 +184,6 @@ public class QuestDataLoader : MonoBehaviour
         questBtn.GetComponent<Quest>().Clear=clear;
         questBtn.GetComponent<Quest>().Hash=hash;
         questBtn.GetComponent<Quest>().GetComponentInChildren<Text>().text=title; //Update the title of "Quest Button UI"
-        Debug.Log(id+"::"+title);
         questBtn.SetActive(false);
 
         return questBtn; //부모 obj반환.
@@ -197,7 +195,6 @@ public class QuestDataLoader : MonoBehaviour
     private void SaveSibligQuest(int id,int hash, string reg, string title,int count, int clear)
     {    
         int virtualID=id/100; //100을 나눈 몫
-        Debug.Log(virtualID);
         Quest parentinfo = QuestList[virtualID].GetComponent<Quest>();
         if(parentinfo.ID==virtualID)
         {
@@ -207,10 +204,6 @@ public class QuestDataLoader : MonoBehaviour
            detailCount.transform.localScale=detail.transform.localScale;       
            //detailCount.transform.SetParent(detail.);   
            parentinfo.DesList.Add(detailCount);
-           Debug.Log(id+"/"+"/"+hash+"/"+"/"+reg+"/"+"/"+title+"/"+count+"/"+clear);
-           Debug.Log(detailCount.GetComponent<Text>().text);
-           Debug.Log(count.ToString());
-           Debug.Log(Manager.Rcount.ToString());
            //일단 첫번째 맵 구현하기 위해서 임시로 여기다가 작성.
            //추후에 함수로 분리할 예정임. ID_1번 퀘스트 관련.
           switch(title)
@@ -249,7 +242,7 @@ public class QuestDataLoader : MonoBehaviour
 
         if(!File.Exists(Filepath))
         {
-            Debug.LogWarning("File \""+Filepath+"\" does not exist. Attempting to create from \"" + Application.dataPath + "!/assets/"+p);
+            //Debug.LogWarning("File \""+Filepath+"\" does not exist. Attempting to create from \"" + Application.dataPath + "!/assets/"+p);
             Filepath = Application.dataPath + "/" + p;
             if(!File.Exists(Filepath)){
                 File.Copy(Application.streamingAssetsPath + "/" + p , Filepath);
@@ -283,7 +276,7 @@ public class QuestDataLoader : MonoBehaviour
                 + "WHERE ID = 1"; //WHERE을 붙인 이유는 테이블 전체를 돌기 때문에 해당 아이디만 수정하게 선택한것.->WHERE ID는 db 표의 행 번호를 의미. 나는 0부터 시작해서 ID+1로 계산해줘야됨.
             //sqpQery에 들어가는 명령어 풀 문장
             //UPDATE QUestTable SET ID = '1', NAME = '2', DISCRIPTION = '2'
-              Debug.Log(sqlQuery);
+              //Debug.Log(sqlQuery);
 
               dbCmd.CommandText = sqlQuery;
               using (IDataReader reader = dbCmd.ExecuteReader()) //테이블에 있는 데이터들이 들어간다.

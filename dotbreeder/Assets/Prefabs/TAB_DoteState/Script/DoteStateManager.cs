@@ -24,11 +24,11 @@ public class DoteStateManager : MonoBehaviour
   private GameManager Manager;
   private PieManager PieManager;
   private BarManager BarManager;
-  public GameObject DotInfo;
-  public GameObject DotCondition;
-  public GameObject PixelChart;
-  public GameObject TotalChart;
-  public GameObject ExpectedLv;
+  private GameObject DotInfo;
+  private GameObject DotCondition;
+  private GameObject PixelChart;
+  private GameObject TotalChart;
+  private GameObject ExpectedLv;
 
   public List<GameObject> GrowCondList = new List<GameObject>(); //성장조건 리스트
 
@@ -38,14 +38,13 @@ public class DoteStateManager : MonoBehaviour
     Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
     PieManager = transform.Find("PixelChart").Find("FullCircle").GetComponent<PieManager>();
     BarManager = transform.Find("TotalChart").Find("FullBar").GetComponent<BarManager>();   
-  }
 
-  void Update()
-  {
-      
-        
+    DotInfo = transform.Find("DotInfo").gameObject;
+    DotCondition = transform.Find("DotCondition").gameObject;
+    PixelChart = transform.Find("PixelChart").gameObject;
+    TotalChart = transform.Find("TotalChart").gameObject;
+    ExpectedLv = transform.Find("ExpectedLv").gameObject;     
   }
-
 
 //01. DotInfo GameObject Functions
   // * 게임 메니저에서 도트 인포정보를 불러와 UI에 업데이트 시킨다.
@@ -110,14 +109,10 @@ public class DoteStateManager : MonoBehaviour
             //reader.GetInt32(0) = level DB;
             if(reader.GetInt32(0)!=Manager.DotLevel) continue;
 
-            Debug.Log("[!]GrowthDb_Pharsing...:"); //타입명, (몇 열에 있는 것을 볼 것인가?)
+           //타입명, (몇 열에 있는 것을 볼 것인가?)
             GrowCondList.Add(CreatCondition(reader.GetInt32(0),reader.GetString(2),reader.GetInt32(3),reader.GetInt32(4),reader.GetInt32(5)));
             
-            Debug.Log("[DotLevel]"+reader.GetInt32(0));
-            Debug.Log("[Index]"+reader.GetInt32(1));
-            Debug.Log("[Condition]"+reader.GetString(2));
-            Debug.Log("[Goal_Count]"+reader.GetInt32(3));
-            Debug.Log("[Clear]"+reader.GetInt32(5));
+          
 
           }             
           //파일 닫기
@@ -173,10 +168,13 @@ public class DoteStateManager : MonoBehaviour
     return 0;
   }
 
-  // 플레이어가 획득한 총 픽셀 조각 수를 불러온다.
-  public void GetTotalPixelInfo()
+  // 플레이어가 획득한 총 픽셀 조각 수를 업데이트 한다.
+  public void UpdatePixelInfo(bool _Rcount, bool _Gcount, bool _Bcount)
   {
-    //GameMAnager에서 불러오거나 GameManager 스트립트로 이동시킬 수 있음.
+    if(_Rcount==true)
+    {
+
+    }
   }
 
 

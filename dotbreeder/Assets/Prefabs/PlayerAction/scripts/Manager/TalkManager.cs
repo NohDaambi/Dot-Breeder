@@ -21,6 +21,9 @@ public class TalkManager : MonoBehaviour
     //대화 할당
     void GenerateData()
     {
+        //조합기
+        talkData.Add(1500, new string[] { "[!]Tutorial_System : 픽셀조각을 모아 조합기를 고쳐주세요." });
+
         //Study
         talkData.Add(100, new string[] { "사용하기엔 도트가 아직 어리다.." });
 

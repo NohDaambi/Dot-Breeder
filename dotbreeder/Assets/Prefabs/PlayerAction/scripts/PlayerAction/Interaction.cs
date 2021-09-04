@@ -138,8 +138,9 @@ public class Interaction : MonoBehaviour
         Manager.scanObject = scanObj;
         ObjData objData = Manager.scanObject.GetComponent<ObjData>();
 
-        //Npc 일 경우에만 대화가능
-        if (objData.isNpc || objData.isDataPiece || (objData.isStudy && Manager.DotLevel == 1))
+        // (obj.isCombination && ()<--여기에 퀘스트 클리어 조건 넣으면 퀘스트 클리어시 조합기 사용 가능) 
+        // 현재는 도트레벨 1에만 대사출력, 2렙에는 조합기 켜지게끔 조건 걸어놓은건데 예람이꺼 잘 모르겠어서 안나오는중, while문안에 뭘 넣어야 할 듯,,        
+        if (objData.isNpc || objData.isDataPiece || (objData.isStudy && Manager.DotLevel == 1) || (objData.isCombination && Manager.DotLevel == 1)) 
         {
             Talk(objData.Id);
             NpcName.gameObject.SetActive(true);
@@ -150,7 +151,9 @@ public class Interaction : MonoBehaviour
 
 
         //이야기 보여주기
-        if (Player.scanObject.tag == "Npc" || Player.scanObject.tag == "DataPiece" || (Player.scanObject.name == "Study" && Manager.DotLevel == 1))
+        if (Player.scanObject.tag == "Npc" || Player.scanObject.tag == "DataPiece" 
+            || (Player.scanObject.name == "Study" && Manager.DotLevel == 1) 
+            || (Player.scanObject.name == "Combination" && Manager.DotLevel == 1))
             Manager.talkPanel.SetBool("isShow", Manager.isAction);
     }
 

@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject menuSet;
     public GameObject TabMenu;
     public GameObject DataPieceObj;
-    public GameObject miniGame;    
+    public GameObject miniGame;
+    public GameObject PlayerObj;
 
     public int talkIndex;  
 
@@ -74,6 +75,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "StartScene")
+            PlayerObj.SetActive(false);
+        else
+            PlayerObj.SetActive(true);
+
         //스테이지 넘버
         if (SceneManager.GetActiveScene().name == "Forest1" || SceneManager.GetActiveScene().name == "Forest2")
             stageNum = 1;

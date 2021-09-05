@@ -42,6 +42,8 @@ public class PieManager : MonoBehaviour
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+
+     //픽셀을 사용하거나, 획득하면 이 함수로 업데이트 해줘야 한다.
     public void PixelDataLoad()
     {
        pieWedges = new List<Wedge>();

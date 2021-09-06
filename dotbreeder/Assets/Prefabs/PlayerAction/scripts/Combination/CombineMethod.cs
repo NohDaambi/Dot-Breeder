@@ -14,7 +14,8 @@ public class CombineMethod : MonoBehaviour
     public Image MethodImage;
     public Image stageImage;
     public Image[] stageimgarr = new Image[3];
-    public Text RgbTxt;
+    public Text[] RgbTxt = new Text[3];
+    public Text ItemName;
 
     public int PageNum; //1 숲 2 얼음 3 사막
     
@@ -73,64 +74,64 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             stageImage.sprite = stageimgarr[0].sprite;
-            textArr[0].text = "분유 조합법";
-            textArr[1].text = "쪽쪽이 조합법";
-            textArr[2].text = "딸랑이 조합법";
-            textArr[3].text = "축구공 조합법";
-            textArr[4].text = "목각인형 조합법";
-            textArr[5].text = "사탕 조합법";
-            textArr[6].text = "비니 조합법";
-            textArr[7].text = "송곳 조합법";
-            textArr[8].text = "도끼 조합법";
-            textArr[9].text = "망치 조합법";
-            textArr[10].text = "장갑 조합법";
-            textArr[11].text = "좋은도끼 조합법";
-            textArr[12].text = "통나무집 조합법";
-            textArr[13].text = "라탄 요람침대 조합법";
-            textArr[14].text = "벽난로 조합법";
-            textArr[15].text = "테이블 톱 조합법";
+            textArr[0].text = "분유";
+            textArr[1].text = "쪽쪽이";
+            textArr[2].text = "딸랑이";
+            textArr[3].text = "축구공";
+            textArr[4].text = "목각인형";
+            textArr[5].text = "사탕";
+            textArr[6].text = "비니";
+            textArr[7].text = "송곳";
+            textArr[8].text = "도끼";
+            textArr[9].text = "망치";
+            textArr[10].text = "장갑";
+            textArr[11].text = "좋은도끼";
+            textArr[12].text = "통나무집";
+            textArr[13].text = "라탄 요람침대";
+            textArr[14].text = "벽난로";
+            textArr[15].text = "테이블 톱";
         }
 
         if(PageNum == 2)
         {
             stageImage.sprite = stageimgarr[1].sprite;
-            textArr[0].text = "분유 조합법";
-            textArr[1].text = "쪽쪽이 조합법";
-            textArr[2].text = "딸랑이 조합법";
-            textArr[3].text = "축구공 조합법";
-            textArr[4].text = "목각인형 조합법";
-            textArr[5].text = "사탕 조합법";
-            textArr[6].text = "낚싯대 조합법";
-            textArr[7].text = "지렁이 조합법";
-            textArr[8].text = "두건 조합법";
-            textArr[9].text = "좋은 낚싯대 조합법";
-            textArr[10].text = "장갑 조합법";
-            textArr[11].text = "뜰채 조합법";
-            textArr[12].text = "이글루 조합법";
-            textArr[13].text = "얼음침대 조합법";
-            textArr[14].text = "낚시용품 진열대 조합법";
-            textArr[15].text = "수족관(어항) 조합법";
+            textArr[0].text = "분유";
+            textArr[1].text = "쪽쪽이";
+            textArr[2].text = "딸랑이";
+            textArr[3].text = "축구공";
+            textArr[4].text = "목각인형";
+            textArr[5].text = "사탕";
+            textArr[6].text = "낚싯대";
+            textArr[7].text = "지렁이";
+            textArr[8].text = "두건";
+            textArr[9].text = "좋은 낚싯대";
+            textArr[10].text = "장갑";
+            textArr[11].text = "뜰채";
+            textArr[12].text = "이글루";
+            textArr[13].text = "얼음침대";
+            textArr[14].text = "낚시용품 진열대";
+            textArr[15].text = "수족관(어항)";
         }
 
         if(PageNum == 3)
         {
             stageImage.sprite = stageimgarr[2].sprite;
-            textArr[0].text = "분유 조합법";
-            textArr[1].text = "쪽쪽이 조합법";
-            textArr[2].text = "딸랑이 조합법";
-            textArr[3].text = "축구공 조합법";
-            textArr[4].text = "목각인형 조합법";
-            textArr[5].text = "사탕 조합법";
-            textArr[6].text = "츄르 조합법";
-            textArr[7].text = "손톱깎이 조합법";
-            textArr[8].text = "모자 조합법";
-            textArr[9].text = "앞치마 조합법";
-            textArr[10].text = "화장품 조합법";
-            textArr[11].text = "먼지털이 조합법";
-            textArr[12].text = "천막 조합법";
-            textArr[13].text = "해먹 침대 조합법";
-            textArr[14].text = "접시 그릇 조합법";
-            textArr[15].text = "진흙화로, 물병 조합법";
+            textArr[0].text = "분유";
+            textArr[1].text = "쪽쪽이";
+            textArr[2].text = "딸랑이";
+            textArr[3].text = "축구공";
+            textArr[4].text = "목각인형";
+            textArr[5].text = "사탕";
+            textArr[6].text = "츄르";
+            textArr[7].text = "손톱깎이";
+            textArr[8].text = "모자";
+            textArr[9].text = "앞치마";
+            textArr[10].text = "화장품";
+            textArr[11].text = "먼지털이";
+            textArr[12].text = "천막";
+            textArr[13].text = "해먹 침대";
+            textArr[14].text = "접시 그릇";
+            textArr[15].text = "진흙화로, 물병";
         }
     }
 
@@ -150,12 +151,20 @@ public class CombineMethod : MonoBehaviour
             PageNum = 1;
     }
 
+    public void TextTransition(int num)
+    {
+        RgbTxt[0].text = "R 픽셀조각 " + itemManager.combine.RequiredR;
+        RgbTxt[1].text = "G 픽셀조각 " + itemManager.combine.RequiredG;
+        RgbTxt[2].text = "B 픽셀조각 " + itemManager.combine.RequiredB;        
+        ItemName.text = textArr[num].text;
+    }
+
     public void button1()
     {
         if(PageNum >= 1)
         {
-            itemManager.Milk();            
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            itemManager.Milk();
+            TextTransition(0);
             MethodImage.sprite = itemManager.combine.CombineItemArr[0].sprite;
         } 
     }
@@ -164,7 +173,7 @@ public class CombineMethod : MonoBehaviour
         if (PageNum >= 1)
         {
             itemManager.jjokjjok2();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(1);
             MethodImage.sprite = itemManager.combine.CombineItemArr[1].sprite;
         }
     }
@@ -173,7 +182,7 @@ public class CombineMethod : MonoBehaviour
         if (PageNum >= 1)
         {
             itemManager.DDalang2();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(2);
             MethodImage.sprite = itemManager.combine.CombineItemArr[2].sprite;
         }
     }
@@ -182,7 +191,7 @@ public class CombineMethod : MonoBehaviour
         if (PageNum >= 1)
         {
             itemManager.SoccerBall();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(3);
             MethodImage.sprite = itemManager.combine.CombineItemArr[3].sprite;
         }
     }
@@ -191,7 +200,7 @@ public class CombineMethod : MonoBehaviour
         if (PageNum >= 1)
         {
             itemManager.WoodenDoll();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(4);
             MethodImage.sprite = itemManager.combine.CombineItemArr[4].sprite;
         }
     }
@@ -200,7 +209,7 @@ public class CombineMethod : MonoBehaviour
         if (PageNum >= 1)
         {
             itemManager.Candy();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(5);
             MethodImage.sprite = itemManager.combine.CombineItemArr[5].sprite;
         }
     }
@@ -210,20 +219,20 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Beanie();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(6);
             MethodImage.sprite = itemManager.combine.CombineItemArr[6].sprite;
         }
         if(PageNum == 2)
         {
             itemManager.FishingRod();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
-            MethodImage.sprite = itemManager.combine.CombineItemArr[9].sprite;
+            TextTransition(6);
+            MethodImage.sprite = itemManager.combine.CombineItemArr[9].sprite;          
         }
         if (PageNum == 3)
         {
             itemManager.Chur();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
-            MethodImage.sprite = itemManager.combine.CombineItemArr[12].sprite;
+            TextTransition(6);
+            MethodImage.sprite = itemManager.combine.CombineItemArr[12].sprite;       
         }
     }
     public void button8()
@@ -231,20 +240,20 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Driver();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(7);
             MethodImage.sprite = itemManager.combine.CombineItemArr[7].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.Worm();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(7);
             MethodImage.sprite = itemManager.combine.CombineItemArr[10].sprite;
         }
         if (PageNum == 3)
         {
             itemManager.NailClipper();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
-            MethodImage.sprite = itemManager.combine.CombineItemArr[13].sprite;
+            TextTransition(7);
+            MethodImage.sprite = itemManager.combine.CombineItemArr[13].sprite;  
         }
     }
     public void button9()
@@ -252,19 +261,19 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Axe();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(8);
             MethodImage.sprite = itemManager.combine.CombineItemArr[8].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.Bandana();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(8);
             MethodImage.sprite = itemManager.combine.CombineItemArr[11].sprite;
         }
         if (PageNum == 3)
         {
             itemManager.Hat();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(8);
             MethodImage.sprite = itemManager.combine.CombineItemArr[14].sprite;
         }
     }
@@ -273,19 +282,19 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Hammer();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(9);
             MethodImage.sprite = itemManager.combine.CombineItemArr[15].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.GreatFishingRod();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(9);
             MethodImage.sprite = itemManager.combine.CombineItemArr[18].sprite;
         }
         if (PageNum == 3)
         {
             itemManager.Apron();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(9);
             MethodImage.sprite = itemManager.combine.CombineItemArr[21].sprite;
         }
     }
@@ -294,19 +303,19 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.ForestGlove();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(10);
             MethodImage.sprite = itemManager.combine.CombineItemArr[16].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.IceGlove();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(10);
             MethodImage.sprite = itemManager.combine.CombineItemArr[19].sprite;
         }
         if (PageNum == 3)
         {
             itemManager.Cosmetic();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(10);
             MethodImage.sprite = itemManager.combine.CombineItemArr[22].sprite;
         }
     }
@@ -315,19 +324,19 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.GreatAxe();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(11);
             MethodImage.sprite = itemManager.combine.CombineItemArr[17].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.LandingNet();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(11);
             MethodImage.sprite = itemManager.combine.CombineItemArr[20].sprite;
         }
         if (PageNum == 3)
         {
             itemManager.Dust();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(11);
             MethodImage.sprite = itemManager.combine.CombineItemArr[23].sprite;
         }
     }
@@ -336,13 +345,13 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.TreeHouse();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(12);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[0].sprite;
         }
         if(PageNum == 2)
         {
             itemManager.Igloo();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(12);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
     }
@@ -351,13 +360,13 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Bed();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(13);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[1].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.IceBed();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(13);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
     }
@@ -366,13 +375,13 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Stove();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(14);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[2].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.FishingTool();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(14);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
     }
@@ -381,13 +390,13 @@ public class CombineMethod : MonoBehaviour
         if (PageNum == 1)
         {
             itemManager.Table();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(15);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[3].sprite;
         }
         if (PageNum == 2)
         {
             itemManager.Aquarium();
-            RgbTxt.text = "R :" + itemManager.combine.RequiredR + " G : " + itemManager.combine.RequiredG + " B : " + itemManager.combine.RequiredB;
+            TextTransition(15);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
     }

@@ -11,12 +11,15 @@ public class TabManager : MonoBehaviour
     public GameObject Quest;
     public GameObject Data;
 
+    public Animator TabAnim;
+
     public void DotinformBtn()
     {
         Dotinform.SetActive(true);
         Mixture.SetActive(false);
         Quest.SetActive(false);
         Data.SetActive(false);
+        TabAnim.SetTrigger("isState");
     }
     public void MixtureBtn()
     {
@@ -24,6 +27,7 @@ public class TabManager : MonoBehaviour
         Mixture.SetActive(true);
         Quest.SetActive(false);
         Data.SetActive(false);
+        TabAnim.SetTrigger("isCombine");
     }
     public void QuestBtn()
     {
@@ -31,6 +35,7 @@ public class TabManager : MonoBehaviour
         Mixture.SetActive(false);
         Quest.SetActive(true);
         Data.SetActive(false);
+        TabAnim.SetTrigger("isQuest");
     }
     public void DataBlockBtn()
     {
@@ -38,6 +43,7 @@ public class TabManager : MonoBehaviour
         Mixture.SetActive(false);
         Quest.SetActive(false);
         Data.SetActive(true);
+        TabAnim.SetTrigger("isDate");
     }   
 }
 

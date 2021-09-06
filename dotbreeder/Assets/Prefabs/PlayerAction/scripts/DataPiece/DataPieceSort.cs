@@ -13,8 +13,11 @@ public class DataPieceSort : MonoBehaviour
     public GameObject DataInterpret;
     public GameObject[] DataPiece = new GameObject[ArrSize]; // 버튼 오브젝트 정렬
     public GameObject[] DataPieceObj = new GameObject[ArrSize]; //데이터 조각 정렬 활성화 비활성화 시킬 것
+    public Image[] DataActiveImgArr = new Image[ArrSize]; // 활성화 데이터 조각 이미지
     public Button[] DataPieceBtn = new Button[ArrSize]; // 버튼 정렬   
     public int[] EmptyArr = new int[ArrSize]; // 일단 빈 배열
+
+    public Image DataActiveImg;
 
     static int ArrSize = 10;
     public int PlayCount;    
@@ -36,7 +39,7 @@ public class DataPieceSort : MonoBehaviour
         //모든 버튼 비활성화
         for (int i = 0; i < DataPieceBtn.Length; i++)
         {
-            DataPieceBtn[i].interactable = false;
+            DataPieceBtn[i].interactable = false;            
         }
     }
     void Update()
@@ -86,7 +89,8 @@ public class DataPieceSort : MonoBehaviour
             for (int i = 0; i < PlayCount; i++)
             {
                DataPiece[num].transform.SetSiblingIndex(i);
-               DataPieceBtn[num].interactable = true;               
+               DataPieceBtn[num].interactable = true;
+               DataActiveImgArr[num].sprite = DataActiveImg.sprite;
             }
             ActiveArrSorting(num);
             GetCount++;            

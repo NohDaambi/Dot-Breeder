@@ -7,7 +7,26 @@ public class Box : MonoBehaviour
 {
     public Sprite m_SpriteBox;
     public Sprite m_SpriteBoxEnd;
+    private SpriteRenderer render;
     public bool m_OnCross;//true if box has been pushed on to a cross
+
+    private void Start()
+    {
+        this.render = GetComponent<SpriteRenderer>();
+        
+    }
+    private void Update()
+    {
+        //플레이어 위에 물병이 있으면 플레이어 보다 뒤에 있어보이게끔
+        if (this.gameObject.transform.position.y > GameObject.FindWithTag("Player").transform.position.y)
+        {
+            this.render.sortingOrder = -1;
+        }
+        else
+        {
+            this.render.sortingOrder = 1;
+        }
+    }
     public bool Move(Vector2 direction)//Avoid ability to move diagonally
     {
         if (BoxBlocked(transform.position, direction))
@@ -18,6 +37,7 @@ public class Box : MonoBehaviour
         {
             transform.Translate(direction);
             TestForOnCross();
+            
             return true;
         }
     }

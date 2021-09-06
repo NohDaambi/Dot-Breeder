@@ -2395,7 +2395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "B \uD53D\uC140\uC870\uAC01 55"
+  m_Text: "B \uD53D\uC140\uC870\uAC01 1"
 --- !u!222 &920093467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3069,7 +3069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "G \uD53D\uC140\uC870\uAC01 5"
+  m_Text: "G \uD53D\uC140\uC870\uAC01 1"
 --- !u!222 &1106513553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24596,7 +24596,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3221846098594311206}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.3145289
+  m_Size: 0.31452894
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28299,7 +28299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "R \uD53D\uC140\uC870\uAC01 10"
+  m_Text: "R \uD53D\uC140\uC870\uAC01 1"
 --- !u!224 &3221846098250391171
 RectTransform:
   m_ObjectHideFlags: 0

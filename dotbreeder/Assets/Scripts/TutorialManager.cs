@@ -21,7 +21,7 @@ public class TutorialManager : MonoBehaviour
        StartCoroutine(questobj.BeOnCall((int)INTERACTION_STRUCTURE.BROKEN_COMBINER));
        
        //BeOnCall 함수: 해당 OBJ에 말풍선을 띄운다.
-
+        
 
        yield return null;
     }

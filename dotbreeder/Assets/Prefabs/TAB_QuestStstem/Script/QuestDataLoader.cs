@@ -121,6 +121,23 @@ public class QuestDataLoader : MonoBehaviour
         yield return null;
     }
 
+    //오브젝트 해쉬코드를 인자로 받고, 클리어한 퀘스트의 UI를 [수령가능]으로 바꾼다.
+    public void ChageClearQuest(int _hash)
+    {
+        //해쉬코드에 해당하는 퀘스트의 버튼 transform과 인포타이틀 transform 정보를 불러온다.
+        Transform QuestBtn = GetMyQuest(_hash).GetComponent<GameObject>().transform;
+        Transform InfoTitle = GetComponent<Quest>().InfoTitle.transform;
+        //Text 컴포넌트를 찾는다.
+        Text Questtxt=InfoTitle.transform.GetComponentInChildren<Text>();
+        Text Infotxt = InfoTitle.transform.GetChild(0).gameObject.GetComponent<Text>();
+        //UI"Text"를 변경한다.
+        Questtxt.text = "[수령가능] "+Questtxt.text;
+        Infotxt.text = "[수령가능] "+Infotxt.text;
+        //UI"Image"를 변경한다.
+
+       
+    }
+
 
     //해시코드를 인자로 받아 자신에게 해당하는 퀘스트를 return 값으로 받는다. 1가지 퀘스트만 불러올 수 있음.
     public Quest GetMyQuest(int hash)
@@ -139,6 +156,10 @@ public class QuestDataLoader : MonoBehaviour
     //외부에서 다음 함수를 이용해서 해당 퀘스트를 발생시킨다. 인자로는 해쉬코드를 받음.
     public IEnumerator MatchHash(int hashcode)
     {
+        //GameObject matchedQuest = null;//초기화
+        
+
+        Debug.Log("Get In MatchHashFUnction!"+hashcode);
         for (int i=0; i<QuestList.Count; i++)
         {
             //지역변수 선언한 이유: data만 잠깐 가져올거라서.
@@ -147,18 +168,37 @@ public class QuestDataLoader : MonoBehaviour
 
             if(data.Hash!=hashcode) continue; //hashcode가 같지 않을 경우 아래는 시행하지 않고 다시 탐색.
 
-            QuestList[i].SetActive(true); //해당 퀘스트 UI에 오픈.
+            //matchedQuest=QuestList[i];
 
-            // if(data.DesList != null) //세부 퀘스트가 있는 경우
-            // {
-            //    for(int j =0;i<data.DesList.Count;j++)
-            //    {
-            //        //data.DesList 는 gameobject이고 text컴포넌트를 가지고 있다.
-            //        data.DesList[i].SetActive(true);
-            //    }
-            // }
+            QuestList[i].SetActive(true); //해당 퀘스트 UI에 오픈.
+            Debug.Log("[!]Success: Creating Quest: "+ QuestList[i].GetComponent<Quest>().Title);
             
-        }
+
+            if(hashcode==(int)INTERACTION_STRUCTURE.TUTORIAL_SIGN) continue;
+
+            if(data.DesList != null) //세부 퀘스트가 있는 경우
+            {
+              for(int j =0;i<data.DesList.Count;j++)
+              {
+                 //data.DesList 는 gameobject이고 text컴포넌트를 가지고 있다.
+                 Debug.Log("[!]"+QuestList[i].GetComponent<Quest>().Title+"this quest have sibling data");
+                 data.DesList[i].SetActive(true);
+              }
+            }
+            //StartCoroutine(QuestList[i].GetComponent<QuestObj>().CheckingQuestState());
+            
+        }   
+
+        yield return null;
+    }
+
+    public IEnumerator GiveQuest(Transform _questobj)
+    {
+        Quest data = _questobj.GetComponent<Quest>();
+
+        _questobj.gameObject.SetActive(true); //해당 퀘스트 UI에 오픈.
+        Debug.Log("[!]Success: Creating Quest: "+ _questobj.GetComponent<Quest>().Title);
+        
 
         yield return null;
     }

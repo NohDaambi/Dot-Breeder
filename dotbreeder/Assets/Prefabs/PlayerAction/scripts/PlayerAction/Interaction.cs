@@ -104,8 +104,10 @@ public class Interaction : MonoBehaviour
             {
                 //퀘스트가 대기중이거나 실행중일때
                 questobj.ShowMessage();
+                questobj.IsbeonCall=false; //한번 상호작용을 하면 퀘스트 생성요청보냄.
                 return;
             }
+            //IsbeonCall,IsAvtive가 모두 false일때만 실행.
             
             CombinationUI.SetActive(true);
             if (!CombinationChild.activeSelf && !Combining.activeSelf && !CombinEnd.activeSelf)

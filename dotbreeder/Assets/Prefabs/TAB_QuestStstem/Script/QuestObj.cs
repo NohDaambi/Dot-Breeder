@@ -17,6 +17,7 @@ public class QuestObj : MonoBehaviour
     private GameManager Manager;
     private DoteStateManager DoteStateManager;
     private GameObject questobj;
+    private int descount=0;
     public QuestDataLoader DBloader;
     public INTERACTION_STRUCTURE Interaction;//외부에서 지정. 조합기일 경우 Broken_combiner
     public bool IsbeonCall;
@@ -27,15 +28,16 @@ public class QuestObj : MonoBehaviour
     {
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
         questobj = GameObject.Find("Combination"); //combination img,collider
-        //DBloader = GameObject.Find("QuestDataManager").GetComponent<"QuestDataLoader">(); 
+        DBloader = GameObject.Find("QuestDataManager").GetComponent<QuestDataLoader>(); 
     }
     
 
 
      public IEnumerator SearchQuest(int hash)
     {
-        yield return StartCoroutine(DBloader.MatchHash(hash)); //아이템 정보 파싱코루틴이 null값이 되면 아래로 진행.
+        //yield return StartCoroutine(DBloader.MatchHash(hash)); //아이템 정보 파싱코루틴이 null값이 되면 아래로 진행.
            //yield return StartCoroutine(UploadQuest()); //UI에 퀘스트를 업로드 한다.
+            yield return null;
     }
 
 
@@ -47,11 +49,28 @@ public class QuestObj : MonoBehaviour
         GameObject combination = Resources.Load<GameObject>("ingame/QuestMark");
         GameObject QuestFlag = Instantiate(combination,combination.transform.position,combination.transform.rotation);
         QuestFlag.transform.SetParent(questobj.transform,false);
+
         while(true)
         {
-           
-           yield return null;
+            //대기상태가 종료될때,
+            if(IsbeonCall==false) 
+            {
+                //느낌표 말풍선이 사라지고,
+                QuestFlag.SetActive(false);
+                Debug.Log("test"+(int)Interaction);
+                //combination 퀘스트 코루틴 시작.
+                IsAvtive=true; //나중에 코루틴 내부로 옮길예정!!
+                //해당 퀘스트를 불러온다.
+                //StartCoroutine(DBloader.MatchHash((int)Interaction));
+               
+               // DBloader.MatchHash((int)Interaction);
+
+                //null값을 return하여 대기 코루틴에서 벗어난다.
+                yield return new WaitForSeconds(0.2f);
+            }
+            yield return null;
         }
+        
     }
     
     //메세지를 보여준다.
@@ -62,8 +81,9 @@ public class QuestObj : MonoBehaviour
     
 
     //진행중인 퀘스트 진행상태를 체크한다.
-    private IEnumerator CheckingQuestState()
+    public IEnumerator CheckingQuestState()
     {
+        StopCoroutine(BeOnCall((int)Interaction));
         //DB에 있는 Quest리스트에서 자기 자신에 대한 퀘스트가 있는지 확인한다. 없으면 null, 있으면 아래 시행한다.
         //혹시 모를 버그를 위해 데이터를 한번 체크해준다.
         if(DBloader.GetMyQuest(Interaction.GetHashCode())==null) yield return null; //quest가 null이 아니면? 아래 시행.
@@ -78,10 +98,13 @@ public class QuestObj : MonoBehaviour
                 case (int)INTERACTION_STRUCTURE.TUTORIAL_SIGN:
                 break;
                 case (int)INTERACTION_STRUCTURE.BROKEN_COMBINER:
+                Combination(quest);
                 break;
                 case (int)INTERACTION_STRUCTURE.DATA_PIECE:
                 break;
             }
+
+            yield return null;
            
         }
         yield return null; //yield return이 null이 될 때 까지 돌아간다.
@@ -101,14 +124,13 @@ public class QuestObj : MonoBehaviour
     }
     
     //Hash: 452260499 : 조합기를 고치자 : 망가진 조합기 고치기 : R10,G10,B10 픽셀 모으기
+    //코루틴에 의해 연속적으로 함수가 실행된다. 
     private void Combination(Quest quest)
     {
         //GameManager에 있는 player RGB정보와 UI에 게시되어있는 RGB text 정보를 받아온다.
         List<int> RGB = new List<int>() {GetComponent<GameManager>().Rcount,GetComponent<GameManager>().Gcount,GetComponent<GameManager>().Bcount};
         List<string> RGBtxt = new List<string>() {quest.DesList[0].GetComponent<Text>().text,quest.DesList[1].GetComponent<Text>().text,quest.DesList[2].GetComponent<Text>().text};
-        int goal=10;
-        int descount=0;
-
+        const int goal=15; //변하지 않는 목표 값이다.
           
         for(int i=0;i<RGB.Count;i++)  //RGB 순회
         {
@@ -116,6 +138,10 @@ public class QuestObj : MonoBehaviour
             if(descount==quest.Count) 
             {
                 //UI변환관련 함수 로딩 후 아래 코드는 실행 X
+                DBloader.ChageClearQuest((int)Interaction);
+                IsAvtive=false;
+                DBloader.GetMyQuest((int)Interaction).Clear=1;
+                //보상제공가능?
                 continue;
             }
 

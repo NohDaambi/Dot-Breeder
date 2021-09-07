@@ -61,7 +61,7 @@ public class QuestObj : MonoBehaviour
                 //combination 퀘스트 코루틴 시작.
                 IsAvtive=true; //나중에 코루틴 내부로 옮길예정!!
                 //해당 퀘스트를 불러온다.
-                //StartCoroutine(DBloader.MatchHash((int)Interaction));
+               // StartCoroutine(DBloader.MatchHash((int)Interaction));
                
                // DBloader.MatchHash((int)Interaction);
 

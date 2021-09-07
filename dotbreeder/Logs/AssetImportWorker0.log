@@ -1,16 +1,25 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
+<<<<<<< Updated upstream
 OS: 'Windows 10 Pro; OS build 19042.1165; Version 2009; 64bit' Language: 'ko' Physical Memory: 16284 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
 E:\unity\2020.3.13f1\Editor\Unity.exe
+=======
+OS: 'Windows 10 Home; OS build 18363.1556; Version 1909; 64bit' Language: 'ko' Physical Memory: 8025 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\unity r00t\2020.3.13f1\Editor\Unity.exe
+>>>>>>> Stashed changes
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 E:/GitHub/Dot-Breeder/dotbreeder
 -logFile
 Logs/AssetImportWorker0.log
@@ -54,10 +63,56 @@ Refreshing native plugins compatible for Editor in 69.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  1.695 seconds
+=======
+D:/2_동아리_Exdio/1_재학생 개발/21_귀여운게좋아/1_개발/01.Dev/Dot-Breeder/dotbreeder
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+8906
+Successfully changed project path to: D:/2_동아리_Exdio/1_재학생 개발/21_귀여운게좋아/1_개발/01.Dev/Dot-Breeder/dotbreeder
+D:/2_동아리_Exdio/1_재학생 개발/21_귀여운게좋아/1_개발/01.Dev/Dot-Breeder/dotbreeder
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 114.40 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.13f1 (71691879b7f5)
+[Subsystems] Discovering subsystems at path C:/unity r00t/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/2_동아리_Exdio/1_재학생 개발/21_귀여운게좋아/1_개발/01.Dev/Dot-Breeder/dotbreeder/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   
+    VRAM:     4012 MB
+    Driver:   25.20.100.6577
+Initialize mono
+Mono path[0] = 'C:/unity r00t/2020.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'C:/unity r00t/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/unity r00t/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/unity r00t/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009370 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 448.27 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  8.868 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.020773 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 106.25 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.665 seconds
+>>>>>>> Stashed changes
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.83 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2565 Unused Serialized files (Serialized files now loaded: 0)
@@ -66,6 +121,16 @@ System memory in use after: 122.3 MB.
 
 Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 2982.
 Total: 3.707600 ms (FindLiveObjects: 0.269000 ms CreateObjectMapping: 0.133100 ms MarkObjects: 2.055000 ms  DeleteObjects: 1.249000 ms)
+=======
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2566 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.4 MB.
+System memory in use after: 123.3 MB.
+
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 2984.
+Total: 5.056200 ms (FindLiveObjects: 0.435300 ms CreateObjectMapping: 0.296500 ms MarkObjects: 3.006100 ms  DeleteObjects: 1.316700 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -79,6 +144,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   path: Assets/Resources/Maker/item(X4)
   artifactKey: Guid(c322346b87d730c44beb7e986709c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Resources/Maker/item(X4) using Guid(c322346b87d730c44beb7e986709c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e00f24d6a12a5e7e02b74b25eb8c72') in 0.008552 seconds 
@@ -413,6 +479,100 @@ System memory in use after: 120.8 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3020.
 Total: 4.293500 ms (FindLiveObjects: 0.263900 ms CreateObjectMapping: 0.237800 ms MarkObjects: 2.519400 ms  DeleteObjects: 1.270500 ms)
+=======
+  path: Assets/Prefabs/TAB_QuestStstem/Script/QuestObj.cs
+  artifactKey: Guid(597a4d8872248564cb576a6d65667423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/TAB_QuestStstem/Script/QuestObj.cs using Guid(597a4d8872248564cb576a6d65667423) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3164cd4471f364c975f7ba38a60c0789') in 0.083328 seconds 
+  Import took 0.154179 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.381058 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files (x86)\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:737)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:405)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:51)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1105)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:288)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 737)
+
+[VSCode] Code executable in 'C:\Program Files (x86)\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:737)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:405)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:51)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1109)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:288)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 737)
+
+[VSCode] Code executable in 'C:\Program Files (x86)\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:737)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:405)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:51)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1118)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:288)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 737)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1083)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:289)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1083)
+
+DisplayProgressbar: VSCode
+Cancelling DisplayDialog: VSCode Update A newer version of the VSCode plugin is available, would you like to update your version?
+This should not be called in batch mode.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+dotBunny.Unity.VSCode:CheckForUpdate () (at Assets/VSCode/Plugins/Editor/VSCode.cs:511)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:295)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Assets/VSCode/Plugins/Editor/VSCode.cs line 511]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.562 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.5 MB.
+System memory in use after: 119.4 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2988.
+Total: 8.168900 ms (FindLiveObjects: 0.916200 ms CreateObjectMapping: 0.431400 ms MarkObjects: 5.256300 ms  DeleteObjects: 1.562600 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -427,6 +587,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.017089 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -473,6 +634,81 @@ System memory in use after: 120.8 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3026.
 Total: 4.454900 ms (FindLiveObjects: 0.323900 ms CreateObjectMapping: 0.155100 ms MarkObjects: 2.624700 ms  DeleteObjects: 1.349400 ms)
+=======
+Registered in 0.489623 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  4.359 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.74 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.6 MB.
+System memory in use after: 119.5 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2991.
+Total: 10.454800 ms (FindLiveObjects: 0.765400 ms CreateObjectMapping: 0.362900 ms MarkObjects: 6.818100 ms  DeleteObjects: 2.505300 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -487,6 +723,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.018197 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -533,6 +770,81 @@ System memory in use after: 120.9 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3032.
 Total: 3.984100 ms (FindLiveObjects: 0.283100 ms CreateObjectMapping: 0.124300 ms MarkObjects: 2.325100 ms  DeleteObjects: 1.250300 ms)
+=======
+Registered in 0.596525 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.239 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.79 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.6 MB.
+System memory in use after: 119.5 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2994.
+Total: 34.309600 ms (FindLiveObjects: 3.590600 ms CreateObjectMapping: 0.559000 ms MarkObjects: 19.171900 ms  DeleteObjects: 10.976900 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -547,6 +859,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.020506 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -593,6 +906,81 @@ System memory in use after: 120.9 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3038.
 Total: 4.543800 ms (FindLiveObjects: 0.276800 ms CreateObjectMapping: 0.129600 ms MarkObjects: 2.694400 ms  DeleteObjects: 1.441400 ms)
+=======
+Registered in 0.234900 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in 13.482 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.6 MB.
+System memory in use after: 119.5 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 2997.
+Total: 8.287500 ms (FindLiveObjects: 0.397900 ms CreateObjectMapping: 0.237600 ms MarkObjects: 4.754800 ms  DeleteObjects: 2.894600 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -607,6 +995,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.016920 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1013,6 +1402,81 @@ System memory in use after: 121.0 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3055.
 Total: 8.005400 ms (FindLiveObjects: 0.585700 ms CreateObjectMapping: 0.552000 ms MarkObjects: 5.396800 ms  DeleteObjects: 1.468800 ms)
+=======
+Registered in 1.297027 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.093 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.5 MB.
+System memory in use after: 119.4 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3000.
+Total: 5.893900 ms (FindLiveObjects: 0.346000 ms CreateObjectMapping: 0.172500 ms MarkObjects: 3.588400 ms  DeleteObjects: 1.785100 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1027,6 +1491,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.016781 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1073,6 +1538,81 @@ System memory in use after: 121.1 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3061.
 Total: 4.680300 ms (FindLiveObjects: 0.284700 ms CreateObjectMapping: 0.133300 ms MarkObjects: 2.621800 ms  DeleteObjects: 1.639000 ms)
+=======
+Registered in 0.071179 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  4.540 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.92 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.6 MB.
+System memory in use after: 119.5 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3003.
+Total: 17.168400 ms (FindLiveObjects: 0.946400 ms CreateObjectMapping: 0.388400 ms MarkObjects: 11.525800 ms  DeleteObjects: 4.303600 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1087,6 +1627,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.021134 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1133,6 +1674,81 @@ System memory in use after: 121.1 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3067.
 Total: 4.181000 ms (FindLiveObjects: 0.285700 ms CreateObjectMapping: 0.134800 ms MarkObjects: 2.227400 ms  DeleteObjects: 1.531500 ms)
+=======
+Registered in 0.578157 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  3.983 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.7 MB.
+System memory in use after: 119.5 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3006.
+Total: 9.320000 ms (FindLiveObjects: 0.826100 ms CreateObjectMapping: 0.418000 ms MarkObjects: 4.996300 ms  DeleteObjects: 3.076700 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -1147,6 +1763,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.018940 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -1193,6 +1810,81 @@ System memory in use after: 121.1 MB.
 
 Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3073.
 Total: 5.052800 ms (FindLiveObjects: 0.329600 ms CreateObjectMapping: 0.226600 ms MarkObjects: 3.046200 ms  DeleteObjects: 1.449100 ms)
+=======
+Registered in 0.040228 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1218)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1222)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Code executable in 'C:\Program Files\Microsoft VS Code\bin\code.cmd' not found. Check yourVisual Studio Code installation and insert the correct path in the Preferences menu.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+dotBunny.Unity.VSCode:PrintNotFound (string) (at Assets/VSCode/Plugins/Editor/VSCode.cs:832)
+dotBunny.Unity.VSCode:AutodetectCodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:477)
+dotBunny.Unity.VSCode:get_CodePath () (at Assets/VSCode/Plugins/Editor/VSCode.cs:59)
+dotBunny.Unity.VSCode:UpdateUnityPreferences (bool) (at Assets/VSCode/Plugins/Editor/VSCode.cs:1231)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:345)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 832)
+
+[VSCode] Debug Port Found (24396)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+dotBunny.Unity.VSCode:UpdateLaunchFile () (at Assets/VSCode/Plugins/Editor/VSCode.cs:1196)
+dotBunny.Unity.VSCode:.cctor () (at Assets/VSCode/Plugins/Editor/VSCode.cs:346)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/VSCode/Plugins/Editor/VSCode.cs Line: 1196)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  5.040 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 120.6 MB.
+System memory in use after: 119.6 MB.
+
+Unloading 39 unused Assets to reduce memory usage. Loaded Objects now: 3009.
+Total: 7.203200 ms (FindLiveObjects: 0.391500 ms CreateObjectMapping: 0.212800 ms MarkObjects: 4.622700 ms  DeleteObjects: 1.974000 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

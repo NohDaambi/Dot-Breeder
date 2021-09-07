@@ -7,13 +7,15 @@ public class CombineMethod : MonoBehaviour
 {
     public ItemManager itemManager;
     public GameManager Manager;
+    public Combination combinaiton;
 
     public Text[] textArr = new Text[16];
     public Button[] buttonarr = new Button[16];
-
+    public Image[] btnImgArr = new Image[16]; // 0~11 item, 12~15 building
     public Image MethodImage;
     public Image stageImage;
     public Image[] stageimgarr = new Image[3];
+
     public Text[] RgbTxt = new Text[3];
     public Text ItemName;
 
@@ -28,17 +30,33 @@ public class CombineMethod : MonoBehaviour
     {
         if(Manager.DotLevel == 1)
         {
+            for (int i = 0; i < 3; i++){
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
+            for (int i = 12; i < 13; i++){
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
             for (int i = 3; i < 12; i++)
             {
+                btnImgArr[i].color = new Color(0, 0, 0, 150);
                 buttonarr[i].interactable = false;
             }
             for (int i = 13; i < 16; i++)
             {
+                btnImgArr[i].color = new Color(0, 0, 0, 150);
                 buttonarr[i].interactable = false;
             }            
         }
         if(Manager.DotLevel == 2)
         {
+            for (int i = 0; i < 6; i++)
+            {
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
+            for (int i = 12; i < 14; i++)
+            {
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
             for (int i = 3; i < 6; i++)
             {
                 buttonarr[i].interactable = true;
@@ -50,6 +68,14 @@ public class CombineMethod : MonoBehaviour
         }
         if (Manager.DotLevel == 3)
         {
+            for (int i = 0; i < 9; i++)
+            {
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
+            for (int i = 12; i < 15; i++)
+            {
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
             for (int i = 6; i < 9; i++)
             {
                 buttonarr[i].interactable = true;
@@ -61,6 +87,10 @@ public class CombineMethod : MonoBehaviour
         }
         if (Manager.DotLevel == 4)
         {
+            for (int i = 0; i < 16; i++)
+            {
+                btnImgArr[i].color = new Color(255, 255, 255, 255);
+            }
             for (int i = 9; i < 12; i++)
             {
                 buttonarr[i].interactable = true;
@@ -90,6 +120,20 @@ public class CombineMethod : MonoBehaviour
             textArr[13].text = "라탄 요람침대";
             textArr[14].text = "벽난로";
             textArr[15].text = "테이블 톱";
+
+            for (int i = 0; i < 9; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i].sprite;
+            }
+            for (int i = 9; i < 12; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i+6].sprite;
+            }
+            for (int i = 12; i < 16; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineBuildingArr[i - 12].sprite;
+            }
+
         }
 
         if(PageNum == 2)
@@ -111,6 +155,19 @@ public class CombineMethod : MonoBehaviour
             textArr[13].text = "얼음침대";
             textArr[14].text = "낚시용품 진열대";
             textArr[15].text = "수족관(어항)";
+            
+            for (int i = 6; i < 9; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i + 3].sprite;
+            }
+            for (int i = 9; i < 12; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i + 9].sprite;
+            }
+            for (int i = 12; i < 16; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineBuildingArr[i - 8].sprite;
+            }
         }
 
         if(PageNum == 3)
@@ -132,6 +189,19 @@ public class CombineMethod : MonoBehaviour
             textArr[13].text = "해먹 침대";
             textArr[14].text = "접시 그릇";
             textArr[15].text = "진흙화로, 물병";
+
+            for (int i = 6; i < 9; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i + 6].sprite;
+            }
+            for (int i = 9; i < 12; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineItemArr[i + 12].sprite;
+            }
+            for (int i = 12; i < 16; i++)
+            {
+                btnImgArr[i].sprite = combinaiton.CombineBuildingArr[i - 4].sprite;
+            }
         }
     }
 
@@ -354,6 +424,12 @@ public class CombineMethod : MonoBehaviour
             TextTransition(12);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
+        if (PageNum == 3)
+        {
+            itemManager.Tent();
+            TextTransition(12);
+            MethodImage.sprite = itemManager.combine.CombineBuildingArr[8].sprite;
+        }
     }
     public void button14()
     {
@@ -368,6 +444,12 @@ public class CombineMethod : MonoBehaviour
             itemManager.IceBed();
             TextTransition(13);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
+        }
+        if (PageNum == 3)
+        {
+            itemManager.H_Bed();
+            TextTransition(13);
+            MethodImage.sprite = itemManager.combine.CombineBuildingArr[8].sprite;
         }
     }
     public void button15()
@@ -384,6 +466,12 @@ public class CombineMethod : MonoBehaviour
             TextTransition(14);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
         }
+        if (PageNum == 3)
+        {
+            itemManager.Plate();
+            TextTransition(14);
+            MethodImage.sprite = itemManager.combine.CombineBuildingArr[8].sprite;
+        }
     }
     public void button16()
     {
@@ -398,6 +486,12 @@ public class CombineMethod : MonoBehaviour
             itemManager.Aquarium();
             TextTransition(15);
             MethodImage.sprite = itemManager.combine.CombineBuildingArr[4].sprite;
+        }
+        if (PageNum == 3)
+        {
+            itemManager.MudStove();
+            TextTransition(15);
+            MethodImage.sprite = itemManager.combine.CombineBuildingArr[8].sprite;
         }
     }
 }

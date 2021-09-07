@@ -160,6 +160,75 @@ public class ItemManager : MonoBehaviour
     }
 
     //사막 섬 건물
+    public void Tent()
+    {
+        combine.RequiredR = 1;
+        combine.RequiredG = 2;
+        combine.RequiredB = 1;
+        combine.GetHouseTime = 12;
+        combine.timer.combineTIme = combine.GetHouseTime;
+        //조합기 텍스트        
+        combine.Title.text = "천막";
+        combine.time.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        ImageControl(7);
+        //조합중 텍스트
+        combine.TitleIng.text = "천막";
+        combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        combine.houseManager.CurrentCombinging = 8;
+        combine.ProduceCount();
+    }
+    public void H_Bed()
+    {
+        combine.RequiredR = 1;
+        combine.RequiredG = 1;
+        combine.RequiredB = 2;
+        combine.GetHouseTime = 12;
+        combine.timer.combineTIme = combine.GetHouseTime;
+        //조합기 텍스트        
+        combine.Title.text = "해먹 침대";
+        combine.time.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        ImageControl(7);
+        //조합중 텍스트
+        combine.TitleIng.text = "해먹 침대";
+        combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        combine.houseManager.CurrentCombinging = 8;
+        combine.ProduceCount();
+    }
+    public void Plate()
+    {
+        combine.RequiredR = 2;
+        combine.RequiredG = 1;
+        combine.RequiredB = 1;
+        combine.GetHouseTime = 12;
+        combine.timer.combineTIme = combine.GetHouseTime;
+        //조합기 텍스트        
+        combine.Title.text = "접시, 그릇";
+        combine.time.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        ImageControl(7);
+        //조합중 텍스트
+        combine.TitleIng.text = "접시, 그릇";
+        combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        combine.houseManager.CurrentCombinging = 8;
+        combine.ProduceCount();
+    }
+    public void MudStove()
+    {
+        combine.RequiredR = 3;
+        combine.RequiredG = 1;
+        combine.RequiredB = 1;
+        combine.GetHouseTime = 12;
+        combine.timer.combineTIme = combine.GetHouseTime;
+        //조합기 텍스트        
+        combine.Title.text = "진흙 화로";
+        combine.time.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        ImageControl(7);
+        //조합중 텍스트
+        combine.TitleIng.text = "진흙 화로";
+        combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
+        combine.houseManager.CurrentCombinging = 8;
+        combine.ProduceCount();
+    }
+
 
     //1~2 레벨 공통 아이템
     public void Milk()

@@ -69,7 +69,7 @@ public class ForestDungeonManager : MonoBehaviour
             ForestDungeonScript.isForestDungeon1Clear = true;
             LevelBuilder.m_CurrentLevel = 1;
         }
-        SceneManager.LoadScene("DungeonClearRoom");
+        SceneManager.LoadScene("ForestDungeonClearRoom");
         return true;
     }
 }

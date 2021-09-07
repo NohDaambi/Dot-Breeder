@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: d1adea7b1128e26498cb1d663da6ccf4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7981068070484241409
+    second: BeforeIgloo_0
+  - first:
+      213: 4967526252733689599
+    second: BeforeIgloo_1
+  - first:
+      213: 1335198805108185918
+    second: BeforeIgloo_2
+  - first:
+      213: -7297543895752817584
+    second: BeforeIgloo_3
+  - first:
+      213: 5084840088381296167
+    second: BeforeIgloo_4
+  - first:
+      213: -266562041371105028
+    second: BeforeIgloo_5
+  - first:
+      213: -3995953370322577114
+    second: BeforeIgloo_6
+  - first:
+      213: -3492404833204593645
+    second: BeforeIgloo_7
+  - first:
+      213: 5093876825955099477
+    second: BeforeIgloo_8
+  - first:
+      213: -8892373593914769017
+    second: BeforeIgloo_9
+  - first:
+      213: -5450162094710871420
+    second: BeforeIgloo_10
+  - first:
+      213: 613387662648174023
+    second: BeforeIgloo_11
+  - first:
+      213: 8821463072902282361
+    second: BeforeIgloo_12
+  - first:
+      213: 3199812745535310749
+    second: BeforeIgloo_13
+  - first:
+      213: -1665711103554551813
+    second: BeforeIgloo_14
+  - first:
+      213: -1646039917300133448
+    second: BeforeIgloo_15
+  - first:
+      213: -3809086430215505848
+    second: BeforeIgloo_16
+  - first:
+      213: -3350187550755842715
+    second: BeforeIgloo_17
+  - first:
+      213: 4220418775904480467
+    second: BeforeIgloo_18
+  - first:
+      213: -4190216132021228806
+    second: BeforeIgloo_19
+  - first:
+      213: 6054770365889269392
+    second: BeforeIgloo_20
+  - first:
+      213: -5581584582022713290
+    second: BeforeIgloo_21
+  - first:
+      213: 4350936206506685647
+    second: BeforeIgloo_22
+  - first:
+      213: -701323198941656072
+    second: BeforeIgloo_23
+  - first:
+      213: 3817059237499247856
+    second: BeforeIgloo_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +107,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +121,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,7 +140,19 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -77,7 +164,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BeforeIgloo_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 268
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cec65ef1372ce60800000000000000
+      internalID: 7981068070484241409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 268
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe6e9acec230f440800000000000000
+      internalID: 4967526252733689599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 228
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bdff23d34978210800000000000000
+      internalID: 1335198805108185918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 228
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05445d8ad7ae9ba90800000000000000
+      internalID: -7297543895752817584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 188
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e02a7ae1bf09640800000000000000
+      internalID: 5084840088381296167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 188
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8e8755c3bfc4cf0800000000000000
+      internalID: -266562041371105028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629d5e6c4958b88c0800000000000000
+      internalID: -3995953370322577114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c9bf8ce4c788fc0800000000000000
+      internalID: -3492404833204593645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553e5a41cf511b640800000000000000
+      internalID: 5093876825955099477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78185a48451f79480800000000000000
+      internalID: -8892373593914769017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aa57873722d54b0800000000000000
+      internalID: -5450162094710871420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 148
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c560cd44d0338800800000000000000
+      internalID: 613387662648174023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cf09b3de12c6a70800000000000000
+      internalID: 8821463072902282361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b466d1db4086c20800000000000000
+      internalID: 3199812745535310749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfff43e939432e8e0800000000000000
+      internalID: -1665711103554551813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b156339a671829e0800000000000000
+      internalID: -1646039917300133448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8487e38b218632bc0800000000000000
+      internalID: -3809086430215505848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 108
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56513423c2eb181d0800000000000000
+      internalID: -3350187550755842715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 68
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcec251480f19a30800000000000000
+      internalID: 4220418775904480467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 68
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa63cee0ac59d5c0800000000000000
+      internalID: -4190216132021228806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 68
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e4467719dd60450800000000000000
+      internalID: 6054770365889269392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 68
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6303db8256a3a82b0800000000000000
+      internalID: -5581584582022713290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_22
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 68
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc477357d61a16c30800000000000000
+      internalID: 4350936206506685647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 28
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb875e24466446f0800000000000000
+      internalID: -701323198941656072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BeforeIgloo_24
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 28
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc14c1272be8f430800000000000000
+      internalID: 3817059237499247856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

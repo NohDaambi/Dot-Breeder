@@ -44,12 +44,12 @@ public class LevelBuilder : MonoBehaviour {
         if(m_CurrentLevel == 0)
         {
             m_camera.transform.position = new Vector3(0, 0, -10);
-            m_camera.GetComponent<Camera>().orthographicSize = 5;
+            m_camera.GetComponent<Camera>().orthographicSize = 6.7f;
         }
         else if (m_CurrentLevel == 1)
         {
             m_camera.transform.position = new Vector3(0, -0.5f, -10);
-            m_camera.GetComponent<Camera>().orthographicSize = 8;
+            m_camera.GetComponent<Camera>().orthographicSize = 6.7f;
         }
         //Offset coordinates so that centre of level is roughly at 0,0
         int startx = -m_Level.Whdth / 2;//Save start x since needs to be reset in loop

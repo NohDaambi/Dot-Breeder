@@ -48,7 +48,7 @@ public class LevelBuilder : MonoBehaviour {
         }
         else if (m_CurrentLevel == 1)
         {
-            m_camera.transform.position = new Vector3(0, -0.5f, -10);
+            m_camera.transform.position = new Vector3(0, 0, -10);
             m_camera.GetComponent<Camera>().orthographicSize = 6.7f;
         }
         //Offset coordinates so that centre of level is roughly at 0,0

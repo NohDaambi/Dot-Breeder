@@ -15,7 +15,8 @@ public class Icetile_PlayerMove : MonoBehaviour
     bool isHorizonMove;
     Vector3 dirVec3;
     GameObject scanObject;
-
+    float waitingTime;
+    public bool IceisDelay;
     public bool isWallTouch = false;
     public bool isfirst = true;
 
@@ -24,7 +25,11 @@ public class Icetile_PlayerMove : MonoBehaviour
         Rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
+    private void Start()
+    {
+        waitingTime = 0.5f;
+        IceisDelay = true;
+    }
     void Update()
     {
         if (scanObject != null)
@@ -36,35 +41,38 @@ public class Icetile_PlayerMove : MonoBehaviour
             isWallTouch = false;
         }
 
-        if (isWallTouch == true || isfirst == true)
+        if (!IceisDelay)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            if (isWallTouch == true || isfirst == true)
             {
-                isfirst = false;
-                isWallTouch = false;
-                h = 1;
-                v = 0;
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = -1;
-                v = 0;
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = 0;
-                v = 1;
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-            {
-                isfirst = false;
-                isWallTouch = false;
-                h = 0;
-                v = -1;
+                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+                {
+                    isfirst = false;
+                    isWallTouch = false;
+                    h = 1;
+                    v = 0;
+                }
+                else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+                {
+                    isfirst = false;
+                    isWallTouch = false;
+                    h = -1;
+                    v = 0;
+                }
+                else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+                {
+                    isfirst = false;
+                    isWallTouch = false;
+                    h = 0;
+                    v = 1;
+                }
+                else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+                {
+                    isfirst = false;
+                    isWallTouch = false;
+                    h = 0;
+                    v = -1;
+                }
             }
         }
         if (isWallTouch == true)
@@ -129,6 +137,12 @@ public class Icetile_PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        waitingTime -= Time.deltaTime;
+
+        if (waitingTime <= 0)
+        {
+            IceisDelay = false;
+        }
         //Move
         Vector2 moveVec = new Vector2(h, v);
         Rigid.velocity = moveVec * Speed;
@@ -151,10 +165,15 @@ public class Icetile_PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Clear");
-            h = 0;
-            v = 0;
-            SceneManager.LoadScene("Ocene2");
+            if (IceDungeonScript.isIceDungeon1Clear == true && IceDungeonScript.isIceDungeon2Clear == false)
+            {
+                IceDungeonScript.isIceDungeon2Clear = true;
+            }
+            if (IceDungeonScript.isIceDungeon1Clear == false)
+            {
+                IceDungeonScript.isIceDungeon1Clear = true;
+            }
+            SceneManager.LoadScene("IceDungeonClearRoom");
         }
     }
 }

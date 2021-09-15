@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if(!ForestDungeonManager.isDelay)
+        if(!ForestDungeonManager.ForestisDelay)
         {
             if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             {

@@ -29,7 +29,7 @@ public class Interaction : MonoBehaviour
     public Animator PortraitAnim;
 
     public int talkIndex;
-    public static bool openDoor;
+    public static bool ForestopenDoor;
 
     //채집 액션
     public void Forage(GameObject scanobj)
@@ -126,10 +126,9 @@ public class Interaction : MonoBehaviour
         }
 
         //보물상자
-        if (Player.scanObject.tag == "TreasureChest")
+        if (Player.scanObject.tag == "ForestTreasureChest")
         {
-            openDoor = true;
-
+            ForestopenDoor = true;
         }
     }
 

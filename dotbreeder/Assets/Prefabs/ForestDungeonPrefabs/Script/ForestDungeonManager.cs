@@ -9,12 +9,12 @@ public class ForestDungeonManager : MonoBehaviour
     private bool m_ReadyForInput;
     public Player m_Player;
     float waitingTime;
-    public static bool isDelay;
+    public static bool ForestisDelay;
 
     private void Start()
     {
         waitingTime = 0.5f;
-        isDelay = true;
+        ForestisDelay = true;
         m_LevelBuilder.Build();
         m_Player = FindObjectOfType<Player>();
     }
@@ -25,7 +25,7 @@ public class ForestDungeonManager : MonoBehaviour
 
         if (waitingTime <= 0)
         {
-            isDelay = false;
+            ForestisDelay = false;
         }
     }
 
@@ -39,7 +39,7 @@ public class ForestDungeonManager : MonoBehaviour
             if (m_ReadyForInput)
             {
                 m_ReadyForInput = false;
-                if (isDelay == false)
+                if (ForestisDelay == false)
                 {
                     m_Player.Move(input);
                 }
@@ -59,7 +59,6 @@ public class ForestDungeonManager : MonoBehaviour
             if (!box.m_OnCross) return false;
         }
         Debug.Log("clear");
-        //if Clear, you go to other scenes
         if(ForestDungeonScript.isForestDungeon1Clear == true && ForestDungeonScript.isForestDungeon2Clear == false)
         {
             ForestDungeonScript.isForestDungeon2Clear = true;
@@ -69,6 +68,7 @@ public class ForestDungeonManager : MonoBehaviour
             ForestDungeonScript.isForestDungeon1Clear = true;
             LevelBuilder.m_CurrentLevel = 1;
         }
+        //if Clear, you go to other scenes
         SceneManager.LoadScene("ForestDungeonClearRoom");
         return true;
     }

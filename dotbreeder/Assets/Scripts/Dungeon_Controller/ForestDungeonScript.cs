@@ -17,7 +17,6 @@ public class ForestDungeonScript : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("문식이 레벨 : " + GameManager.instance.DotLevel);
         if (GameManager.instance.DotLevel == 3 && isForestDungeon1Clear == false && isForestDungeon2Clear == false)
         {
             ForestDungeonClose.SetActive(false);

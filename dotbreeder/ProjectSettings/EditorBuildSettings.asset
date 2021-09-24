@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon/IceDungeonClearRoom.unity
     guid: 1145d728b0ed10a479b5e00752ac1121
+  - enabled: 1
+    path: Assets/Scenes/Dungeon/DesertDungeonClearRoom.unity
+    guid: bcc0dd9843ee68f4ba3612bcd080fc31
   m_configObjects: {}

@@ -10,7 +10,7 @@ public class BoundedNPC : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Animator anim;
     public Collider2D bounds;
-    private bool isMoving;
+    private bool isNpcMoving;
     public float minMoveTime;
     public float maxMoveTime;
     private float moveTimeSeconds;
@@ -25,7 +25,7 @@ public class BoundedNPC : MonoBehaviour
 
     void Start()
     {
-        isMoving = false;
+        isNpcMoving = false;
         moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
         waitTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
         anim = GetComponent<Animator>();
@@ -33,26 +33,24 @@ public class BoundedNPC : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         ChangeDirection();
     }
-
     public void Update()
     {
-        if (isMoving)
+        if (isNpcMoving)
         {
-            moveTimeSeconds -= Time.deltaTime;
-            if (moveTimeSeconds <= 0)
+            
+            if(Interaction.isTalkPlayer == false)
             {
+                moveTimeSeconds -= Time.deltaTime;
+                if (moveTimeSeconds <= 0)
+                {
 
-                moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
-                isMoving = false;
+                    moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
+                    isNpcMoving = false;
+                }
+                Move();
             }
-            //나중에 플레이어가 말을걸때 아래 Move 지우고 아래 OnCollisionEnter에서 기능 추가하면 됨
-            Move();
         }
-        else if(isMoving && isConectPlayer)
-        {
-            Move();
-        }
-        else
+        else if(Interaction.isTalkPlayer == false)
         {
             waitTimeSeconds -= Time.deltaTime;
             if (isRight)
@@ -90,10 +88,11 @@ public class BoundedNPC : MonoBehaviour
                     anim.SetBool("DirectDown", false);
                 }
                 ChooseDifferentDirection();
-                isMoving = true;
+                isNpcMoving = true;
                 waitTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
             }
         }
+        
     }
 
     private void ChooseDifferentDirection()
@@ -162,17 +161,6 @@ public class BoundedNPC : MonoBehaviour
         anim.SetFloat("MoveY", directionVector.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            isMoving = false;
-            isConectPlayer = true;
-        }
-        else
-            isConectPlayer = false;
-            ChooseDifferentDirection();
-    }
     void IsRight()
     {
         isRight = true;

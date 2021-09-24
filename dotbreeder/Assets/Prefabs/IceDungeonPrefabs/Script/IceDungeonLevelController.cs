@@ -16,8 +16,4 @@ public class IceDungeonLevelController : MonoBehaviour
             iceLevel2.SetActive(true);
         }
     }
-    void Update()
-    {
-        
-    }
 }

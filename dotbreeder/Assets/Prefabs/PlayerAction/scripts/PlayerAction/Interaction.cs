@@ -30,6 +30,7 @@ public class Interaction : MonoBehaviour
 
     public int talkIndex;
     public static bool ForestopenDoor;
+    public static bool isTalkPlayer = false;
 
     //채집 액션
     public void Forage(GameObject scanobj)
@@ -146,10 +147,13 @@ public class Interaction : MonoBehaviour
             Talk(objData.Id);
             NpcName.gameObject.SetActive(true);
             NpcName.text = Manager.scanObject.name;
+            //isTalkPlayer = true; npc와의 애기가 끝나는거 알아야함
         }
         else
+        {
             NpcName.gameObject.SetActive(false);
-
+            //isTalkPlayer = false;
+        }
 
         //이야기 보여주기
         if (Player.scanObject.tag == "Npc" || Player.scanObject.tag == "DataPiece" 

@@ -192,8 +192,15 @@ public class Deserttile_PlayerMove : MonoBehaviour
     {
         if (other.gameObject.tag == "ClearFront")
         {
-            Debug.Log("Clear");
-            SceneManager.LoadScene("Desert2");
+            if (DesertDungeonScript.isDesertDungeon1Clear == true && DesertDungeonScript.isDesertDungeon2Clear == false)
+            {
+                DesertDungeonScript.isDesertDungeon2Clear = true;
+            }
+            if (DesertDungeonScript.isDesertDungeon1Clear == false)
+            {
+                DesertDungeonScript.isDesertDungeon1Clear = true;
+            }
+            SceneManager.LoadScene("DesertDungeonClearRoom");
         }
     }
 }

@@ -14392,18 +14392,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.09, y: 0.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.6, y: 0.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.11}
+  m_Size: {x: 0.38, y: 0.36}
   m_EdgeRadius: 0
 --- !u!224 &1600803391597182851
 RectTransform:
@@ -18112,13 +18112,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2782107787248800151}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2655561, w: 0.9640955}
-  m_LocalPosition: {x: -0.46, y: 0.2, z: -1}
-  m_LocalScale: {x: 4.867943, y: 5.678, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7120873, w: 0.702091}
+  m_LocalPosition: {x: 0.57000005, y: 0.02, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1910256754140481179}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.8}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.81}
 --- !u!224 &2374239957374986284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40507,7 +40507,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a4050c6173340342af58c69013530ff, type: 3}
+  m_Sprite: {fileID: 1872732258777413398, guid: c50a4684d21fa6149bf82c6a6467b0f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -53929,11 +53929,12 @@ MonoBehaviour:
   Manager: {fileID: 5265442899089783918}
   sManager: {fileID: 1904884789}
   PlayerInteraction: {fileID: 2921049433180030241}
-  Speed: 3
+  Speed: 10
   Attack: 0
   weaponstrength: 1
   clip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
   scanObject: {fileID: 0}
+  weapon: {fileID: 2782107787248800151}
   isDelay: 0
 --- !u!114 &7969445261700158162
 MonoBehaviour:

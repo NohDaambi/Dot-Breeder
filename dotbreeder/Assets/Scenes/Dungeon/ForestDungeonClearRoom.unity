@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 3893163797083826755}
   m_Layer: 0
   m_Name: CaveOpenGate
-  m_TagString: FoRight
+  m_TagString: OutForestDg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

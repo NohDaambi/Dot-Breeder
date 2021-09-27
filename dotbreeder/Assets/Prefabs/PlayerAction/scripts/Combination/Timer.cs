@@ -26,6 +26,8 @@ public class Timer : MonoBehaviour
     public bool ShackOn;
     public bool isOnIgloo = false;
     public bool IglooOn;
+    public bool isOnTent = false;
+    public bool TentOn;
 
     //Á¶ÇÕ³¡ UI
     public Text TitleEnd;

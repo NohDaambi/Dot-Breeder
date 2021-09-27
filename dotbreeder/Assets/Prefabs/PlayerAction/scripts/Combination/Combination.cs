@@ -390,6 +390,8 @@ public class Combination : MonoBehaviour
             itemManager.TreeHouse();
         else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
             itemManager.Igloo();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Desert1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 3)
+            itemManager.Tent();
     }
     public void Button2()
     {
@@ -416,6 +418,8 @@ public class Combination : MonoBehaviour
             itemManager.Bed();
         else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
             itemManager.IceBed();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Desert1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 3)
+            itemManager.H_Bed();
     }
     public void Button3()
     {
@@ -442,6 +446,8 @@ public class Combination : MonoBehaviour
             itemManager.Stove();
         else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
             itemManager.FishingTool();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Desert1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 3)
+            itemManager.Plate();
     }
     public void Button4()
     {
@@ -467,6 +473,8 @@ public class Combination : MonoBehaviour
             itemManager.Table();
         else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Ocene1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 2)
             itemManager.Aquarium();
+        else if (pageNumBuilding == 1 && BuildingPage && (SceneManager.GetActiveScene().name == "Desert1" || SceneManager.GetActiveScene().name == "House") && Manager.stageNum == 3)
+            itemManager.MudStove();
     }
     public void Button5()
     {
@@ -588,6 +596,12 @@ public class Combination : MonoBehaviour
             timer.isGive = true;
         else if (timer.IglooOn == true)
             timer.isOnIgloo = true;
+
+            
+        if (timer.TentOn == false)
+            timer.isGive = true;
+        else if (timer.TentOn == true)
+            timer.isOnTent = true;
     }
 
     //최대로 조합하기

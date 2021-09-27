@@ -88,7 +88,7 @@ public class SceneTransition : MonoBehaviour
                 break;
             case "ExitHouse":
                 SceneManager.LoadScene("Forest1");
-                gameObject.transform.position = new Vector3(5.8f, -4f, -1);
+                gameObject.transform.position = new Vector3(-2.3f, 0.5f, -1);
                 break;
 
             //Igloo
@@ -98,7 +98,17 @@ public class SceneTransition : MonoBehaviour
                 break;
             case "ExitIgloo":
                 SceneManager.LoadScene("Ocene1");
-                gameObject.transform.position = new Vector3(0.1f, -3.7f, -1);
+                gameObject.transform.position = new Vector3(6.8f, -1.5f, -1);
+                break;
+
+            //Tent
+            case "GoTent":
+                SceneManager.LoadScene("House");
+                gameObject.transform.position = new Vector3(0.05f, -3.3f, -1);
+                break;
+            case "ExitTent":
+                SceneManager.LoadScene("Desert1");
+                gameObject.transform.position = new Vector3(-7.8f, -1.5f, -1);
                 break;
 
 

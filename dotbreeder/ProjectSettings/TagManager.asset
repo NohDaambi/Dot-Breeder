@@ -47,6 +47,8 @@ TagManager:
   - OutForestDg
   - OutOceneDg
   - OutDesertDg
+  - GoTent
+  - ExitTent
   layers:
   - Default
   - TransparentFX

@@ -174,7 +174,7 @@ public class ItemManager : MonoBehaviour
         //조합중 텍스트
         combine.TitleIng.text = "천막";
         combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
-        combine.houseManager.CurrentCombinging = 8;
+        combine.houseManager.CurrentCombinging = 9;
         combine.ProduceCount();
     }
     public void H_Bed()
@@ -191,7 +191,7 @@ public class ItemManager : MonoBehaviour
         //조합중 텍스트
         combine.TitleIng.text = "해먹 침대";
         combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
-        combine.houseManager.CurrentCombinging = 8;
+        combine.houseManager.CurrentCombinging = 10;
         combine.ProduceCount();
     }
     public void Plate()
@@ -208,7 +208,7 @@ public class ItemManager : MonoBehaviour
         //조합중 텍스트
         combine.TitleIng.text = "접시, 그릇";
         combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
-        combine.houseManager.CurrentCombinging = 8;
+        combine.houseManager.CurrentCombinging = 11;
         combine.ProduceCount();
     }
     public void MudStove()
@@ -225,7 +225,7 @@ public class ItemManager : MonoBehaviour
         //조합중 텍스트
         combine.TitleIng.text = "진흙 화로";
         combine.timeIng.text = "제작 시간 : " + combine.GetHouseTime.ToString();
-        combine.houseManager.CurrentCombinging = 8;
+        combine.houseManager.CurrentCombinging = 12;
         combine.ProduceCount();
     }
 

@@ -11,10 +11,10 @@ public class Diary : MonoBehaviour
     public GameObject ConstraintImg;
 
     public Text[] text = new Text[4];
-    public Button[] Btn = new Button[32];
+    public Button[] Btn = new Button[16];
 
     public GameObject[] textObj = new GameObject[4];
-    public GameObject[] btnObj = new GameObject[32];
+    public GameObject[] btnObj = new GameObject[16];
 
     public Animator ImgAnim1;
     public Animator Change1;
@@ -107,10 +107,10 @@ public class Diary : MonoBehaviour
             Change3.SetTrigger("isChange");
 
         //버튼 번호 -8씩
-        if (btnNum > 0 && btnNum <= 24) // 24 16 8 0
-            btnNum -= 8;
+        if (btnNum > 0 && btnNum <= 16) // 0 4 8 12 16
+            btnNum -= 4;
         else if (btnNum <= 0)
-            btnNum = 24;
+            btnNum = 16;
         //텍스트 번호 -1씩
         if (textNum > 0 && textNum <= 3)
             textNum -= 1;
@@ -134,10 +134,10 @@ public class Diary : MonoBehaviour
         else if (textObj[3].activeSelf)
             Change1.SetTrigger("isChange");
 
-        //버튼 번호 +8씩
-        if (btnNum >= 0 && btnNum < 24) // 0 8 16 24
-            btnNum += 8;
-        else if (btnNum >= 24)
+        //버튼 번호 +4씩
+        if (btnNum >= 0 && btnNum < 16) // 0 8 16 24 //0 4 8 12 16
+            btnNum += 4;
+        else if (btnNum >= 16)
             btnNum = 0;
         //텍스트 번호 +1씩
         if (textNum >= 0 && textNum < 3)
@@ -152,7 +152,7 @@ public class Diary : MonoBehaviour
 
     public void BtnAcitveTrue(int btnArr,int textArr)
     {
-        for (int i = 0 + btnArr; i < 8 + btnArr; i++)
+        for (int i = 0 + btnArr; i < 4 + btnArr; i++)
         {
             btnObj[i].SetActive(true);
         }
@@ -163,9 +163,9 @@ public class Diary : MonoBehaviour
     public void BtnAcitveFalseR(int btnArr, int textArr)
     {
        
-        if (btnArr > 0) // 8 16 24
+        if (btnArr > 0) // 8 16 24 32 // 4 8 12 16
         {
-            for (int i = btnArr - 8; i < btnArr; i++)
+            for (int i = btnArr - 4; i < btnArr; i++)
             {
                 btnObj[i].SetActive(false);
             }
@@ -173,7 +173,7 @@ public class Diary : MonoBehaviour
         }
         else if(btnArr == 0) // 0
         {
-            for (int i = 24; i < 32; i++)
+            for (int i = 12; i < 16; i++) //(int i = 24; i < 32; i++)/0 8 16 24 32 /0 4 8 12 16
             {
                 btnObj[i].SetActive(false);
             }
@@ -184,17 +184,17 @@ public class Diary : MonoBehaviour
     public void BtnAcitveFalseL(int btnArr, int textArr)
     {
         
-        if (btnArr < 24) // 16 8 0
+        if (btnArr < 12) // 32 24 16 8 0 // 0 4 8 12 16
         {
-            for (int i = btnArr + 8; i < btnArr + 16; i++)
+            for (int i = btnArr + 4; i < btnArr + 8; i++)
             {
                 btnObj[i].SetActive(false);
             }
             textObj[textArr + 1].SetActive(false);
         }
-        else if (btnArr == 24) // 24
+        else if (btnArr == 12) // 24
         {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 4; i++)
             {
                 btnObj[i].SetActive(false);
             }

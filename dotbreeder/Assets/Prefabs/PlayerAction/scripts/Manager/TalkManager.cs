@@ -22,7 +22,7 @@ public class TalkManager : MonoBehaviour
     void GenerateData()
     {
         //조합기
-        talkData.Add(1500, new string[] { "[!]Tutorial_System : 픽셀조각을 모아 조합기를 고쳐주세요." });
+        talkData.Add(1500, new string[] { "[!][Quest] : 픽셀조각을 모아 조합기를 고쳐주세요." });
 
         //Study
         talkData.Add(100, new string[] { "사용하기엔 도트가 아직 어리다.." });
@@ -45,7 +45,7 @@ public class TalkManager : MonoBehaviour
 
 
         //Quest Talk
-        talkData.Add(10 + 1000, new string[] { "안녕 만나서 반가워:0", "일단 옆 동네 친구에게 가볼래?:1" });
+        talkData.Add(10 + 1000, new string[] { "움!:0", "움늄늄:1"});
         talkData.Add(11 + 2000, new string[] { "안녕:0", "풀 3개만 구해줄래?:1" });
 
         talkData.Add(20 + 1000, new string[] { "빨리 수집해줘!:3" });

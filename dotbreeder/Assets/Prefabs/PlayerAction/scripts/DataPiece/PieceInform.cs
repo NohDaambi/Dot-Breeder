@@ -13,7 +13,8 @@ public class PieceInform : MonoBehaviour
     public void InterpretTextFunc(int num)
     {
         if (num == 0)
-            InterpretText.text = "µ¥ÀÌÅÍ Á¶°¢1 ÇØ¼®³»¿ë";
+            InterpretText.text = "[»¡¸® »¡¸® Áü ½Î!! ÀÌÁ¦ °ð ´ÝÈù´Ù°í!] " +
+                "ÀþÀº ³²¼ºÀÇ ¸ñ¼Ò¸®°¡ ´ã±ä µ¥ÀÌÅÍ ÀÏºÎ";
         else if (num == 1)
             InterpretText.text = "µ¥ÀÌÅÍ Á¶°¢2 ÇØ¼®³»¿ë";
         else if (num == 2)
